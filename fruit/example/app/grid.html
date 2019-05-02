@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Grid</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+    <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+
+    <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+    <script type="text/javascript" src="../common/fn.js"></script>
+    <style type="text/css">
+        .demo-grid [class^=f-col],
+        .demo-grid [class^=f-phone-col] {
+            line-height: 32px;
+            text-align: center;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            background-color: #DAF1FA;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+<body>
+<h1>Grid system</h1>
+
+<h2>Fixed container</h2>
+
+<p>
+    Each item width is <strong>80px</strong> and gap is <strong>20px</strong>. <br/><br/>
+    <strong>Implement</strong> : <br/>
+    1. <code>.f-container</code> class for container.<br/>
+    2. <code>.f-row </code> class for row. <br/>
+    3. <code>.f-col1</code> to <code>.f-col12</code> class for each items.<br/>
+</p>
+
+<div class="f-container">
+    <div class="f-row demo-grid">
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+    </div>
+    <div class="f-row demo-grid">
+        <div class="f-col11">
+            11
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+    </div>
+    <div class="f-row demo-grid">
+        <div class="f-col10">
+            10
+        </div>
+        <div class="f-col2">
+            2
+        </div>
+    </div>
+    <div class="f-row demo-grid">
+        <div class="f-col9">
+            9
+        </div>
+        <div class="f-col3">
+            3
+        </div>
+    </div>
+    <div class="f-row demo-grid">
+        <div class="f-col8">
+            8
+        </div>
+        <div class="f-col4">
+            4
+        </div>
+    </div>
+    <div class="f-row demo-grid">
+        <div class="f-col7">
+            7
+        </div>
+        <div class="f-col5">
+            5
+        </div>
+    </div>
+    <div class="f-row demo-grid">
+        <div class="f-col6">
+            6
+        </div>
+        <div class="f-col6">
+            6
+        </div>
+    </div>
+</div>
+<h3>With sub item</h3>
+
+<div class="f-container">
+    <div class="demo-grid f-row">
+        <div class="f-col4">
+            4
+            <div class="f-row">
+                <div class="f-col1" style="background: #ccc;">1</div>
+                <div class="f-col3" style="background: #ccc;">3</div>
+
+            </div>
+        </div>
+        <div class="f-col4">4
+            <div class="f-row">
+                <div class="f-col2" style="background: #ccc;">2</div>
+                <div class="f-col2" style="background: #ccc;">2</div>
+
+            </div>
+        </div>
+        <div class="f-col4">4
+            <div class="f-row">
+                <div class="f-col3" style="background: #ccc;">3</div>
+                <div class="f-col1" style="background: #ccc;">1</div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<h2>Fluid container</h2>
+
+<p>
+    Each item width is <strong>6.7%</strong> and gap is <strong>1.7%</strong>. <br/><br/>
+    <strong>Implement</strong> : <br/>
+    1. <code>.f-container-fluid</code> class for container.<br/>
+    2. <code>.f-row-fluid </code> class for row. <br/>
+    3. <code>.f-col1</code> to <code>.f-col12</code> class for each items.<br/>
+</p>
+
+<div class="f-container-fluid">
+    <div class="f-row-fluid demo-grid">
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+    </div>
+    <div class="f-row-fluid demo-grid">
+        <div class="f-col11">
+            11
+        </div>
+        <div class="f-col1">
+            1
+        </div>
+    </div>
+    <div class="f-row-fluid demo-grid">
+        <div class="f-col10">
+            10
+        </div>
+        <div class="f-col2">
+            2
+        </div>
+    </div>
+    <div class="f-row-fluid demo-grid">
+        <div class="f-col9">
+            9
+        </div>
+        <div class="f-col3">
+            3
+        </div>
+    </div>
+    <div class="f-row-fluid demo-grid">
+        <div class="f-col8">
+            8
+        </div>
+        <div class="f-col4">
+            4
+        </div>
+    </div>
+    <div class="f-row-fluid demo-grid">
+        <div class="f-col7">
+            7
+        </div>
+        <div class="f-col5">
+            5
+        </div>
+    </div>
+    <div class="f-row-fluid demo-grid">
+        <div class="f-col6">
+            6
+        </div>
+        <div class="f-col6">
+            6
+        </div>
+    </div>
+</div>
+<h3>With sub item</h3>
+
+<div class="f-container-fluid">
+    <div class="demo-grid f-row-fluid">
+        <div class="f-col4">
+            4
+            <div class="f-row-fluid">
+                <div class="f-col6" style="background: #ccc;">6</div>
+                <div class="f-col6" style="background: #ccc;">6</div>
+
+            </div>
+        </div>
+        <div class="f-col2">2
+            <div class="f-row-fluid">
+                <div class="f-col4" style="background: #ccc;">4</div>
+                <div class="f-col8" style="background: #ccc;">8</div>
+
+            </div>
+        </div>
+        <div class="f-col6">6
+            <div class="f-row-fluid">
+                <div class="f-col11" style="background: #ccc;">11</div>
+                <div class="f-col1" style="background: #ccc;">1</div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<h2>Fluid container for phone</h2>
+
+<p>
+    <code>.f-phone-col1</code> to <code>.f-phone-col4</code> class for each items.<br/>
+</p>
+
+<div class="f-container-fluid">
+    <div class="f-row-fluid demo-grid">
+        <div class="f-phone-col1">1</div>
+        <div class="f-phone-col1">1</div>
+        <div class="f-phone-col1">1</div>
+        <div class="f-phone-col1 end">1</div>
+        <div class="f-phone-col2">2</div>
+        <div class="f-phone-col1">1</div>
+        <div class="f-phone-col1 end">1</div>
+        <div class="f-phone-col3">3</div>
+        <div class="f-phone-col1 end">1</div>
+    </div>
+
+</div>
+<script type="text/javascript">
+    setTimeout(prettyCode, 500)
+</script>
+</body>
+</html>

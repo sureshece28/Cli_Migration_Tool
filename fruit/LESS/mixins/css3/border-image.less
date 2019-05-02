@@ -1,0 +1,7 @@
+.border-image(@img,@borderTop,@borderRight,@borderBottom,@borderLeft,@model:repeat){
+
+    border-width:@borderTop @borderRight @borderBottom @borderLeft;
+    -moz-border-image:url("@{img}") ~`+parseInt('@{borderTop}')+' '+parseInt('@{borderRight}')+' '+parseInt('@{borderBottom}')+' '+parseInt('@{borderLeft}')+' @{model}'`; //url("border-image.png") 25 30 10 20 repeat stretch;
+     -webkit-border-image:url("@{img}") ~`+parseInt('@{borderTop}')+' '+parseInt('@{borderRight}')+' '+parseInt('@{borderBottom}')+' '+parseInt('@{borderLeft}')+' @{model}'`;
+     border-image:url("@{img}") ~`+parseInt('@{borderTop}')+' '+parseInt('@{borderRight}')+' '+parseInt('@{borderBottom}')+' '+parseInt('@{borderLeft}')+'  @{model}'`;
+}

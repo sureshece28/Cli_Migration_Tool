@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+</head>
+<body>
+<label class="f-checkbox" role="checkbox" data-fruit-type="fruit.ui.CheckBox" data-fruit-name="cb1">
+    <i data-fruit-name="checkPic" class="f-checkbox-img" tabindex="0"></i>
+    <input type="checkbox" data-fruit-name="check" >
+    <span data-fruit-name="text" class="f-label" role="label" >CheckBox 1</span>
+</label>
+<script type="text/javascript">
+    fruit.ready(function () {
+        var app = fruit.Application;
+        var cb1 = app.cb1;
+
+        cb1.on('onClick', function () {
+            alert('CheckBox 1 Clicked!');
+        });
+
+    });
+</script>
+</body>
+</html>

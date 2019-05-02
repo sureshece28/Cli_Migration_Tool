@@ -1,0 +1,9 @@
+.opacity(@opacity: 100) {
+  filter: e(%("alpha(opacity=%d)", @opacity)); /* #ie7# #ie8# */
+  //-khtml-opacity: @opacity / 100;
+  //-moz-opacity: @opacity / 100;
+  opacity: @opacity / 100; /* Chrome 4+, FF2+, Saf3.1+, Opera 9+, IE9, iOS 3.2+, Android 2.1+ */
+}
+.ie-opacity(@opacity: 100){
+    filter: e(%("alpha(opacity=%d)", @opacity)); /* #ie7# #ie8# */
+}

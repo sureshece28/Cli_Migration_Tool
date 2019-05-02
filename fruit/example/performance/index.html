@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+		<link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+		<script type="text/javascript" src="../../js/fruit.js"></script>
+		<script type="text/javascript" src="../../3rdparty/jquery-1.8.2.js"></script>
+		<script type="text/javascript" src="tester.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var tester = Tester(2000);
+			
+			
+			tester.push('create function', function(i) {				
+					var fn = new Function('test','alert(1)');
+			})
+			tester.push('new function', function(i) {
+				var fn = function(){
+					alert(1)
+				}
+			})
+			tester.push('eval function', function(i) {
+				var fn = eval('fn = function(){alert(1);};')
+			})
+			tester.run();
+
+		</script>
+	</body>
+</html>

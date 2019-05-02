@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+
+    <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+    <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/jquery1.7.1.js"></script>
+    <script type="text/javascript" src="../../3rdparty/Math.uuid.js"></script>
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+    <script type="text/javascript" src="../common/DemoRobot.js"></script>
+</head>
+<body>
+
+<script type="text/html" class="demo-source">
+	
+	fruit.io.SPIRequest.setDefaultUrl("http://xq.cisco.com:8080/fruit/JSONRPCHandler.do");
+	
+    fruit.io.ajax({
+        data:{"info":"test spi call!"},
+        beforeSend:showBeforeSend,
+        success:showSuccess,
+        error:showError,
+        complete:showComplete
+    });
+    
+	function showBeforeSend(xhr,setting){
+	    logger.info('showBeforeSend');
+	}
+	
+	function showSuccess(data, status, xhr){
+	    logger.info('Request success, status =' + status);
+	}
+	
+	function showError(xhr, status){
+	    logger.info('Request error, status =' + status);
+	}
+	
+	function showComplete(xhr, status){
+	    logger.info('Request complete, status= ' + status);
+	}
+</script>
+</body>
+</html>

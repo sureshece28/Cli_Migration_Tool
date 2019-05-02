@@ -1,0 +1,4 @@
+ip ospf - config
+qwwwwwwww - config
+qwwwwwwww - config
+qwwwwwwww - config

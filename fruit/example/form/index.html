@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="../../3rdparty/jquery1.7.1.js"></script>
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+    <script type="text/javascript" src="./EditForm.js"></script>
+    <style>
+        li, ul {
+            list-style: none;
+            margin: 0px;
+            padding: 3px 5px;
+        }
+
+        label {
+            display: inline-block;
+            width: 200px;
+            text-align: right;
+        }
+
+        .error-msg {
+            color: red;
+        }
+
+        .error {
+            border: 1px solid #FF0000;
+        }
+    </style>
+</head>
+
+<body>
+<form id="editform">
+    <ul>
+        <li>
+            <label for="name">Name:</label>
+
+                <span data-fruit-name="fruit.ui.TextBox" id="name" class="f-textbox">
+				<input name="name" data-fig-name="name" data-validate="minSize[4],maxSize[8]" type="text"
+                       placeholder="test  place holder text...">
+				<a data-fig-name="icon" class="hidden"></a></span>
+        </li>
+        <li>
+            <label for="options">Option:</label>
+            <select id="options" name="options" data-validate="required">
+                <option>Please Select ...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </li>
+        <li>
+            <label for="password">Password:</label>
+            <input type="password" data-validate="required,maxSize[4]" data-position="bottom,left" id="password"
+                   name="password"/>
+        </li>
+        <li>
+            <label for="repassword">Confirm Password</label>
+            <input type="password" data-validate="required,equals[password],maxSize[4]" id="repassword"
+                   name="repassword"/>
+        </li>
+        <li>
+            <label for="type">Open</label>
+            <input id="type" type="radio" name="type" value="1" data-validate="required"/>
+
+        </li>
+        <li>
+            <label>Close</label>
+            <input type="radio" name="type" value="2" data-validate="required"/>
+
+        </li>
+        <li>
+            <label>
+                <input type="checkbox" name="confirm" value="true"/>
+                I Agree</label>
+        </li>
+        <li>
+            <label>Start Time</label>
+            <input type="text" data-name="fruit.form.Input" data-validate="past[:date2]" value="2011-5-1" id="date1"
+                   name="date1"/>
+        </li>
+
+    </ul>
+    <input type="button" value="Set Default Value" id='set'/>
+    <input type="submit" value="Save" id='save'/>
+</form>
+<ul id="info"></ul>
+<script>
+    $(function () {
+        fruit.CONFIG.debug = true;
+
+        fruit.io.Request.mock = {
+            status:200,
+            responseText:{
+                status:'SUCCESS',
+                result:{
+                    user:'Test',
+                    age:'20'
+                }
+            }
+        };
+
+        var form = new fruit.form.Form({
+            id:'editform',
+            reader:{
+                spi:'test.getInfo'
+            },
+            writer:{
+                spi:'test.saveInfo',
+                listeners:{
+                    writeSuccess:function () {
+                    }
+                }
+            },
+            messageType:'inline'
+        });
+        $('#set').click(function () {
+            form.load({
+                id:123
+            });
+        })
+    });
+/*
+    fruit.ready(function () {
+        var main = new demo.EditForm();
+        fruit.Application.load(main, 'mvc-container');
+        main.setModel(model);
+    });
+*/
+</script>
+</body>
+</html>

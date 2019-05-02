@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript" src="../../3rdparty/jquery1.7.1.js"></script>
+
+		<script type="text/javascript" src="../../3rdparty/Math.uuid.js"></script>
+		<script type="text/javascript" src="../../js/fruit.js"></script>
+		<script>
+			fruit.ready(function() {
+
+				fruit.define('demo.UserViewModel', {
+					extend : 'fruit.ui.data.ViewModel'
+				});
+
+				var accountStore = new fruit.data.AjaxStore({
+					responseType : 'json',
+					//url:'files/accountsInfo_2.json',
+
+					url : {
+						read : 'files/accountsInfo_2.json',
+						create : ' files/accountsInfo_2.json',
+						update : 'files/accountsInfo_2.json',
+						destroy : 'files/accountsInfo_2.json'
+						//spi:meething.create
+					},
+
+					modelType : 'demo.UserViewModel',
+					idAttribute : 'firstName'
+				});
+
+				var userModel = null;
+				var userModelCollection;
+
+				accountStore.on('readSuccess', function(data, status, xhr) {
+					userModel = accountStore.getModel("Jack");
+					if (userModel) {
+						console.log("---------readSuccess!  userModel firstName = " + userModel.getValue('firstName'));
+						
+						//update action
+						userModel.setValue('firstName', 'winner');
+						console.log("userModel firstName = " + userModel.getValue('firstName'));
+					}
+					
+					userModelCollection = accountStore.getModelCollection();
+					if (userModelCollection) {
+						console.log("count =" + userModelCollection.count());
+						
+						//create action
+						userModelCollection.appendItem(userModel);
+						
+						//destroy action
+						userModelCollection.removeItemAt(0); //userModelCollection.removeItemAt(userModel);
+					}
+
+				});
+
+				accountStore.on('updateSuccess', function(data, status, xhr) {
+					console.log("------------updateSuccess ! status = " + status);
+				});
+
+				accountStore.on('createSuccess', function(data, status, xhr) {
+					console.log("-----------createSuccess ! status = " + status);
+				});
+
+				accountStore.on('destroySuccess', function(data, status, xhr) {
+					console.log("------------destroySuccess! status = " + status);
+				});
+
+				accountStore.read({
+					id : '1'
+				});
+
+			});
+
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

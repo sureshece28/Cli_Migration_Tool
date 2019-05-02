@@ -1,0 +1,31 @@
+.clean(){
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    *zoom: 1;
+    *display: inline;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.inline-block() {
+    //display: -moz-inline-stack;  //because this line for ff2. ignore it.
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+    //vertical-align: middle; //will use the specific definition in relevant component
+}
+.ie7-after(@cls){
+    *zoom: e(%("expression(this.runtimeStyle.zoom=1,this.appendChild( document.createElement('i') ).className='%d-after')",@cls));
+    (~".@{cls}-after"){
+        display: block;
+    }
+}

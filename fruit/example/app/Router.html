@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Router</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+</head>
+<body>
+<div>
+    <a href="#login/abu/abuabu">Login</a> <br/><br/>
+    <a href="#main/hello/haha">Main</a> <br/><br/>
+    <a href="#reg1/xx/yy">reg 1</a> <br/><br/>
+    <a href="#reg2/ee/rr">reg 2</a> <br/><br/>
+    <a href="#reg3/nn/mm">reg 3</a> <br/><br/>
+
+
+</div>
+</body>
+<script type="text/javascript">
+    fruit.define('demo.Main', {
+        extend:"fruit.ui.Component",
+        view:{
+            content:[
+                {
+                    tag:"h1",
+                    name:'h1'
+                },
+                {
+                    tag:"textarea",
+                    name:"textarea",
+                    attr:{
+                        style:{
+                            height:'120px',
+                            width:'300px'
+                        }
+                    }
+                },
+                {
+                    tag:"button",
+                    content:"Redirect",
+                    name:"btn"
+                },
+                {
+                    tag:"button",
+                    content:"Not Redirect",
+                    name:"btn2"
+                }
+            ]
+        },
+        triggers:{
+            event:{
+                'click':[{
+                    source:"btn",
+                    action:'__redirect'
+                },{
+                    source:"btn2",
+                    action:'__redirect2'
+                }]
+            }
+        },
+        methods:{
+            init:function () {
+                var router = fruit.Router;
+                router.registerRouteMap({
+                    "login":{
+                        "leave":this._loginLeave,
+                        "enter":this._loginEnter
+                    },
+                    "detail":{
+                        "leave":this._detailLeave,
+                        "enter":this._detailEnter
+                    },
+                    "main":this._main,
+                    "/^reg/":this.__reg
+                }, this);
+                router.setDefault("login");
+                router.on("HashChange", this.__log);
+                router.start();
+
+            },
+            _loginEnter:function (args) {
+                alert("enter login");
+                this.h1.setHtml(args.router);
+            },
+            _loginLeave:function (args) {
+                alert("leave login");
+                this.h1.setHtml("leave:"+args.router);
+            },
+            _detailEnter:function (args) {
+                alert("enter detail");
+                this.h1.setHtml(args.router);
+            },
+            _detailLeave:function (args) {
+                alert("not let you leave detail");
+                this.h1.setHtml("leave:"+args.router);
+                return false;
+            },
+            _main:function (args) {
+                this.h1.setHtml(args.router);
+
+            },
+            __log:function (sender, args) {
+                this.textarea.setHtml(JSON.stringify(args.hash));
+            },
+            __redirect:function () {
+                fruit.Router.redirect("abu", "123");
+            },
+            __redirect2:function () {
+                fruit.Router.redirect("detail", "123");
+            },
+            __reg :function(hash){
+                alert("we all reg");
+                console.dir(hash);
+            }
+
+
+        }
+    })
+    fruit.ready(function () {
+        var main = new demo.Main();
+        main.renderTo();
+
+
+    });
+</script>
+</html>

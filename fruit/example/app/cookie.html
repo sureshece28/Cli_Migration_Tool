@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookie</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    console.log(">>>Set")
+    fruit.Cookie.setCookie("Name","Abu",15);
+    fruit.Cookie.setCookie("Sex","Male",15);
+    console.log(">>>Get")
+    console.log(fruit.Cookie.getCookie("Name"));
+    console.log(fruit.Cookie.getCookie("Sex"));
+    console.log(">>>Delete")
+    fruit.Cookie.delCookie("Name")
+    console.log(fruit.Cookie.getCookie("Name"));
+    console.log(fruit.Cookie.getCookie("Sex"));
+
+    console.log(">>>Destory")
+    fruit.Cookie.destory();
+    console.log(fruit.Cookie.getCookie("Name"));
+    console.log(fruit.Cookie.getCookie("Sex"));
+
+
+
+    fruit.define("Demo",{
+        extend:"fruit.ui.Component",
+        view:{
+            content:[{
+                name:"text",
+                tag:"h1"
+            }]
+        },
+//        triggers:{
+//            event:{
+//                'cookieChange':'__cookie'
+//            }
+//        },
+        methods:{
+            init:function(){
+                this.on('cookieChange',function(){
+                    console.log(1);
+                })
+
+            },
+            __cookie:function(){
+                console.log(1);
+            }
+            //cookieChange
+        }
+    })
+
+
+    var demo1 = new Demo();
+    demo1.renderTo();
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+router ospf x
+network <network> <wildcard mask> area <0 - 255>
+exit
+

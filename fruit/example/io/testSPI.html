@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="../../3rdparty/jquery1.7.1.js"></script>
+
+    <script type="text/javascript" src="../../3rdparty/Math.uuid.js"></script>
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+    <script>
+        jQuery(function () {
+        	var req = null;
+        	fruit.io.SPIRequest.setDefaultUrl('http://xq.cisco.com:8080/fruit/JSONRPCHandler.do');
+        	
+            function showMessage(data, status, xhr) {
+                logger.debug("Success, status = " + status);
+            }
+
+            function showError(xhr, status) {
+                logger.debug("Error, status = " + status);
+            }
+
+            function showComplete(xhr, status) {
+                logger.debug("Show Complete, status = " + status);
+            }
+
+            fruit.io.PageRequest.on(fruit.io.EVENT_SESSION_TIMEOUT, function () {
+                logger.debug("TimeOut!");
+            });
+
+            fruit.io.PageRequest.on(fruit.io.REQUEST_COMPLETE,function(xhr,status){
+                logger.debug("Global Complete! xhr = " + xhr + ", status = " + status);
+            });
+
+/*
+            fruit.io.PageRequest.mock = {
+                status:200,
+                responseText:{
+                    status:'FAILURE',
+                    exceptionID:102,
+                            result:{
+                        user:'Test',
+                        age:'20'
+                    }
+                }
+            };
+*/
+
+/*
+            testSPI();
+
+            fruit.io.Request.mock = {
+                status:200,
+                responseText:{
+                    status:'FAILURE',
+                    exceptionID : 102,
+                    result:'this is a error.'
+                }
+            };
+            */
+
+            /*
+            fruit.io.Request.mock = {
+                status:200,
+                responseText:{
+                    status:'PENDING',
+                    result:'this is a request PENDING.'
+                }
+            };
+            */
+
+            testSPI();
+
+            function testSPI() {
+                req = fruit.io.ajax({
+                    spi:'example.testSetSession',
+                    //url : 'test.jsp',
+                    data:{a:'1111'},
+                    method:'POST',
+                    useMerge:false,
+                    success:showMessage,
+                    error:showError,
+                    complete:showComplete
+                });
+                
+                //req.abort();
+            }
+
+            //fruit.config.debug = true;
+
+            jQuery('#spiBtn').bind('click', testSPI);
+        });
+
+    </script>
+</head>
+<body>
+<input type='button' id='spiBtn' value='testSPI'>
+</body>
+</html>

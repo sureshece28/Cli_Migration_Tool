@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Buttons</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+    <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+
+    <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+    <script type="text/javascript" src="../common/fn.js"></script>
+    <style type="text/css">
+    	.f-container{
+    		width:auto;
+    		border:5px solid #EEE;
+    		padding:10px;
+
+    	}
+    	.demo-grid{
+			margin-bottom:10px;
+
+		}
+
+		.demo-grid [class^=f-col]{
+
+			padding: 5px 0;
+			text-align: center;
+			background: #CCC;
+			-webkit-border-radius: 5px;
+	  		border-radius:  5px;
+	  		background-color: #DAF1FA;
+		}
+
+
+
+    </style>
+
+</head>
+<body>
+<h1>Responsive layout</h1>
+<div class="f-container">
+	<div class="f-row-fluid demo-grid">
+		<div class="f-col1 f-phone-col1">
+			1 <span class="f-hide-desktop f-hide-tablet">f-phone-col1</span>
+		</div><div class="f-col1 f-phone-col1">
+			1 <span class="f-hide-desktop f-hide-tablet">f-phone-col1</span>
+		</div><div class="f-col1 f-phone-col1">
+			1 <span class="f-hide-desktop f-hide-tablet">f-phone-col1</span>
+		</div><div class="f-col1 f-phone-col1 end">
+			1 <span class="f-hide-desktop f-hide-tablet">f-phone-col1</span>
+		</div><div class="f-col1 f-phone-col1">
+			1 <span class="f-hide-desktop f-hide-tablet">f-phone-col1</span>
+		</div><div class="f-col1 f-phone-col3 end">
+			1 <span class="f-hide-desktop f-hide-tablet">f-phone-col3</span>
+		</div><div class="f-col1 f-phone-col2">
+			1 <span class="f-hide-desktop f-hide-tablet">f-phone-col3</span>
+		</div><div class="f-col1 f-phone-col2 end">
+			1 <span class="f-hide-desktop f-hide-tablet">f-phone-col2</span>
+		</div><div class="f-col1 f-phone-col4 end">
+			1 <span class="f-hide-desktop f-hide-tablet">f-phone-col3</span>
+		</div>
+		<div class="f-col1">
+			1
+		</div>
+		<div class="f-col1">
+			1
+		</div>
+		<div class="f-col1">
+			1
+		</div>
+	</div>
+	<div class="f-row-fluid demo-grid">
+		<div class="f-col11">
+			11
+		</div>
+		<div class="f-col1">
+			1
+		</div>
+	</div>
+	<div class="f-row-fluid demo-grid">
+		<div class="f-col10">
+			10
+		</div>
+		<div class="f-col2">
+			2
+		</div>
+	</div>
+	<div class="f-row-fluid demo-grid">
+		<div class="f-col9">
+			9
+		</div>
+		<div class="f-col3">
+			3
+		</div>
+	</div>
+	<div class="f-row-fluid demo-grid">
+		<div class="f-col8">
+			8
+		</div>
+		<div class="f-col4">
+			4
+		</div>
+	</div>
+	<div class="f-row-fluid demo-grid">
+		<div class="f-col7">
+			7
+		</div>
+		<div class="f-col5">
+			5
+		</div>
+	</div>
+	<div class="f-row-fluid demo-grid">
+		<div class="f-col6">
+			6
+		</div>
+		<div class="f-col6">
+			6
+		</div>
+	</div>
+
+	<br/>
+	<br/>
+	<div class="f-row-fluid">
+		<h1>See deferences among your devices</h1>
+	</div>
+	<div class="f-row-fluid f-form">
+		<div class="f-col8">
+			<div class="f-row-fluid f-form-row">
+				<div class="f-col3">
+					<label class="f-label">Input:</label>
+				</div>
+				<div class="f-col9">
+					<span class="f-textbox">
+						<input type="text" name="username">
+					</span>
+				</div>
+			</div>
+			<div class="f-row-fluid f-form-row-text">
+				<div class="f-col3">
+					<label class="f-label">Check box:</label>
+				</div>
+				<div class="f-col9">
+					<label class="f-checkbox"> <i class="f-checkbox-img"></i>
+						<input type="checkbox" value="option1" name="option[]">
+						<span class='f-label'>This is a check box</span> </label>
+				</div>
+			</div>
+			<div class="f-row-fluid f-form-row-text">
+				<div class="f-col3">
+					<label class="f-label">Radio box:</label>
+				</div>
+				<div class="f-col9">
+					<label class="f-radio"> <i class="f-radio-img"></i>
+						<input type="radio" value="option1" name="option[]">
+						<span class='f-label'>This is a radio box</span> </label>
+				</div>
+			</div>
+			<div class="f-row-fluid f-form-row-text">
+				<div class="f-col3">
+					<label class="f-label">Text line:</label>
+				</div>
+				<div class="f-col9">
+					<label class="f-label">Only Test content</label>
+				</div>
+			</div>
+
+			<div class="f-row-fluid f-form-row error">
+				<div class="f-col3">
+					<label class="f-label">Input with Error:</label>
+				</div>
+				<div class="f-col9">
+					<span class="f-textbox f-textbox-error">
+						<input type="text" name="username">
+					</span>
+					<span class="message">Please verify the error</span>
+				</div>
+			</div>
+
+			<div class="f-row-fluid f-form-row">
+				<div class="f-col3">
+					<label class="f-label">Select:</label>
+				</div>
+				<div class="f-col9">
+					<span role="combobox" class="f-combobox" aria-expanded="false" aria-haspopup="true" tabindex="1">
+					    <input type="text" placeholder="Number Only" class="placeHolder">
+					    <span role="combobox" class="f-combobox-btn"></span>
+					</span>
+				</div>
+			</div>
+
+
+
+			<div class="f-row-fluid f-form-actions">
+				<div class="f-col3 f-hide-phone">
+					&nbsp;
+				</div>
+				<div class="f-col9">
+					<button class="f-btn f-btn-CTA" type="submit">
+						Save changes
+					</button>
+					<button class="f-btn">
+						Cancel
+					</button>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="f-col4">
+			<div class="f-hide-tablet f-hide-phone" style="padding:10px; border-radius: 5px; background:#F5F5F5">
+				<h3>This area will be hidden in Tablet or Phone system.</h3>
+				<table class="f-datagrid">
+					<thead>
+						<tr>
+							<th>Class</th>
+							<th>Phones </th>
+							<th>Tablets</th>
+							<th>Desktops </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>
+							<code>
+								.f-hide-desktop
+							</code></th>
+							<td class="is-visible">Show</td>
+							<td class="is-visible">Show</td>
+							<td class="is-hidden">Hidden</td>
+						</tr>
+
+						<tr>
+							<th>
+							<code>
+								.f-hide-phone
+							</code></th>
+							<td class="is-hidden">Hidden</td>
+							<td class="is-visible">Show</td>
+							<td class="is-visible">Show</td>
+						</tr>
+						<tr>
+							<th>
+							<code>
+								.f-hide-tablet
+							</code></th>
+							<td class="is-visible">Show</td>
+							<td class="is-hidden">Hidden</td>
+							<td class="is-visible">Show</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+			<div class="f-hide-desktop" style="border:1px solid #E5CECE; background:#FFe5E5; border-radius: 5px; padding:10px;">
+				You can see the message on tablet and phone.
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+object-group ip 
+sh fm interface<>
+interface po10 
+service-policy input policy1
+show plat hard cef ip 2.2.2.255 32
+plat hard cef ipv6 2001:100:10:1:103:103:103:103/128
+show plat hard cef adj entry 229376 detail
+show diagnostic sanity 
+mls qos aggregate-policer
+auto qos default
+platform qos vlan-based
+platform qos vlan-based
+mls qos trust cos/dscp
+match ipv4 dscp
+collect counter bytes
+collect timestamp sys-uptime   first
+ipv6 flow monitor v6 layer2-switched   input
+ip flow monitor v4_igmp   layer2-switched input
+match transport tcp source-port
+match transport tcp   destination-port
+collect ipv4 source address
+collect ipv4 destination address
+show mac address-table move update
+show qos interface FortyGigabitEthernet2/1/2
+debug cisp events
+cts cache
+ipv6 cga modifier rsakeypair SEND sec-level 1
+show flow monitor M4 provisioning
+hardware statistics
+clear   platform hardware acl hit-counts all 
+show   platform software flow internal fnf 
+show fm interface FortyGigabitEthernet1/1/1
+no ip flow monitor v4_monitor1 sampler sampler1 unicast input 
+show platform flow aging 
+no flow platform cache timeout fast 
+flow platform cache timeout inactive 90 
+type copy
+statistics   packet protocol 
+ip flow ingress 
+police flow 96000 conform-action set-prec-transmit 6
+ show platform hardware acl entry interface control-plane primary-if qos out ip detail
+no platform rate-limit all mtu-failure
+show platform hardware statistics  switch 1 module 1  exception
+show platform qos ipv6  switch 1 module 1  | include CPP
+clear platform hardware statistics
+no platform rate-limit unicast ip options
+vrf definition blue 
+collect routing forwarding-status 
+match routing forwarding-status 
+vlan-range 35-36 
+sh platform qos arp
+show archive config differences system:running-config slavesystem:running-config
+show platform qos mac fo1/1/1
+show platform software qos last  switch 1 module 1   
+clear platform qos mac
+show platform hardware acl entry interface 0x8004000 qos in mac detail  switch 1 module 1   
+remote command switch-id 1 module 1  show platform hardware lif l3 ingress handle 0x8004000 detail
+show platform idbhal interface fo1/1/1
+no mac packet-classify vlan-based
+no mac packet-classify vlan-based
+class-map type lan-queuing cos1
+platform qos dscp-mutation dscp1
+mac packet-classify input
+police aggregate test
+show platform qos ip
+clear platform qos ip
+show earl-info mac 
+show   calendar
+debug mgmt-infra eicore-full
+sh platform crashdump
+sh logging onboard switch 1 detail
+fullcoredump ?
+show pds tag all
+show iosd iif name-map
+show mgmt-infra trace buffers
+show usb0:
+dir usb0:
+show license  all
+show license  in-use 
+power redundancy-mode combined
+ipv6 mfib hardware-switching
+ip pgm router
+ip pgm   host
+no power enable module 2
+fabric   switching-mode allow truncated threshold 5
+boot config slot0:<config_file>
+show cgmp
+service  customer_101_provider vlan 101
+Show fips
+Show power
+sh power
+sh environment ?
+sh logging onboard summary
+line vty ?
+sh int status vlan 401 
+sh idprom ? 
+show platform qos ip
+clear platform hardware statistics
+show platform qos ip
+clear platform qos mac
+clear platform qos ip
+clear platform qos mac
+show platform qos ip
+clear platform qos mac
+show platform qos ip

@@ -1,0 +1,240 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="fruit/css/futurama.css">
+	<link href="fruit/3rdparty/prettify.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<script type="text/javascript" src="fruit/js/fruit.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/main.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script src="jquery-linedtextarea.js"></script>
+	<link href="jquery-linedtextarea.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="./css/btn-glass.css">
+	<script>
+		function myFunction() {
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "file");
+    document.body.appendChild(x);
+}
+function eraseText() {
+    document.getElementById("myTextArea").value = "";
+    document.getElementById("theiframe").value = "";
+}
+
+
+</script>
+	<style>
+		
+		#link {
+    			font-family: "Tahoma",arial,sans-serif;
+    			color: white;
+    			
+   
+    		}
+		body { 
+    background-color: 
+}
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+.textarea {
+  position: absolute;
+  top: 20%;
+
+}
+
+.loader {
+  border: 11px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 11px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#marker {
+	font-family: "Tahoma",arial,sans-serif;
+	color: white;
+	
+
+}
+
+ul li::before {
+  content: "\2022";
+  color: blue;
+  font-weight: bold;
+  display: inline-block; 
+  height: 10px;
+  width: 200px;
+  background-color: red;
+}
+
+.centerblock{
+    background-color: black;
+    padding-top: 7px;
+}
+.centerblock1{
+    background-color: blue;
+    padding-top: 7px;
+}
+
+		</style>
+</head>
+<body>
+	<center>
+        <form name="form_map" id=form_hunt action="featurehuntt.cgi" method="post" target="theiframe">
+        	
+      <br>
+      <br>
+      <br>
+    
+	
+        <table >
+	<tr>
+		
+	<td><center><b>Input Config</b></center></td>
+	<td></td>
+       <td><center><b>Converted Config</b></center></td>
+
+</tr>
+<tr>  
+	      <td>
+
+	<textarea class="lined" onscroll="this.form.elements.theiframe.scrollTop=this.scrollTop;" id="myTextArea" name="comment" style="font-family: "monospace"; font-size:14px"; rows="22" cols="52" maxlength="1000000" onkeyup="textCounter(this,'counter',1000000);" id="message"></textarea>
+
+</td>
+
+	
+	
+<td><input class="mybutton" id="search_button" type="submit"  value="Convert"></td>
+
+
+<td bgcolor="white" width="375" height="75" >
+	
+	<!--style="width:450px;height:350px;"-->
+
+ <iframe frameborder='1' scrolling="yes" onscroll="this.form.elements.myTextArea.scrollTop=this.scrollTop;" id="theiframe" style="font-family: "monospace"; font-size:14px" form="form_hunt" name="theiframe" rows="8" cols="28" ></iframe></td>
+
+       
+</li>
+</tr>
+
+</table>	
+
+                </form>
+              </center>
+        </div>
+<table>
+<tr><td width="21%"></td><td><font size="1"><input disabled  maxlength="2" size="4" value="1000000" id="counter" style="display: block; margin: 2.9;">characters left</font></td>
+
+	<td><div><input type="button" class="mybutton" value="Reset" onclick="javascript:eraseText();" style="display: block; margin: 0 265;"> </div></td></tr></table>        
+<!--       <center> <form action="/action_page.php">
+  <input type="file" name="pic" accept="file_extension">
+<input type="submit"> </center>
+
+
+-->
+
+
+
+
+
+
+<script> $( "#myTextArea1" ).load( "input.txt" ); </script>
+
+<script>$('#input.txt').load("theiframe");</script>
+
+<script>$("#theiframe").contents().find("a").css("background-color","#BAD.html");</script>
+
+<table >
+<tr >
+	<td width="9%"></td>
+		<td><font size="2">Select a File to Load:</font>
+  <font size="2"><input type="file" id="fileToLoad" onclick="loadFileAsText()"></input></font></td>
+  <td><button class="mybutton" onclick="loadFileAsText()"><font size="2">Upload File<font></button></td>
+  <td>	
+  <a href="http://wwwin-hss-devtest.cisco.com/cli-migrator/new/foo.html" download="converted_config.txt" class="mybutton"><font size="2">Download File</font>
+
+<!-- # <img style="position:absolute;right:460px;top:550px" border="0" src="http://www.rkm-research.com/wp-content/uploads/2015/12/Download-Button.png" width="120" height="40">
+ !-->
+</a>	
+</td>
+</tr></table>
+
+<script>
+function loadFileAsText(){
+  var fileToLoad = document.getElementById("fileToLoad").files[0];
+
+  var fileReader = new FileReader();
+  fileReader.onload = function(fileLoadedEvent){
+      var textFromFileLoaded = fileLoadedEvent.target.result;
+      document.getElementById("myTextArea").value = textFromFileLoaded;
+  };
+
+  fileReader.readAsText(fileToLoad, "UTF-8");
+}
+document.getElementById("myTextArea").on("keypress", function(event) {
+    var key = event.key;
+    if(key == 13) {
+         addLineCount();
+    }
+});
+function textCounter(field,field2,maxlimit)
+{
+ var countfield = document.getElementById(field2);
+ if ( field.value.length > maxlimit ) {
+  field.value = field.value.substring( 0, maxlimit );
+  return false;
+ } else {
+  countfield.value = maxlimit - field.value.length;
+ }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+var data = document.getelementbyid("theiframe").html();
+var url = 'write.php';
+$.ajax({url: url,type:"POST",data: data});
+</script>
+
+<script>
+$(function() {
+	$(".lined").linedtextarea(
+		{selectedLine: 1}
+	);
+});
+</script>
+
+
+
+ 
+
+
+</script>
+
+</body>
+</html>

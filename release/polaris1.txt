@@ -1,0 +1,106 @@
+No equivalent CLI in 3k
+No equivalent CLI in 3k
+Not Supported
+Not Supported
+show   platform software ip switch active R0 cef prefix <IP>/<mask>   detail
+show platform software ipv6   switch active R0 cef prefix <IP>/<mask> detail 
+show platform software   adjacency switch active R0 index <> 
+Not supported
+There is no equivalent cli in 3k as of now
+auto qos global compact
+There is no equivalent cli in 3k as of now
+There is no equivalent cli in 3k as of now
+trust cos/dscp
+match ipv4 tos
+collect counter bytes long
+collect timestamp absolute first
+ ip flow monitor v4_igmp input
+match transport source-port
+match ipv4 source address 
+match transport destination-port
+match ipv4 source address 
+match ipv4 destination address 
+Not supported
+show auto qos interface FortyGigabitEthernet2/1/2
+set platform software trace smd switch active r0  cusp verbose
+not supported 
+Not Supported
+Not Supported
+Not supported 
+Not Supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+show clock
+Not supported
+Not Supported
+Not supported
+Not supported
+Not Supported
+Not supported
+Show platform software trace
+show usb-devices summary
+show usb-devices summary
+show license right-to-use detail
+show license right-to-use summary
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+show fips status
+show env power
+sh env power
+sh env ?
+Not supported
+sh line vty ?
+Doesn't work 
+sh idprom ? (only interface option)
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported
+Not supported

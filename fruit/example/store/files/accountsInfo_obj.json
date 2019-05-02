@@ -1,0 +1,15 @@
+[
+    {
+        "fullName":"Jack",
+        "age":20,
+        "isOld":false
+    },
+    {
+        "fullName":"Tom",
+        "age":60,
+        "isOld":true
+    }
+]
+
+
+

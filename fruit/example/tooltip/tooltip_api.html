@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Tooltip</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+    <!--Tooltip End-->
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+
+    fruit.ready(function () {
+        var btn=new fruit.ui.Button({
+            text:'Button',
+            title:'test'
+        });
+        btn.attachBehavior({
+            behavior:'Tooltip',
+            params:{
+                title:'test tooltip'
+            }
+        });
+        btn.renderTo();
+    });
+
+</script>
+</html>

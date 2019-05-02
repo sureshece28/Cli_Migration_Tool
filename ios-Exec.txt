@@ -1,0 +1,24 @@
+show switch virtual redundancy
+show module switch
+show switch virtual
+show mac address-table count
+show platform hardware statistics drop
+clear platform hardware acl hit all
+show mgmt-infra trace buffers
+show usb0:
+dir usb0:
+show license  all
+show license  in-use
+show fips
+show power
+show hw-module led beacon
+show idprom module <0-9>
+show idprom power-supply <0-13>
+show idprom supervisor <0-13>
+show idprom all
+no power enable module <0-13>
+power enable module <0-13>
+Show env alarm
+Show power        
+
+

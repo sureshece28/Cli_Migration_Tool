@@ -1,0 +1,5 @@
+show ip interface - show ip interface - Exec
+router ospf 100 - router ospf 100 - config
+ip  - ip ospf - Exec
+ip  - ip ospf - config
+ip  - ip ospf - config

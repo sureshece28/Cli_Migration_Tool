@@ -1,0 +1,6 @@
+<pre style="border: none; color:black; font-family:serif; font:15px" >interface Tw1/0/0 no switchport
+ ip address 11.10.14.201 255.255.0.0interface gigabitEthernet0/0 no switchport
+ ip address 11.10.14.201 255.255.0.0interface GigabitEthernet0/0 no switchport
+ ip address 11.10.14.201 255.255.0.0interface GigabitEthernet0/0 switchportinterface Hu1/0/0 no switchport
+ ip address 11.10.14.201 255.255.0.0interface hu1/0/0 no switchport
+ ip address 11.10.14.201 255.255.0.0interface vlan10 ip address 11.10.14.201 255.255.0.0nterface port-channel 10 ip address 11.10.14.201 255.255.0.0nterface port-channel 10 switchport</pre><br>

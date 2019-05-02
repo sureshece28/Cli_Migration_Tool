@@ -1,0 +1,23 @@
+ip  - config
+aaaaaaaaa - config
+ip  - config
+ip  - config
+ip  - config
+jjjjj - config
+ios - config
+ip - test
+ip ospf - Exec
+ip - Exec
+ip - Exec
+qqqqqqqqqq - config
+ios - config
+ip  - config
+ip ospf 100 - config
+
+ip ospf 20 - config
+ip ospf 20
+ - config
+ip ospf 20
+ip ospf 20
+ip ospf 20
+ip ospf 20 - config

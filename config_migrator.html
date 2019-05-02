@@ -1,0 +1,245 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="fruit/css/futurama.css">
+	<link href="fruit/3rdparty/prettify.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<script type="text/javascript" src="fruit/js/fruit.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/main.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script src="jquery-linedtextarea.js"></script>
+	<link href="jquery-linedtextarea.css" type="text/css" rel="stylesheet" />
+	<script>
+		function myFunction() {
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "file");
+    document.body.appendChild(x);
+}
+function eraseText() {
+    document.getElementById("myTextArea").value = "";
+}
+</script>
+	<style>
+		
+		#link {
+    			font-family: "Tahoma",arial,sans-serif;
+    			color: white;
+    			
+   
+    		}
+		body { 
+    background-color: 
+}
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+.textarea {
+  position: absolute;
+  top: 20%;
+
+}
+.square {
+  height: 10px;
+  width: 20px;
+  background-color: black;
+  font-size: 5pt;
+}
+.square1 {
+  height: 10px;
+  width: 20px;
+  background-color: red;
+  font-size: 5px;
+}
+
+.square2 {
+  height: 10px;
+  width: 20px;
+  background-color: #00ff00;
+}
+
+.square3 {
+  height: 10px;
+  width: 20px;
+  background-color: blue;
+}
+
+ul li::before {
+  content: "\2022";
+  color: blue;
+  font-weight: bold;
+  display: inline-block; 
+  height: 10px;
+  width: 200px;
+  background-color: red;
+}
+
+.centerblock{
+    background-color: black;
+    padding-top: 7px;
+}
+.centerblock1{
+    background-color: blue;
+    padding-top: 7px;
+}
+
+		</style>
+</head>
+<body>
+	<center>
+        <form name="form_map" id=form_hunt action="configmg.cgi" method="post" target="theiframe">
+        	
+      <br>
+      <br>
+      <br>
+      
+        <table >
+	<tr>
+		
+	<td><center><b>IOS</b></center></td>
+	<td></td>
+       <td><center><b>Polaris</b></center></td>
+
+</tr>
+<tr>        <td>
+
+	<textarea class="lined" id="myTextArea" name="comment" style="font-family:serif;font:40px" rows="19" cols="51" maxlength="60000" onkeyup="textCounter(this,'counter',60000);" id="message">
+
+</textarea>
+
+</td>
+
+
+<td><input class="f-btn f-btn-CTA" id="search_button" type="submit"  value="Convert"></td>
+
+
+<td>
+	<div class="linedwrap" style="width: 370px;"><div class="lines" style="width: 50px; height: 327px;"><div class="codelines"><div class="lineno lineselect">1</div><div class="lineno">2</div><div class="lineno">3</div><div class="lineno">4</div><div class="lineno">5</div><div class="lineno">6</div><div class="lineno">7</div><div class="lineno">8</div><div class="lineno">9</div><div class="lineno">10</div><div class="lineno">11</div><div class="lineno">12</div><div class="lineno">13</div><div class="lineno">14</div><div class="lineno">15</div><div class="lineno">16</div><div class="lineno">17</div><div class="lineno">18</div><div class="lineno">19</div><div class="lineno">20</div></div></div><div class="linedtextarea"><textarea class="lined" id="myTextArea" name="comment" style="font-family: serif; resize: none; width: 299px;" rows="19" cols="51" maxlength="60000" onkeyup="textCounter(this,'counter',60000);" wrap="off"></textarea></div></div>
+<td>
+
+
+   
+       <td> <div class="square"></div>
+       	      <p><span style = "color:#black; style="font-family:serif;font:10px">No change in CLI
+       </span>
+       	
+
+    </div>
+
+
+      <div class="square1">&nbsp &nbsp </div> 
+        <span style = "color:#black; style="font-family:serif;font-size:5pt">CLI not available
+       </span>
+
+
+
+      <div class="square2"></div> 
+        <span style = "color:#black; style="font-family:serif;font:20px">Equivalent Polaris CLI
+       </span>
+       
+      <div class="square3"></div> 
+        <span style = "color:#black; style="font-family:serif;font:20px">User input required
+       </span>       
+      </td>
+</li>
+</tr>
+
+</table>	
+
+                </form>
+              </center>
+        </div>
+<table>
+<tr><td width="10%"><font size="1"><input disabled  maxlength="3" size="4" value="60000" id="counter" style="display: block; margin: 0 70;">characters left</font></td>
+	<td><div><input type="button" class="f-btn f-btn-CTA" value="Reset" onclick="javascript:eraseText();" style="display: block; margin: 0 265;"> </div></td></tr></table>        
+<!--       <center> <form action="/action_page.php">
+  <input type="file" name="pic" accept="file_extension">
+<input type="submit"> </center>
+
+
+-->
+
+</form>
+
+
+
+
+<script> $( "#myTextArea1" ).load( "input.txt" ); </script>
+
+<script>$('#input.txt').load("theiframe");</script>
+
+<script>$("#theiframe").contents().find("a").css("background-color","#BAD.html");</script>
+
+<table >
+<tr >
+	<td width="10%"></td>
+		<td><font size="2">Select a File to Load:</font></td>
+    <td><font size="2"><input type="file" id="fileToLoad" onclick="loadFileAsText()"></input></font></td>
+    <td><button class="f-btn f-btn-CTA" onclick="loadFileAsText()"><font size="2">Load file<font></button><td>
+</tr></table>
+<form>
+<script>
+function loadFileAsText(){
+  var fileToLoad = document.getElementById("fileToLoad").files[0];
+
+  var fileReader = new FileReader();
+  fileReader.onload = function(fileLoadedEvent){
+      var textFromFileLoaded = fileLoadedEvent.target.result;
+      document.getElementById("myTextArea").value = textFromFileLoaded;
+  };
+
+  fileReader.readAsText(fileToLoad, "UTF-8");
+}
+document.getElementById("myTextArea").on("keypress", function(event) {
+    var key = event.key;
+    if(key == 13) {
+         addLineCount();
+    }
+});
+function textCounter(field,field2,maxlimit)
+{
+ var countfield = document.getElementById(field2);
+ if ( field.value.length > maxlimit ) {
+  field.value = field.value.substring( 0, maxlimit );
+  return false;
+ } else {
+  countfield.value = maxlimit - field.value.length;
+ }
+}
+</script>
+
+<!--<a  href="http://wwwin-home.cisco.com/~kanbunat/starcli/clihunt/foo.docs" download="output.docs">
+  <img style="position:absolute;right:460px;top:550px" border="0" src="http://www.rkm-research.com/wp-content/uploads/2015/12/Download-Button.png" width="120" height="40">
+  
+</a>-->
+
+<a  style="position:absolute;right:400px;top:620px" class="f-btn f-btn-CTA" href="http://wwwin-home.cisco.com/~kanbunat/starcli/clihunt/foo.docs" download="output.docs"><font size="2">Download<font>
+</a>
+
+
+</form>
+</script>
+
+
+
+
+<script>
+var data = document.getelementbyid("theiframe").html();
+var url = 'write.php';
+$.ajax({url: url,type:"POST",data: data});
+</script>
+
+<script>
+$(function() {
+	$(".lined").linedtextarea(
+		{selectedLine: 1}
+	);
+});
+</script>
+
+
+</body>
+</html>

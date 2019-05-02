@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TextBox</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+    <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+
+    <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+    <script type="text/javascript" src="../common/fn.js"></script>
+</head>
+<body style="padding: 10px;">
+<div id="content">
+    <h1>TextBox</h1>
+
+    <p> `
+    </p>
+
+    <h2>DOM Definition</h2>
+    <span class="f-textbox"><input type="text" name="username" placeholder="Fill me …"></span>
+
+    <p>
+        <br/>
+        <textarea type="html" class="hidden">
+            <span class="f-textbox"><input type="text" name="username" placeholder="Fill me …"></span>
+        </textarea>
+    </p>
+
+    <h2>Status</h2>
+
+    <h3>Placeholder</h3>
+    <span>Add <code>placeholder</code> attribute to input node and add <code>.placeHolder</code> class.</span><br/><br/>
+    <span class="f-textbox"><input type="text" placeholder="Fill me …" class="placeHolder"></span>
+
+    <p>
+        <br/>
+        <textarea type="html" class="hidden">
+            <span class="f-textbox"><input type="text" placeholder="Fill me …" class="placeHolder"></span>
+        </textarea>
+    </p>
+
+    <h3>Focus</h3>
+    <span>Add <code>.f-textbox-focus</code> class to node.</span><br/><br/>
+    <span class="f-textbox f-textbox-focus"><input type="text" name="username" placeholder="Fill me …"></span>
+
+    <p>
+        <br/>
+        <textarea type="html" class="hidden">
+            <span class="f-textbox f-textbox-focus"><input type="text" name="username" placeholder="Fill me …"></span>
+        </textarea>
+    </p>
+
+    <h3>Disabled</h3>
+    <span>Add <code> aria-disabled="true"</code> attribute to node and add <code> disabled="disabled"</code> to input node.</span><br/><br/>
+    <span class="f-textbox" aria-disabled="true"><input type="text" disabled="disabled" value="Tom"
+                                                        name="username"></span>
+
+    <p>
+        <br/>
+        <textarea type="html" class="hidden">
+            <span class="f-textbox" aria-disabled="true"><input type="text" disabled="disabled" name="username"
+                                                                value="Tom"></span>
+        </textarea>
+    </p>
+
+    <h3>Read only</h3>
+    <span>Add <code> aria-readonly="true"</code> attribute to node and add <code> readonly="readonly"</code> to input node.</span><br/><br/>
+    <span class="f-textbox" aria-readonly="true"><input type="text" readonly="readonly" name="username"
+                                                        value="Tom"></span>
+
+    <p>
+        <br/>
+        <textarea type="html" class="hidden">
+            <span class="f-textbox" aria-readonly="true"><input type="text" readonly="readonly" name="username"
+                                                                value="Tom"></span>
+        </textarea>
+    </p>
+
+    <h3>Error</h3>
+    <span>Add <code>.f-textbox-error</code> class to node.</span><br/><br/>
+    <span class="f-textbox f-textbox-error"><input type="text" name="username"></span>
+
+    <p>
+        <br/>
+        <textarea type="html" class="hidden">
+            <span class="f-textbox f-textbox-error"><input type="text" name="username"></span>
+        </textarea>
+    </p>
+
+
+    <h3>Password type</h3>
+    <br/>
+    <span class="f-textbox"><input type="password" placeholder="Fill me …" class="placeHolder"></span>
+
+    <p>
+        <br/>
+        <textarea type="html" class="hidden">
+            <span class="f-textbox"><input type="password" placeholder="Fill me …" class="placeHolder"></span>
+        </textarea>
+    </p>
+
+
+    <h3>Set font-size</h3>
+    <p>
+        Set font-size to <code>input</code> with <code>style</code> attribute.
+    </p>
+    <span class="f-textbox"><input type="text" placeholder="Fill me …" class="placeHolder" style="font-size: 16px;"></span><br /><br />
+    <span class="f-textbox"><input type="text" placeholder="Fill me …" class="placeHolder" style="font-size: 24px;"></span><br /><br />
+    <span class="f-textbox"><input type="text" placeholder="Fill me …" class="placeHolder" style="font-size: 32px;"></span>            <br /><br />
+    <span class="f-textbox"><input type="text" placeholder="Fill me …" class="placeHolder" style="font-size: 48px;"></span>
+    <p>
+        <br/>
+        <textarea type="html" class="hidden">
+            <span class="f-textbox"><input type="text" placeholder="Fill me …" class="placeHolder" style="font-size: 32px;"></span>
+        </textarea>
+    </p>
+
+    <h3>IOS TextBox with different keyboard</h3>
+    <span><a
+            href="http://developer.apple.com/library/ios/#documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html"
+            target="_blank">Configuring the Keyboard for Text Objects</a></span><br/><br/>
+    <h4>Tel(Number)</h4>
+    <span>Set type to <code>tel</code></span><br/><br/>
+    <span class="f-textbox"><input type="tel"></span>
+
+    <p>
+        <br/>
+        <textarea type="html" class="hidden">
+            <span class="f-textbox"><input type="tel"></span>
+        </textarea>
+    </p>
+    <h4>URL</h4>
+    <span>Set type to <code>url</code></span><br/><br/>
+    <span class="f-textbox"><input type="url"></span>
+
+    <p>
+        <br/>
+        <textarea type="html" class="hidden">
+            <span class="f-textbox"><input type="url"></span>
+        </textarea>
+    </p>
+    <h4>Email</h4>
+    <span>Set type to <code>email</code></span><br/><br/>
+    <span class="f-textbox"><input type="email"></span>
+
+    <p>
+        <br/>
+        <textarea type="html" class="hidden">
+            <span class="f-textbox"><input type="email"></span>
+        </textarea>
+    </p>
+
+
+</div>
+<script type="text/javascript">
+    setTimeout(prettyCode, 500)
+</script>
+</body>
+</html>

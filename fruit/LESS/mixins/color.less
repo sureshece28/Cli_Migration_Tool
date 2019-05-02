@@ -1,0 +1,89 @@
+.rgba(@type,@color: @white, @opacity: 1,@args:"") when(@type = border) {
+    border:hsla(hue(@color), saturation(@color), lightness(@color), @opacity) @args;
+    .ie-rgba(@type,@color, @opacity,@args);
+}
+.rgba(@type,@color: @white, @opacity: 1,@args:"") when(@type = background) {
+    background:hsla(hue(@color), saturation(@color), lightness(@color), @opacity) @args;
+    .ie-rgba(@type,@color, @opacity,@args);
+}
+.rgba(@type,@color: @white, @opacity: 1,@args:"") when(@type = background-color) {
+    background-color:hsla(hue(@color), saturation(@color), lightness(@color), @opacity) @args;
+    .ie-rgba(@type,@color, @opacity,@args);
+}
+.rgba(@type,@color: @white, @opacity: 1,@args:"") when(@type = color) {
+    color:hsla(hue(@color), saturation(@color), lightness(@color), @opacity) @args;
+    .ie-rgba(@type,@color, @opacity,@args);
+}
+.rgba(@type,@color: @white, @opacity: 1,@args:"") when(@type = border-color) {
+    border-color:hsla(hue(@color), saturation(@color), lightness(@color), @opacity) @args;
+    .ie-rgba(@type,@color, @opacity,@args);
+}
+
+.ie-rgba(@type,@color: @white, @opacity: 1,@args:solid) when(@type = border) {
+    @r :~`"@{color}".substring(1,3)`;
+    @g :~`"@{color}".substring(3,5)`;
+    @b :~`"@{color}".substring(5,7)`;
+    @a : ~`1 - "@{opacity}"`;
+    @tr:~` parseInt(((1 - "@{a}") * parseInt('@{r}',16)) + ("@{a}" * 255)).toString(16)`;  //with white background
+    @tg:~` parseInt(((1 - "@{a}") * parseInt('@{g}',16)) + ("@{a}" * 255)).toString(16)`;  //with white background
+    @tb:~` parseInt(((1 - "@{a}") * parseInt('@{b}',16)) + ("@{a}" * 255)).toString(16)`;  //with white background
+    //border:~`"#"+"@{tr}"+"@{tg}"+"@{tb}"+" "+"@{args}".toString()+"\\9"`;
+    border:~`"#"+"@{tr}"+"@{tg}"+"@{tb}"` @args ~`"\\9"`;
+}
+.ie-rgba(@type,@color: @white, @opacity: 1,@args:scroll) when(@type = background) {
+    @r :~`"@{color}".substring(1,3)`;
+    @g :~`"@{color}".substring(3,5)`;
+    @b :~`"@{color}".substring(5,7)`;
+    @a : ~`1 - "@{opacity}"`;
+    @tr:~` parseInt(((1 - "@{a}") * parseInt('@{r}',16)) + ("@{a}" * 255)).toString(16)`;  //with white background
+    @tg:~` parseInt(((1 - "@{a}") * parseInt('@{g}',16)) + ("@{a}" * 255)).toString(16)`;  //with white background
+    @tb:~` parseInt(((1 - "@{a}") * parseInt('@{b}',16)) + ("@{a}" * 255)).toString(16)`;  //with white background
+    background:~`"#"+"@{tr}"+"@{tg}"+"@{tb}"` @args ~`"\\9"`;
+}
+.ie-rgba(@type,@color: @white, @opacity: 1,@args:"") when(@type = background-color) {
+   @r :~`"@{color}".substring(1,3)`;
+    @g :~`"@{color}".substring(3,5)`;
+    @b :~`"@{color}".substring(5,7)`;
+    @a : ~`1 - "@{opacity}"`;
+    @tr:~` parseInt(((1 - "@{a}") * parseInt('@{r}',16)) + ("@{a}" * 255)).toString(16)`;  //with white background
+    @tg:~` parseInt(((1 - "@{a}") * parseInt('@{g}',16)) + ("@{a}" * 255)).toString(16)`;  //with white background
+    @tb:~` parseInt(((1 - "@{a}") * parseInt('@{b}',16)) + ("@{a}" * 255)).toString(16)`;  //with white background
+    background-color:~`"#"+"@{tr}"+"@{tg}"+"@{tb}\\9"`;
+}
+.ie-rgba(@type,@color: @white, @opacity: 1,@args:"") when(@type = color) {
+    @r : ~`"@{color}".substring(1,3)`;
+    @g : ~`"@{color}".substring(3,5)`;
+    @b : ~`"@{color}".substring(5,7)`;
+    @a : ~`1 - "@{opacity}"`;
+    @tr: ~` parseInt(((1 - "@{a}") * parseInt('@{r}',16)) + ("@{a}" * 255)).toString(16)`;  //with white background
+    @tg: ~` parseInt(((1 - "@{a}") * parseInt('@{g}',16)) + ("@{a}" * 255)).toString(16)`;  //with white background
+    @tb: ~` parseInt(((1 - "@{a}") * parseInt('@{b}',16)) + ("@{a}" * 255)).toString(16)`;  //with white background
+    color: ~`"#"+"@{tr}"+"@{tg}"+"@{tb}\\9"`;
+}
+.ie-rgba(@type,@color: @white, @opacity: 1,@args:"") when(@type = border-color) {
+    @r : ~`"@{color}".substring(1,3)`;
+    @g : ~`"@{color}".substring(3,5)`;
+    @b : ~`"@{color}".substring(5,7)`;
+    @a :  ~`1 - "@{opacity}"`;
+    @tr: ~` parseInt(((1 - "@{a}") * parseInt('@{r}',16)) + ("@{a}" * 255)).toString(16)`;  //with white background
+    @tg: ~` parseInt(((1 - "@{a}") * parseInt('@{g}',16)) + ("@{a}" * 255)).toString(16)`;  //with white background
+    @tb: ~` parseInt(((1 - "@{a}") * parseInt('@{b}',16)) + ("@{a}" * 255)).toString(16)`;  //with white background
+    border-color: ~`"#"+"@{tr}"+"@{tg}"+"@{tb}\\9"`;
+}
+/**
+ *     
+ */
+.rgb(@color,@opacity){
+    @r :~`"@{color}".substring(1,3)`;
+    @g :~`"@{color}".substring(3,5)`;
+    @b :~`"@{color}".substring(5,7)`;
+    @a : ~`1 - "@{opacity}"`;
+    //@tr :~`parseInt('@{r}',16)`;
+    @tr:~` parseInt(((1 - "@{a}") * parseInt('@{r}',16)) + ("@{a}" * 255)).toString(16)`;  //with white
+    @tg:~` parseInt(((1 - "@{a}") * parseInt('@{g}',16)) + ("@{a}" * 255)).toString(16)`;  //with white
+    @tb:~` parseInt(((1 - "@{a}") * parseInt('@{b}',16)) + ("@{a}" * 255)).toString(16)`;  //with white
+    color:~`"#"+"@{tr}"+"@{tg}"+"@{tb}"`;
+    //TR = ((1 - SA) * SR) + (SA * BR)
+    
+} 
+

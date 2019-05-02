@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+        <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+
+        <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+        <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+        <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+        <script type="text/javascript" src="../../3rdparty/jquery1.7.1.js"></script>
+        <script type="text/javascript" src="../../js/fruit.js"></script>
+        <script type="text/javascript" src="../common/DemoRobot.js"></script>
+	</head>
+	<body>
+<script type="text/html" class="demo-source">
+//define a class
+fruit.define('demo.Component', {
+    //there is the your code entity
+    methods: {
+        init : function() {
+            logger.debug('demo.Component init');
+        },
+        show : function() {
+            logger.debug('your has call show method');
+        }
+    }
+});
+var a = fruit.create('demo.Component');
+a.show();
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pie</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+</head>
+<body>
+<div class="f-container">
+    <h1>Pie</h1>
+    <div class="f-row">
+        <div class="f-col4" id="number"></div>
+        <div class="f-col8" id="pia"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var _data = [
+        {title:"CISCO", value:100},
+        {title:"Apple", value:90},
+        {title:"SAP", value:50},
+        {title:"Microsoft", value:80},
+        {title:"HP", value:100},
+        {title:"Amazon", value:120},
+        {title:"eBay", value:50},
+        {title:"AutoDesk", value:140}
+    ]
+
+    var data = new fruit.ui.data.ViewModel(_data);
+
+    fruit.define("fruit.Test.form", {
+        extend:"fruit.ui.Component",
+        view:{
+            content:{
+                template:{
+                    tag:"p",
+                    content:[
+                        {
+                            tag:"label",
+                            attr:{
+                                'class':'f-label f-col1'
+                            },
+                            content:"{title}"
+                        },
+                        {
+                            type:"fruit.ui.NumberSpinner",
+                            options:{
+                                value:"{value}",
+                                step: 20,
+                                minValue:0,
+                                maxValue:300
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    });
+
+
+
+
+    var test = new fruit.Test.form();
+    test.setModel(data);
+    test.renderTo("number");
+
+
+    var pie = new fruit.Graphic.Pie({
+        width:"600",
+        height:"600",
+        title:"This is a Pie"
+    });
+    pie.setModel(data);
+
+    pie.renderTo("pia");
+
+
+</script>
+
+</body>
+</html>

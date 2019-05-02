@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+    <script type="text/javascript" src="../../3rdparty/json2.js"></script>
+    <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+    <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/jquery1.7.1.js"></script>
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+    <script type="text/javascript" src="../common/DemoRobot.js"></script>
+</head>
+<body>
+<script type="text/html" class="demo-source">
+    var manager = fruit.manager.MirrorManager;
+    manager.create('ui.Component');
+    var component = manager.get('ui.Component');
+    component.set('name','Colin');
+    component.set('age','33');
+
+    var instance = manager.get({
+    $fullname:'ui.Component',
+    $id:1
+    });
+    instance.set('name','lulu');
+
+    manager.create('ui.Button','ui.Component');
+
+    var btn = manager.get('ui.Button');
+    btn.set('name','Abu');
+    btn.set('age',20);
+    var instance = manager.get({
+        $fullname:'ui.Button',
+        $id:1
+    });
+    instance.set('name','Mars');
+
+    instance.filter(function(){
+        return true;
+    });
+    logger.debug(instance.get('name'));
+
+</script>
+</body>
+</html>

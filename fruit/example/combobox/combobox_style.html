@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html xmlns="">
+<head>
+    <title>Combo Box</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheet/style/style.css">
+    <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+
+    <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+    <script type="text/javascript" src="../common/fn.js"></script>
+
+</head>
+<body style="padding: 10px;">
+<div id="content">
+<h1>Combo Box</h1>
+
+<h2>Example</h2>
+<br/>
+    <span role="combobox" class="f-combobox" aria-expanded="false" aria-haspopup="true" tabindex="1">
+        <input type="text" placeholder="Number Only" class="placeHolder"><span role="combobox"
+                                                                               class="f-combobox-btn"></span>
+    </span>
+<br/><br /><textarea type="html" class="hidden">
+        <span role="combobox" class="f-combobox" aria-expanded="false" aria-haspopup="true" tabindex="1">
+        <input type="text" placeholder="Number Only" class="placeHolder"><span role="combobox"
+                                                                               class="f-combobox-btn"></span>
+    </span>
+</textarea>
+
+
+<h2>Focus</h2>
+<br/>
+    <span role="combobox" class="f-combobox f-combobox-focus" aria-expanded="false" aria-haspopup="true" tabindex="1">
+        <input type="text" placeholder="Number Only" class="placeHolder"><span role="combobox"
+                                                                               class="f-combobox-btn"></span>
+    </span>
+<br/><br /><textarea type="html" class="hidden">
+       <span role="combobox" class="f-combobox f-combobox-focus" aria-expanded="false" aria-haspopup="true" tabindex="1">
+        <input type="text" placeholder="Number Only" class="placeHolder"><span role="combobox"
+                                                                               class="f-combobox-btn"></span>
+    </span>
+</textarea>
+
+
+<h2>Error</h2>
+<br/>
+    <span role="combobox" class="f-combobox f-combobox-error" aria-expanded="false" aria-haspopup="true" tabindex="1">
+        <input type="text" placeholder="Number Only" class="placeHolder"><span role="combobox"
+                                                                               class="f-combobox-btn"></span>
+    </span>
+<br/><br /><textarea type="html" class="hidden">
+        <span role="combobox" class="f-combobox f-combobox-error" aria-expanded="false" aria-haspopup="true" tabindex="1">
+        <input type="text" placeholder="Number Only" class="placeHolder"><span role="combobox"
+                                                                               class="f-combobox-btn"></span>
+    </span>
+</textarea>
+
+
+<h2>Disabled</h2>
+<br/>
+    <span role="combobox" class="f-combobox" aria-disabled="true" aria-expanded="false" aria-haspopup="false" tabindex="-1">
+        <input type="text" placeholder="Number Only" class="placeHolder" disabled="disabled" value="123w">
+        <span role="combobox" class="f-combobox-btn"></span>
+    </span>
+<br/><br /><textarea type="html" class="hidden">
+       <span role="combobox" class="f-combobox" aria-disabled="true" aria-expanded="false" aria-haspopup="false" tabindex="-1">
+        <input type="text" placeholder="Number Only" class="placeHolder" disabled="disabled">
+        <span role="combobox" class="f-combobox-btn"></span>
+    </span>
+</textarea>
+
+<h2>Long</h2>
+1. set width to <code>f-combobox</code> <br/>
+2. set width to <code>input</code> with formula :<code> parent's width - 45</code>
+<br/><br/><br/>
+    <span role="combobox" class="f-combobox" style="width: 400px;" aria-expanded="false" aria-haspopup="true" tabindex="1">
+        <input type="text" placeholder="Number Only" class="placeHolder" style="width: 345px;"><span
+            role="combobox" class="f-combobox-btn"></span>
+    </span>
+<br/><br /><textarea type="html" class="hidden">
+         <span role="combobox" class="f-combobox" style="width: 400px;" aria-expanded="false" aria-haspopup="true" tabindex="1">
+        <input type="text" placeholder="Number Only" class="placeHolder" style="width: 345px;"><span
+                 role="combobox" class="f-combobox-btn"></span>
+    </span>
+</textarea>
+
+<h2>Open</h2>
+<ol>
+    <li>Set <code>aria-expanded</code> to <code>true</code>.</li>
+    <li>Set two attribute to popup node : <code>aria-labelledby="dropdownbutton"</code> <code>role="menu"</code>.</li>
+    <li>Set <code>30px</code> offset at <code>Y axle</code> from button node to popup node.</li>
+</ol>
+
+<div style="position: relative;">
+    <span role="combobox" class="f-combobox" aria-expanded="true" aria-haspopup="true" tabindex="1">
+    <input type="text" placeholder="Number Only" class="placeHolder"><span role="combobox"
+                                                                           class="f-combobox-btn"></span>
+    </span>
+
+    <div class="f-popup" role="menu" aria-labelledby="combobox" style="top:32px;width: 252px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item">
+                    Item 1
+                </li>
+                <li class="f-list-item">
+                    Item 2
+                </li>
+                <li class="f-list-item">
+                    Item 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br /><textarea type="html" class="hidden">
+    <span role="combobox" class="f-combobox f-combobox-focus" aria-expanded="true" aria-haspopup="true" tabindex="1">
+    <input type="text" placeholder="Number Only" class="placeHolder">
+        <span role="combobox" class="f-combobox-btn"></span>
+    </span>
+
+    <div class="f-popup" role="menu" aria-labelledby="combobox" style="top:32px;width: 252px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item">
+                    Item 1
+                </li>
+                <li class="f-list-item">
+                    Item 2
+                </li>
+                <li class="f-list-item">
+                    Item 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</textarea>
+
+<h2>Focus & open</h2>
+
+<p>Set <code>31px</code> offset at <code>Y axle</code> from button node.</p>
+
+<div style="position: relative;">
+         <span role="combobox" class="f-combobox f-combobox-focus" aria-expanded="true" aria-haspopup="true" tabindex="1">
+            <input type="text" placeholder="Number Only" class="placeHolder"><span role="combobox"
+                                                                                   class="f-combobox-btn"></span>
+        </span>
+
+    <div class="f-popup" role="menu" aria-labelledby="combobox" style="top:34px;width: 252px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item">
+                    Item 1
+                </li>
+                <li class="f-list-item">
+                    Item 2
+                </li>
+                <li class="f-list-item">
+                    Item 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br /><textarea type="html" class="hidden">
+         <span role="combobox" class="f-combobox f-combobox-focus" aria-expanded="true" aria-haspopup="true" tabindex="1">
+            <input type="text" placeholder="Number Only" class="placeHolder"><span role="combobox"
+                                                                                   class="f-combobox-btn"></span>
+        </span>
+
+    <div class="f-popup" role="menu" aria-labelledby="combobox" style="top:34px;width: 252px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item">
+                    Item 1
+                </li>
+                <li class="f-list-item">
+                    Item 2
+                </li>
+                <li class="f-list-item">
+                    Item 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</textarea>
+<br/><br/>
+
+<h2>Match</h2>
+<br/>
+
+<div style="position: relative;">
+         <span role="combobox" class="f-combobox f-combobox-focus" aria-expanded="true" aria-haspopup="true" tabindex="1">
+            <input type="text" placeholder="Number Only" class="placeHolder" value="Ite"><span role="combobox"
+                                                                                               class="f-combobox-btn"></span>
+        </span>
+
+    <div class="f-popup" role="menu" aria-labelledby="combobox" style="top:34px;width: 252px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item">
+                    <b>Ite</b>m 1
+                </li>
+                <li class="f-list-item">
+                    <b>Ite</b>m 2
+                </li>
+                <li class="f-list-item">
+                    <b>Ite</b>m 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br /><textarea type="html" class="hidden">
+         <span role="combobox" class="f-combobox f-combobox-focus">
+            <input type="text" placeholder="Number Only" class="placeHolder" value="Ite"><span role="combobox"
+                                                                                               class="f-combobox-btn"></span>
+        </span>
+
+    <div class="f-popup" role="menu" aria-labelledby="combobox" style="top:34px;width: 252px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item">
+                    <b>Ite</b>m 1
+                </li>
+                <li class="f-list-item">
+                    <b>Ite</b>m 2
+                </li>
+                <li class="f-list-item">
+                    <b>Ite</b>m 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</textarea>
+<script type="text/javascript">
+    setTimeout(prettyCode, 500)
+</script>
+
+
+</div>
+</body>
+</html>

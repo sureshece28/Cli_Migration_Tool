@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+        <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+
+        <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+        <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+        <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+        <script type="text/javascript" src="../../3rdparty/jquery1.7.1.js"></script>
+        <script type="text/javascript" src="../../js/fruit.js"></script>
+        <script type="text/javascript" src="../common/DemoRobot.js"></script>
+	</head>
+	<body>
+<script type="text/html" class="demo-source">
+//define a class
+fruit.define('demo.Component', {
+    //define the options you can use getOption('name') to get they.
+    options :{
+        width:100,
+        height:200        
+    },
+    //there is the your code entity
+    methods: {
+        name : 'Component',
+        init : function() {
+
+        },
+        show : function() {
+            logger.debug('show in component: name=' + this.getOption('name') + ' age =' + this.getOption('age'));
+        }
+    }
+});
+
+fruit.define('demo.Button', {
+    //class demo.Button inherit form demo.Component
+    extend : 'demo.Component',
+    options:{
+    	name:'',
+    	age:''
+    },
+    methods: {
+        name : 'Button',
+        init : function() {
+            logger.debug('button init')
+        },
+        disable : function() {
+
+        },
+        text : function() {
+
+        },
+        show : function() {
+            logger.debug('call button show')
+            this.superMethod();
+        }
+    }
+});
+var btn = new demo.Button({name:'lulu',age:24});
+btn.show();
+logger.info('get option width:'+btn.getOption('width'));
+logger.debug("btn instanceof fruit.Button = " + ( btn instanceof demo.Button));
+logger.debug("btn instanceof demo.Component = " + ( btn instanceof demo.Component));
+logger.debug('btn.constructor == demo.Button =' + (btn.constructor == demo.Button))
+logger.debug('btn.constructor == demo.Component =' + (btn.constructor == demo.Component))
+
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<link rel="stylesheet" type="text/css" href="fruit/css/futurama.css">
+	<link href="fruit/3rdparty/prettify.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<script type="text/javascript" src="fruit/js/fruit.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/main.js"></script>
+
+    </head>
+    <body>
+	<div >
+	<div class="f-header f-header-full">
+	    <div class="f-container">
+		<span class="cisco-logo"></span>
+		<span class="f-brand">Starfleet CLI HUNT </span>
+		
+	    </div>
+	</div>
+	<div id="content">
+	     <form name="hunt" id="form_hunt" action="starhunt.cgi" method="post" target="results">
+	
+    <div id="branch_main">
+	   <br> <p><b>Select the Image :</b>
+		    <select name="image" id="branch">
+			<option value="s6t64-adventerprisek9_dbg-mz.SSA.153-1.IE101.296_20160218,ios" width=400px selected>
+                                       cat6k-Sup6T</option>
+		  	<option value="sf.bin,polaris">
+                                       starfleet</option>    
+		</select>
+		</div>
+	    <div id="cli_search">
+		<p><b>Search : </b></i>
+
+	    <input id ="search_text" type="text" name="searchstring" size=50 required>
+	    <input class="f-btn f-btn-CTA" id="search_button" type="submit" name="submit" value="Search">
+	    <p>
+	    Look for : <b>
+		exec <input type="radio" id="exec" input type="radio" id="exec" name="radio_b" value ="exec" CHECKED> 
+		config <input type="radio" id="config" name="radio_b" value="config" >
+                test <input type="radio"  input type="radio" id="exec" name="radio_b" value ="test" ></b>
+	    <small>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	    
+	</div>
+	
+    </form>
+
+</div>
+   <div id="wait">
+    <br><br>
+    <center><img src="fruit/css/images/gif/progress.gif"><b>Loading...<b></center>
+        </div>
+        
+        <iframe name="results" frameborder="0" width="100%"  marginwidth="20px" 
+		padding="5px">
+
+	</iframe>
+        
+   </div>
+	<div class="misc">
+        <a id="rn" href="./add_cli.html" target="results"><b>Add new IOS- Polaris CLI map</b></a>
+         </div>
+	   </body>
+    </html>
+

@@ -1,0 +1,7 @@
+ip cef load-sharing algorithm include-ports source destination
+ip cef load-sharing algorithm original
+ip cef load-sharing algorithm include-ports destination
+hw-module beacon RP/fan-tray/slot WORD on [exec cli]
+hw-module beacon RP/fan-tray/slot <slot no.> off [exec cli]
+hw-module slot WORD shutdown
+no hw-module slot WORD shutdown

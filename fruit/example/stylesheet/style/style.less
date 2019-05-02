@@ -1,0 +1,233 @@
+@import '../../../css/foundation.less';
+
+.color-demo {
+    [class*="span"] {
+        min-height: 32px;
+
+    }
+    &-grid-header {
+        border-bottom: 2px solid @dark60;
+        vertical-align: middle;
+        [class*="span"] {
+            line-height: 32px;
+            font-weight: bold;
+            color: @dark90;
+        }
+    }
+
+    .order {
+        color: @grayLight;
+        .inline-block();
+        margin: 4px 0px;
+        padding: 6px;
+    }
+
+    [class*="cube"] {
+
+        height: 60px;
+        .inline-block();
+        margin: 4px 0px;
+        padding: 5px;
+
+    }
+    &-theme-row {
+        [class*="cube"] {
+            width: 128px;
+        }
+    }
+    &-brand-row {
+        [class*="cube"] {
+            color: @white;
+        }
+
+    }
+    code { //margin: 6px 3px;
+    }
+    .cube-CTA {
+        .f-CTA();
+    }
+
+    .cube-CTA-hover {
+        .f-CTA-hover();
+    }
+
+    .cube-CTA-active {
+        .f-CTA-active();
+    }
+
+    .cube-CTA-focus {
+        .f-CTA-focus();
+    }
+
+    .cube-CTA-disabled {
+        .f-CTA-disabled();
+    }
+
+    .cube-primary {
+        .f-primary();
+    }
+
+    .cube-primary-hover {
+        .f-primary-hover();
+    }
+
+    .cube-primary-active {
+        .f-primary-active();
+    }
+
+    .cube-primary-focus {
+        .f-primary-focus();
+    }
+
+    .cube-primary-disabled {
+        .f-primary-disabled();
+    }
+
+    .cube-common {
+        .f-common();
+    }
+
+    .cube-common-hover {
+        .f-common-hover();
+    }
+
+    .cube-common-active {
+        .f-common-active();
+    }
+
+    .cube-common-focus {
+        .f-common-focus();
+    }
+
+    .cube-common-disabled {
+        .f-common-disabled();
+    }
+
+    .cube-global-hover {
+        background-color: @globalHoverColor;
+        width: 58px;
+    }
+
+    .cube-global-focus {
+        background-color: @globalFocusColor;
+        width: 58px;
+        color: @white;
+    }
+
+    .cube-global-active {
+        background-color: @globalActiveColor;
+        width: 58px;
+        color: @white;
+    }
+
+    .cube-dark90 {
+        background: @dark90;
+        color: @white;
+    }
+    .cube-dark60 {
+        background: @dark60;
+        color: @white;
+    }
+
+    .cube-dark30 {
+        background: @dark30;
+        color: @white;
+    }
+    .cube-light90 {
+        background: @light90;
+        color: @black;
+    }
+    .cube-light60 {
+        background: @light60;
+        color: @black;
+    }
+
+    .cube-light30 {
+        background: @light30;
+        color: @black;
+    }
+
+    .cube-lightbg {
+        background: @lightBg;
+        color: @black;
+    }
+    &-notification-row {
+
+    }
+    .cube-confirmation {
+        background-color: @confirmationBgColor;
+        border: solid 1px @confirmationBorderColor;
+    }
+    .cube-alert {
+        background-color: @alertBgColor;
+        border: solid 1px @alertBorderColor;
+    }
+    .cube-error {
+        background-color: @errorBgColor;
+        border: solid 1px @errorBorderColor;
+    }
+    .cube-brand-small {
+        height: 75px;
+        .gradientBar(@brandGradientStart,@brandGradientEndSmall);
+    }
+    .cube-brand-middle {
+        height: 125px;
+        .gradientBar(@brandGradientStart,@brandGradientEndMiddle);
+    }
+    .cube-brand-large {
+        height: 250px;
+        .gradientBar(@brandGradientStart,@brandGradientEndLarge);
+    }
+    .cube-brand-full {
+        height: 350px;
+        .gradientBar(@brandGradientStart,@brandGradientEndFull);
+    }
+}
+
+.color-table-demo {
+    .cube {
+        .inline-block();
+        width: 20px;
+        height: 20px;
+    }
+}
+
+#icon-sprite {
+    span.item {
+        border: solid 1px #EEE;
+        background: #eee;
+        margin: 5px;
+        padding: 3px;
+        width: 273px;
+        min-height: 66px;
+        vertical-align: top;
+        display: inline-block;
+    }
+
+    code.code {
+        margin-top: 8px;
+        font-size: 12px;
+        display: block;
+    }
+}
+
+
+
+#side-nav {
+    position: fixed;
+}
+
+.dropdown-button-demo {
+    .f-popup {
+        top: 32px;
+        left: 0px;
+        width: 115px;
+    }
+    td {
+        position: relative;
+    }
+}
+
+section{
+    position: relative;
+}

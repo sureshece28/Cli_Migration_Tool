@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CheckBox</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+    <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+    <script type="text/javascript" src="../common/fn.js"></script>
+</head>
+<body  style="padding: 10px;">
+<div id="content">
+    <h1>CheckBox</h1>
+
+    <p>
+
+    </p>
+
+    <h2>DOM Definition</h2>
+    <label class="f-checkbox"><i class="f-checkbox-img"></i><input type="checkbox"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+    <p>
+        <br/>
+        <textarea type="html" class="hidden">
+            <label class="f-checkbox"><i class="f-checkbox-img"></i><input type="checkbox"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+        </textarea>
+    </p>
+    <h2>Status</h2>
+    <table class="f-table">
+        <thead>
+        <tr>
+            <th>Status</th>
+            <th>Demo</th>
+            <th>Code</th>
+            <th>CSS class</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Normal</td>
+            <td>
+                <label class="f-checkbox"><i class="f-checkbox-img"></i><input type="checkbox"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+
+            </td>
+            <td><textarea type="html" class="hidden">
+                <label class="f-checkbox"><i class="f-checkbox-img"></i><input type="checkbox"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+            </textarea></td>
+            <td><code>.f-checkbox</code></td>
+        </tr>
+        <tr>
+            <td>Checked</td>
+            <td>
+                <label class="f-checkbox" aria-checked="true"><i class="f-checkbox-img"></i><input type="checkbox"  value="option1" name="option[]" checked="checked"><span class='f-label'>Option1</span></label>
+
+            </td>
+            <td>
+                <textarea type="html" class="hidden">
+                    <label class="f-checkbox" aria-checked="true"><i class="f-checkbox-img"></i><input type="checkbox"  value="option1" name="option[]" checked="checked"><span class='f-label'>Option1</span></label>
+                </textarea>
+            </td>
+            <td><code>.f-checkbox[aria-checked="true"]</code></td>
+        </tr>
+        <tr>
+            <td>Disabled</td>
+            <td>
+                <label class="f-checkbox" aria-disabled="true"><i class="f-checkbox-img"></i><input type="checkbox"  value="option1" name="option[]" disabled="disabled"><span class='f-label'>Option1</span></label>
+            </td>
+            <td>
+                <textarea type="html" class="hidden">
+                    <label class="f-checkbox" aria-disabled="true"><i class="f-checkbox-img"></i><input type="checkbox"  value="option1" name="option[]" disabled="disabled"><span class='f-label'>Option1</span></label>
+                </textarea>
+            </td>
+            <td><code>.f-checkbox[aria-disabled="true"]</code></td>
+        </tr>
+        <tr>
+            <td>Check & Disabled</td>
+            <td>
+                <label class="f-checkbox" aria-disabled="true" aria-checked="true"><i class="f-checkbox-img"></i><input type="checkbox"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+            </td>
+            <td>
+                <textarea type="html" class="hidden">
+                    <label class="f-checkbox" aria-disabled="true" aria-checked="true"><i class="f-checkbox-img"></i><input type="checkbox"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+                </textarea>
+            </td>
+            <td><code>.f-checkbox[aria-checked="true"][aria-disabled="true"] </code></td>
+        </tr>
+
+        </tbody>
+    </table>
+    <h2>Group</h2>
+    <p>
+        <div class="f-checkbox-group">
+            <label class="f-checkbox"><i class="f-checkbox-img"></i><input type="checkbox"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+            <label class="f-checkbox"><i class="f-checkbox-img"></i><input type="checkbox"  value="option2" name="option[]"><span class='f-label'>Option2</span></label>
+            <label class="f-checkbox"><i class="f-checkbox-img"></i><input type="checkbox"  value="option2" name="option[]"><span class='f-label'>Option3</span></label>
+        </div>
+
+    </p>
+    <br/>
+    <textarea type="html" class="hidden">
+        <div class="f-checkbox-group">
+            <label class="f-checkbox"><i class="f-checkbox-img"></i><input type="checkbox"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+            <label class="f-checkbox"><i class="f-checkbox-img"></i><input type="checkbox"  value="option2" name="option[]"><span class='f-label'>Option2</span></label>
+            <label class="f-checkbox"><i class="f-checkbox-img"></i><input type="checkbox"  value="option2" name="option[]"><span class='f-label'>Option3</span></label>
+        </div>
+    </textarea>
+    <h2>Vertical Group</h2>
+    <p>
+    <div class="f-checkbox-group-vertical">
+        <label class="f-checkbox"><i class="f-checkbox-img"></i><input type="checkbox"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+        <label class="f-checkbox"><i class="f-checkbox-img"></i><input type="checkbox"  value="option2" name="option[]"><span class='f-label'>Option2</span></label>
+        <label class="f-checkbox"><i class="f-checkbox-img"></i><input type="checkbox"  value="option2" name="option[]"><span class='f-label'>Option3</span></label>
+    </div>
+    </p>
+    <br/>
+    <textarea type="html" class="hidden">
+        <div class="f-checkbox-group-vertical">
+            <label class="f-checkbox"><i class="f-checkbox-img"></i><input type="checkbox"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+            <label class="f-checkbox"><i class="f-checkbox-img"></i><input type="checkbox"  value="option2" name="option[]"><span class='f-label'>Option2</span></label>
+            <label class="f-checkbox"><i class="f-checkbox-img"></i><input type="checkbox"  value="option2" name="option[]"><span class='f-label'>Option3</span></label>
+        </div>
+    </textarea>
+</div>
+<script type="text/javascript">
+    setTimeout(prettyCode,500)
+</script>
+</body>
+</html>

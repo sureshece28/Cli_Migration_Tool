@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Combo Box</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+</head>
+<body>
+<div id='mvc-container'></div>
+<script type="text/javascript">
+    fruit.ready(function () {
+        var cbx = new fruit.ui.ComboBox({
+            items:[
+                {text:'Alabama'},
+                {text:'Alaska'},
+                {text:'American'},
+                {text:'Arizona'},
+                {text:'Arkansas'},
+                {text:'Armed Forces Europe'},
+                {text:'Armed Forces Pacific'},
+                {text:'Armed Forces the Americas'},
+                {text:'California'},
+                {text:'Colorado'},
+                {text:'Connecticut'},
+                {text:'Delaware'}
+            ],
+            placeHolder:"Please input"
+
+        });
+        fruit.Application.load(cbx);
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+    <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+</head>
+<style type="text/css">
+    dd {
+        color: blue;
+    }
+</style>
+<body>
+</body>
+<script type="text/javascript">
+
+var abu = {
+    name:'Abu',
+    role:'designer',
+    link:'http://wwwin-tools.cisco.com/dir/details/aaikepae',
+    expertise:['Css', 'Php', 'Javascript', 'Objective-C']
+};
+
+var kai = {
+    name:'Liu Kai',
+    role:'developer',
+    link:'http://wwwin-tools.cisco.com/dir/details/aaikepae',
+    expertise:['Java', 'Css', 'Javascript', 'Design Patterns']
+};
+
+var fei = {
+    name:'Zheng Fei',
+    role:'developer',
+    link:'http://wwwin-tools.cisco.com/dir/details/feizheng',
+    expertise:['Css', 'Php', 'Javascript']
+};
+
+
+var model = {
+    name:{
+        firstName:'Mars',
+        lastName:'Wu',
+        alias:'taojwu'
+    },
+    location:{
+        country:'China',
+        city:'Shanghai',
+        district:'Pudong',
+        address:{
+            primary:'Block C of Keji Building',
+            secondary:'Caohejing Hi-Tech Park 900 Yishan Lu Street'
+        }
+    },
+    workingYears:5,
+    expertise:[
+        {
+            name:'C#',
+            frozen:true
+        },
+        {
+            name:'css',
+            frozen:false
+        },
+        {
+            name:'javascript',
+            frozen:false
+        }
+    ],
+    contacts:[abu, kai]
+};
+
+fruit.define('demo.sub', {
+    extend:'fruit.ui.Component',
+    view:{
+        tag:'span',
+        content:{
+            //model:'{aaa}',
+            tag:'span',
+            attr:{
+                'class':'subspan'
+            }
+        }
+    }
+});
+
+fruit.define('demo.MyViewModel', {
+    extend:'fruit.ui.data.ViewModel',
+    properties:{
+        json:{
+            dependencies:[
+                '*',
+            ],
+            get:function () {
+                return js_beautify(JSON.stringify(this.model));
+            }
+        }
+    }
+});
+
+var vm = new demo.MyViewModel(model);
+
+fruit.define('demo.Main', {
+    extend:'fruit.ui.Component',
+    view:{
+        tag:'div',
+        attr:{
+            width:600
+        },
+        content:[
+            {
+                attr:{
+                    style:{
+                        float:'left'
+                    }
+                },
+                content:[
+//                    {
+//                        tag:'fieldset',
+//                        content:{
+//                            name:'dbtnActions',
+//                            type:'DropdownButton',
+//                            options:{
+//                                text:'My Actions',
+//                                items:'{actions}'
+//                            }
+//                        }
+//                    },
+                    {
+                        tag:'fieldset',
+                        model:'{name}',
+                        content:[
+                            {
+                                tag:'legend',
+                                content:'<h4>Name</h4>'
+                            },
+                            {
+                                tag:'p',
+                                content:[
+                                    {
+                                        content:'First: '
+                                    },
+                                    {
+                                        type:'TextBox',
+                                        options:{
+                                            text:'{firstName}'
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                tag:'p',
+                                content:[
+                                    {
+                                        content:'Last: '
+                                    },
+                                    {
+                                        type:'TextBox',
+                                        options:{
+                                            text:'{lastName}'
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                tag:'p',
+                                content:[
+                                    {
+                                        content:'Alias: '
+                                    },
+                                    {
+                                        type:'TextBox',
+                                        options:{
+                                            text:'{alias}'
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        tag:'fieldset',
+                        model:'{location}',
+                        content:[
+                            {
+                                tag:'legend',
+                                content:'<h4>Location</h4>'
+                            },
+                            {
+                                tag:'p',
+                                content:[
+                                    {
+                                        content:'State: '
+                                    },
+                                    {
+                                        type:'TextBox',
+                                        options:{
+                                            text:'{country}'
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                tag:'p',
+                                content:[
+                                    {
+                                        content:'City: '
+                                    },
+                                    {
+                                        type:'TextBox',
+                                        options:{
+                                            text:'{city}'
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                tag:'p',
+                                content:[
+                                    {
+                                        content:'District: '
+                                    },
+                                    {
+                                        type:'TextBox',
+                                        options:{
+                                            text:'{district}'
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                tag:'fieldset',
+                                model:'{address}',
+                                content:[
+                                    {
+                                        tag:'legend',
+                                        content:'<h5>Address</h5>'
+                                    },
+                                    {
+                                        content:'Address 1: '
+                                    },
+                                    {
+                                        type:'TextBox',
+                                        options:{
+                                            text:'{primary}'
+                                        }
+                                    },
+                                    {
+                                        content:'Address 2: '
+                                    },
+                                    {
+                                        type:'TextBox',
+                                        options:{
+                                            text:'{secondary}'
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        tag:'fieldset',
+                        content:[
+                            {
+                                tag:'legend',
+                                content:'<h4>Experience</h4>'
+                            },
+                            {
+                                content:'Working Years:'
+                            },
+                            {
+                                tag:'p',
+                                content:{
+                                    type:'NumberSpinner',
+                                    options:{
+                                        value:'{workingYears}'
+                                    }
+                                }
+                            },
+                            {
+                                model:'{expertise}',
+                                template:{
+                                    tag:'p',
+                                    content:[
+                                        {
+                                            type:'TextBox',
+                                            attr:{
+                                                style:{
+                                                    'font-size':'1.2em',
+                                                    color:'green'
+                                                }
+                                            },
+                                            options:{
+                                                text:'{name}',
+                                                readonly:'{frozen}'
+                                            }
+                                        },
+                                        {
+                                            tag:'br'
+                                        },
+                                        {
+                                            type:'CheckBox',
+                                            options:{
+                                                text:'Hide me!',
+                                                checked:'{frozen}'
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        tag:'fieldset',
+                        name:'contactList',
+                        content:[
+                            {
+                                tag:'legend',
+                                content:'<h4>Contacts</h4>'
+                            },
+                            {
+                                model:'{contacts}',
+                                template:{
+                                    tag:'fieldset',
+                                    content:[
+                                        {
+                                            tag:'a',
+                                            content:'{name}',
+                                            attr:{
+                                                href:'{link}',
+                                                style:{
+                                                    'font-size':'1.2em'
+                                                }
+                                            }
+                                        },
+                                        {
+                                            tag:'span',
+                                            content:' ('
+                                        },
+                                        {
+                                            tag:'span',
+                                            content:'{role}'
+                                        },
+                                        {
+                                            tag:'span',
+                                            content:') '
+                                        },
+                                        {
+                                            tag:'ul',
+                                            model:'{expertise}',
+                                            template:{
+                                                tag:'li',
+                                                attr:{
+                                                    style:{
+                                                        color:'green'
+                                                    }
+                                                },
+                                                content:'{@self}'
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                tag:'pre',
+                attr:{
+                    style:{
+                        'margin-left':'300px',
+                        'color':'blue'
+                    }
+                },
+                content:'{json}'
+            }
+        ]
+    },
+    triggers:{
+        event:{
+            execute:{
+                source:'dbtnActions',
+                action:'__dbtnActions_Command'
+            },
+            click:{
+                source:'contactList',
+                action:'__onClick'
+            }
+        }
+    },
+    methods:{
+        __dbtnActions_Command:function (sender, args) {
+            var command = args.item.getText();
+
+            if (command == 'Add Contact') {
+                var name = prompt('Contact Name', 'Contact Name');
+                this.model.appendItem('contacts', {
+                    name:name,
+                    role:'developer',
+                    link:'',
+                    expertise:[]
+                })
+            }
+            else if (command == 'Add Expertise') {
+                var expertise = prompt('Expertise', 'Expertise');
+                this.model.appendItem('expertise', {
+                    name:expertise,
+                    frozen:false
+                })
+            }
+        },
+        __onClick:function (sender, arg) {
+            this.model.removeItem('contacts', arg.target.getModel())
+        }
+    }
+});
+
+fruit.ready(function () {
+    var main = new fruit.ui.createComponent('demo.Main');
+    fruit.Application.load(main, 'mvc-container');
+    main.setModel(vm);
+
+});
+
+</script>
+</html>

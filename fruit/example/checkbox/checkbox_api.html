@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>checkbox</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+    fruit.ready(function () {
+        var checkbox = new fruit.ui.CheckBox({
+            text:'CheckBox'
+        });
+
+        checkbox.on('change', log);
+
+        function log(sender, event) {
+            console.log(event.type);
+        };
+
+        checkbox.renderTo();
+    });
+</script>
+</body>
+</html>

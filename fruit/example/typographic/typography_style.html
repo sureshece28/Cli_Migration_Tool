@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Typographic</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+    <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+
+    <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+    <script type="text/javascript" src="../common/fn.js"></script>
+</head>
+<div class="f-container f-width9">
+<h1>Typographic</h1>
+<p>
+    @font-face details <br/>
+    •Framework needs to ship with Cisco Sans Regular and Cisco Sans Extra Light Font kits. <br/>
+    •All custom fonts need to degrade to Arial, and then to Sans-Serif <br/>
+</p>
+
+<h1>Super Classes</h1>
+<table class="f-table">
+    <tr>
+        <th>name</th>
+        <th>usage</th>
+        <th>definition</th>
+    </tr>
+    <tr>
+        <td>.white</td>
+        <td><span style="color: #fff; background: #09A2E0;padding: 4px;">Selected states</span></td>
+        <td>Color : #FFF</td>
+    </tr>
+    <tr>
+        <td>.inactive</td>
+        <td><span style="color: #ccc;">Inactive controls</span></td>
+        <td>Color : #CCC</td>
+    </tr>
+    <tr>
+        <td>.black</td>
+        <td><span style="color: #000;">Inactive controls</span></td>
+        <td>Color : #000</td>
+    </tr>
+    <tr>
+        <td>.error</td>
+        <td><span style="color: #D30000;">Inline error handling</span></td>
+        <td>Color : #D30000</td>
+    </tr>
+</table>
+
+<h1 class="clearfix">Basic Typographic Styles</h1>
+<table class="f-table">
+    <thead>
+    <tr>
+        <th>name</th>
+        <th>example</th>
+        <th>usage</th>
+        <th>definition</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>portlet-large</td>
+        <td class="f-col4">
+            <div class="portlet-large">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pharetra, libero et fermentum ultrices, est ligula pellentesque nunc, sit amet porta felis nunc non sapien. In quis hendrerit magna.</div>
+        </td>
+        <td>Large Portlet (widget) Header</td>
+        <td>Font-Family : Cisco Sans Extra Light <br/>
+            Font Size : 32 <br/>
+            Line Height : 36 <br/>
+            Color : #333333
+        </td>
+    </tr>
+    <tr>
+        <td>portlet-small</td>
+        <td class="f-col4">
+            <div class="portlet-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pharetra, libero et fermentum ultrices, est ligula pellentesque nunc, sit amet porta felis nunc non sapien. In quis hendrerit magna.</div>
+        </td>
+        <td>Small Portlet
+            (widget) Header
+        </td>
+        <td>Font-Family : Cisco Sans Extra Light <br/>
+            Font Size : 24 <br/>
+            Line Height : 30 <br/>
+            Color : #333333
+        </td>
+    </tr>
+    <tr>
+        <td>H1</td>
+        <td class="f-col4"><h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pharetra, libero et fermentum ultrices, est ligula pellentesque nunc, sit amet porta felis nunc non sapien. In quis hendrerit magna. </h1></td>
+        <td>Scope title,
+            Discussion title
+        </td>
+        <td>Font-Family : Cisco Sans Extra Light <br/>
+            Font Size : 36 <br/>
+            Line Height : 42 <br/>
+            Color : #333333
+        </td>
+    </tr>
+    <tr>
+        <td>h2</td>
+        <td class="f-col4"><h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pharetra, libero et fermentum ultrices, est ligula pellentesque nunc, sit amet porta felis nunc non sapien. In quis hendrerit magna. </h2></td>
+        <td>Directory headers <br/>
+            Content headers
+        </td>
+        <td>Font-Family : Cisco Sans Extra Light <br/>
+            Font Size : 32 <br/>
+            Line Height : 32 <br/>
+            Color : #333333
+        </td>
+    </tr>
+    <tr>
+        <td>h3</td>
+        <td class="f-col4"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pharetra, libero et fermentum ultrices, est ligula pellentesque nunc, sit amet porta felis nunc non sapien. In quis hendrerit magna. </h3></td>
+        <td></td>
+        <td>Font-Family : Cisco Sans Reg <br/>
+            Font Size : 18 <br/>
+            Line Height : 24 <br/>
+            Color : #000000
+        </td>
+    </tr>
+    <tr>
+        <td>h4</td>
+        <td class="f-col4"><h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pharetra, libero et fermentum ultrices, est ligula pellentesque nunc, sit amet porta felis nunc non sapien. In quis hendrerit magna. </h4></td>
+        <td>Feed post title</td>
+        <td>Font-Family : Arial <br/>
+            Font Size : 16 <br/>
+            Line Height : <br/>
+            Color : #000000
+        </td>
+    </tr>
+    <tr>
+        <td>h5</td>
+        <td class="f-col4"><h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pharetra, libero et fermentum ultrices, est ligula pellentesque nunc, sit amet porta felis nunc non sapien. In quis hendrerit magna. </h5></td>
+        <td>Left column filters <br/>
+            In page tabs
+        </td>
+        <td>Font-Family : Arial <br/>
+            Font Size : 14 <br/>
+            Color : #333333
+        </td>
+        <br/>
+    </tr>
+    <tr>
+        <td>h6</td>
+        <td class="f-col4"><h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pharetra, libero et fermentum ultrices, est ligula pellentesque nunc, sit amet porta felis nunc non sapien. In quis hendrerit magna. </h6></td>
+        <td>Portlet content headers, <br/>
+            Filters, <br/>
+            MyView tabs,
+        </td>
+        <td>Font-Family : Arial <br/>
+            Font Size : 13 <br/>
+            Line Height : <br/>
+            Font Weight : bold <br/>
+            Color : #666666
+        </td>
+    </tr>
+    <tr>
+        <td>default</td>
+        <td class="f-col4">
+            <div class="default">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pharetra, libero et fermentum ultrices, est ligula pellentesque nunc, sit amet porta felis nunc non sapien. In quis hendrerit magna.</div>
+        </td>
+        <td>Feed content</td>
+        <td>Font-Family : Arial <br/>
+            Font Size : 13 <br/>
+            Line Height : 18 <br/>
+            Color : #333333
+        </td>
+    </tr>
+    <tr>
+        <td>default-tight</td>
+        <td class="f-col4">
+            <div class="default-tight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pharetra, libero et fermentum ultrices, est ligula pellentesque nunc, sit amet porta felis nunc non sapien. In quis hendrerit magna.</div>
+        </td>
+        <td>Table content</td>
+        <td>Font-Family : Arial <br/>
+            Font Size : 12 <br/>
+            Line Height : 15 <br/>
+            Color : #333333
+        </td>
+    </tr>
+    <tr>
+        <td>meta</td>
+        <td class="f-col4">
+            <div class="meta">August 24, 2011</div>
+        </td>
+        <td>Small Portlet
+            Header
+        </td>
+        <td>Font-Family : Arial <br/>
+            Font Size : 12 <br/>
+            Color : #999999
+        </td>
+    </tr>
+    <tr>
+        <td>meta-tight</td>
+        <td class="f-col4">
+            <div class="meta-tight">August 24, 2011</div>
+        </td>
+        <td>Post title</td>
+        <td>Font-Family : Arial <br/>
+            Font Size : 11 <br/>
+            Line Height : 15 <br/>
+            Color : #999999
+        </td>
+    </tr>
+    <tr>
+        <td>InputHelp-huge</td>
+        <td class="f-col4">
+            <div class="inputHelp-huge">The Lazy Brown Fox Jumps Over...</div>
+        </td>
+        <td>Post title</td>
+        <td>Font-Family : Cisco Sans Extra Light <br/>
+            Font Size : 36 <br/>
+            Line Height : 42 <br/>
+            Color : #999
+        </td>
+    </tr>
+    <tr>
+        <td>InputHint-big</td>
+        <td class="f-col4">
+            <div class="inputHint-big">Search all communities</div>
+        </td>
+        <td>Big input fields</td>
+        <td>Font-Family : Arial <br/>
+            Font Size : 18 <br/>
+            Color : #999999
+        </td>
+    </tr>
+    <tr>
+        <td>inputHint-small</td>
+        <td class="f-col4">
+            <div class="inputHint-small">Comment on John’s post</div>
+        </td>
+        <td>Large Portlet Header</td>
+        <td>Font-Family : Arial <br/>
+            Font Size : 14 <br/>
+            Color : #999999
+        </td>
+    </tr>
+    </tbody>
+</table>
+<h1>Links</h1>
+<table class="f-table">
+    <thead>
+    <tr>
+        <th>style</th>
+        <th>example</th>
+        <th>usage</th>
+        <th>definition</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>grey a:link <br/>
+            grey a:hover
+        </td>
+        <td class="f-col4"><a href="#" class="grey">Link</a>
+            <textarea type="html" class="hidden"><a href="#" class="grey">Link</a></textarea>
+        </td>
+        <td>Secondary link style where link is primary focus</td>
+        <td>Default : #666666 <br/>
+            Hover : #0086C0 <br/>
+            Decoration : none
+        </td>
+    </tr>
+    <tr>
+        <td>black a:link <br/>
+            black a:hover
+        </td>
+        <td class="f-col4"><a href="#" class="black">Link</a>
+            <textarea type="html" class="hidden">
+                <a href="#" class="black">Link</a>
+            </textarea></td>
+        <td>Post titles in the feed - H3</td>
+        <td>Default : #000000 <br/>
+            Hover : #0086C0 <br/>
+            Decoration : none
+        </td>
+    </tr>
+    <tr>
+        <td>blue a:link <br/>
+            blue a:hover
+        </td>
+        <td class="f-col4"><a href="#">Link</a><textarea type="html" class="hidden"><a href="#">Link</a></textarea></td>
+        <td>Default a style</td>
+        <td>Default : #0086C0 <br/>
+            Hover : #0086C0 <br/>
+            Decoration : Underline
+        </td>
+    </tr>
+    <tr>
+        <td>bright a:link <br/>
+            bright a:hover
+        </td>
+        <td class="f-col4"><a href="#" class="bright">Link</a><textarea type="html" class="hidden"><a href="#" class="bright">Link</a></textarea></td>
+        <td>links on dark bg such as quad panel and tool tips</td>
+        <td>Default : #13ACDC <br/>
+            Hover : #13ACDC <br/>
+            Decoration : Underline
+        </td>
+    </tr>
+    <tr>
+        <td>nav-main</td>
+        <td class="f-col4">
+            <div class="f-BrandGradinet" style="line-height: 50px; padding-left: 2em;">
+                <a href="#" class="f-nav-main">My View</a>
+                <a href="#" class="f-nav-main">My Library</a>
+                <a href="#" class="f-nav-main">People</a>
+                <a href="#" class="f-nav-main">Communities</a>
+            </div>
+        </td>
+        <td>Primary navigation</td>
+        <td>Font-Family : Arial <br/>
+            Font Size : 15 <br/>
+            Color : #ffffff
+        </td>
+    </tr>
+    <tr>
+        <td>nav-userName</td>
+        <td class="f-col4">
+            <div class="f-BrandGradinet" style="line-height: 50px; padding-left: 2em;"><a href="#" class="f-nav-userName">Srikanth Bhamidipati</a></div>
+        </td>
+        <td>user name in nav</td>
+        <td>Font-Family : Arial <br/>
+            Font Size : 14 <br/>
+            Color : #ffffff
+        </td>
+    </tr>
+    <tr>
+        <td>nav-userPresence</td>
+        <td class="f-col4">
+            <div class="f-BrandGradinet" style="line-height: 50px; padding-left: 2em;"><a href="#" class="f-nav-userPresence">Available</a></div>
+        </td>
+        <td>user presence in nav</td>
+        <td>Font-Family : Arial <br/>
+            Font Size : 12 <br/>
+            Color : #ffffff
+        </td>
+    </tr>
+    <tr>
+        <td>breadcrumbs</td>
+        <td class="f-col4">
+            <div class="f-breadcrumbs"><a href="" class="f-breadcrumbs-item">My Library</a><span class="f-breadcrumbs-splitter">/</span><a href="#" class="f-breadcrumbs-item">Technology</a><span class="f-breadcrumbs-splitter">/</span><a href="#" class="f-breadcrumbs-current">Typographic</a></div>
+        </td>
+        <td>breadcrumbs</td>
+        <td>Font-Family : Arial <br/>
+            Font Size : 13 <br/>
+            Color : #999999 <br/>
+            Decoration : Underline
+        </td>
+    </tr>
+    </tbody>
+</table>
+</div>
+</body>
+<script type="text/javascript">
+   // setTimeout(prettyCode, 500)
+</script>
+</html>

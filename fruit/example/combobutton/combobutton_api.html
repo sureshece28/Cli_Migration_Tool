@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Combo Button</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+</head>
+<body style="height:1000px">
+<div id='mvc-container'></div>
+<div style="height:600px;background-color: red;float:left;"></div>
+<script type="text/javascript">
+    fruit.ready(function () {
+        var cbn = new fruit.ui.ComboButton({
+            text:'test',
+//        theme:'primary',
+            items:[
+                {text:"Item 1"},
+                {text:"Item 2"},
+                {text:"Item 3"}
+            ]
+        });
+
+        cbn.on('click', function (sender, event) {
+            //args.item.getAttribute('text')
+            console.log('click!');
+        });
+
+        cbn.on('execute', function (sender, event) {
+            //args.item.getAttribute('text')
+            console.log('execute!');
+        });
+
+        cbn.renderTo();
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Manager</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    var model = [
+        {
+            'firstName':'Lisa',
+            'lastName':'Ao',
+            'age':32,
+            'male':false,
+            "email":"lisa@simpsons.com",
+            "phone":"555-111-1224"
+        },
+        {
+            'firstName':'Bart',
+            'lastName':'Pa ',
+            'age':25,
+            'male':true,
+            "email":"bart@simpsons.com",
+            "phone":"555-222-1234"
+        },
+        {
+            'firstName':'Homer',
+            'lastName':'Pai ',
+            'age':45,
+            'male':false,
+            "email":"home@simpsons.com",
+            "phone":"555-222-1244"
+        },
+        {
+            'firstName':'Marge',
+            'lastName':'Pih ',
+            'age':34,
+            'male':true,
+            "email":"marge@simpsons.com",
+            "phone":"555-222-1235"
+        },
+        {
+            'firstName':'Charles',
+            'lastName':'Bein',
+            'age':35,
+            'male':false,
+            "email":"charles@simpsons.com",
+            "phone":"555-222-2342"
+        },
+        {
+            'firstName':'Bob',
+            'lastName':'Poo ',
+            'age':45,
+            'male':false,
+            "email":"bob@simpsons.com",
+            "phone":"555-211-2342"
+        },
+        {
+            'firstName':'Charles',
+            'lastName':'Bein',
+            'age':35,
+            'male':false,
+            "email":"John@simpsons.com",
+            "phone":"555-2134-2341"
+        },
+        {
+            'firstName':'Thomas',
+            'lastName':'Li',
+            'age':33,
+            'male':false,
+            "email":"thomas@simpsons.com",
+            "phone":"344-222-2412"
+        },
+        {
+            'firstName':'Henry',
+            'lastName':'Cheng',
+            'age':21,
+            'male':false,
+            "email":"henry@simpsons.com",
+            "phone":"555-222-1244"
+        },
+        {
+            'firstName':'Benjamin',
+            'lastName':'Chi ',
+            'age':32,
+            'male':true,
+            "email":"benjamin@simpsons.com",
+            "phone":"555-222-1241"
+        },
+        {
+            'firstName':'Melody',
+            'lastName':'Teng',
+            'age':50,
+            'male':false,
+            "email":"melody@simpsons.com",
+            "phone":"555-222-1230"
+        },
+        {
+            'firstName':'Debbie',
+            'lastName':'Chu',
+            'age':31,
+            'male':true,
+            "email":"debbie@simpsons.com",
+            "phone":"555-222-8765"
+        },
+        {
+            'firstName':'Lisa',
+            'lastName':'Tang',
+            'age':35,
+            'male':false,
+            "email":"lisa@simpsons.com",
+            "phone":"555-222-4554"
+        },
+        {
+            'firstName':'Yvonne',
+            'lastName':'Ti ',
+            'age':24,
+            'male':true,
+            "email":"yvonne@simpsons.com",
+            "phone":"555-222-1282"
+        },
+        {
+            'firstName':'Robert',
+            'lastName':'Bein',
+            'age':25,
+            'male':true,
+            "email":"robert@simpsons.com",
+            "phone":"555-222-1241"
+        },
+        {
+            'firstName':'Carl',
+            'lastName':'Tiao',
+            'age':26,
+            'male':false,
+            "email":"carl@simpsons.com",
+            "phone":"555-222-0987"
+        },
+        {
+            'firstName':'Scott',
+            'lastName':'Ting',
+            'age':45,
+            'male':false,
+            "email":"scott@simpsons.com",
+            "phone":"555-222-1324"
+        },
+        {
+            'firstName':'Eddy',
+            'lastName':'Tung',
+            'age':69,
+            'male':false,
+            "email":"eddy@simpsons.com",
+            "phone":"555-222-0001"
+        },
+        {
+            'firstName':'Nancy',
+            'lastName':'Tuan ',
+            'age':26,
+            'male':false,
+            "email":"nancy@simpsons.com",
+            "phone":"555-222-8861"
+        },
+        {
+            'firstName':'Jane',
+            'lastName':'Tung',
+            'age':30,
+            'male':true,
+            "email":"Jane@simpsons.com",
+            "phone":"555-222-2342"
+        }
+    ];
+    var vmc = new fruit.ui.data.ViewModelCollection(model);
+
+    document.write('<b>average("age"): </b>' + vmc.average("age") + '</br>');
+    document.write('<b>max("age"): </b>' + vmc.max("age") + '</br>');
+    document.write('<b>min("age"): </b>' + vmc.min("age") + '</br>');
+    document.write('<b>sum("age"): </b>' + vmc.sum("age") + '</br>');
+    document.write('<b>any(function(item){return item.getValue("age")>50}): </b>' + vmc.any(function (item) {
+        return item.getValue("age") > 50;
+    }) + '</br>');
+    document.write('<b>any(function(item){return item.getValue("age")>80}): </b>' + vmc.any(function (item) {
+        return item.getValue("age") > 80;
+    }) + '</br>');
+    document.write('<b>all(function(item){return item.getValue("age")>50}): </b>' + vmc.all(function (item) {
+        return item.getValue("age") > 50;
+    }) + '</br>');
+    document.write('<b>all(function(item){return item.getValue("age")>10}): </b>' + vmc.all(function (item) {
+        return item.getValue("age") > 10;
+    }) + '</br>');
+    document.write('<b>count(function(item){return item.getValue("age")>50}): </b>' + vmc.count(function (item) {
+        return item.getValue("age") > 40;
+    }) + '</br>');
+    document.write('<b>count(function(item){return item.getValue("male")}): </b>' + vmc.count(function (item) {
+        return item.getValue("male");
+    }) + '</br>');
+    document.write('<b>first(function(item){return item.getValue("male")}): </b>' + JSON.stringify(vmc.first(+'</br>').model) + '</br>');
+    document.write('<b>first(function(item){return item.getValue("male")}): </b>' + JSON.stringify(vmc.first(function (item) {
+        return item.getValue("male");
+    }).model) + '</br>');
+    document.write('<b>where(function(item){return item.getValue("male")}): </b>' + vmc.where(function (item) {
+        return item.getValue("age") > 45;
+    }) + '</br>');
+    document.write('<b>groupBy("age"): </b>' + vmc.groupBy("age") + '</br>');
+    document.write('<b>select("email"): </b>' + JSON.stringify(vmc.select("email")) + '</br>');
+    document.write('<b>select(function(item){return item.getValue("firstName")+" "+item.getValue("lastName");}): </b>' + JSON.stringify(vmc.select(function (item) {
+        return item.getValue("firstName") + " " + item.getValue("lastName");
+    })) + '</br>');
+</script>
+</body>
+</html>

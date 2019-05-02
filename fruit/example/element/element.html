@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Element</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+
+</head>
+<body>
+
+<div id="test1">Test</div>
+
+<ul id="list1" style="width:100px; color:#f00; height:200px;">
+    <!--我是注释1-->
+    <li id="L1" style="color:#ff0; font-weight: 800;height:50px;">列表内容1</li>
+    <!--我是注释2-->
+    <li id="L2" style="color:#000;">列表内容2</li>
+    <li id="L3" style="color:#00f;">列表内容3</li>
+    <li id="L4">列表内容4</li>
+    <li id="L5">列表内容5</li>
+</ul>
+<ul id="list2"></ul>
+
+<p id="tt">this is p!</p>
+<a id="ttA" href="#1">this is p!</a>
+
+<p>
+    <input type="checkbox" name="" id="tck">
+</p>
+
+
+<div id="parent1" class="div1 div1-a div1-b" style="position:relative; left: 100px; top:200px; width: 400px; height:400px; border:1px solid #000;">
+    <div id="son1" style=" position:absolute; margin-left: 20px; margin-top:10px; padding: 4px 0 0 100px; left: 30px; top:40px; width: 100px; height: 100px; border:1px solid #f00;">
+        Test:offset/position method!
+    </div>
+</div>
+
+<script type="text/javascript">
+    var $=function(id){ return document.getElementById(id)};
+    var test1 = fruit.dom.byId("test1");
+    var createDom=fruit.dom.create('<td>adfsafii</td>');
+    var son1 = fruit.dom.byId("son1");
+    var list1 = fruit.dom.byId("list1");
+</script>
+</body>
+</html>

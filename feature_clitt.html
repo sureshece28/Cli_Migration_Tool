@@ -1,0 +1,122 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="fruit/css/futurama.css">
+	<link href="fruit/3rdparty/prettify.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<script type="text/javascript" src="fruit/js/fruit.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/main.js"></script>
+	<script>
+		function myFunction() {
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "file");
+    document.body.appendChild(x);
+}
+</script>
+	<style>
+		
+		#link {
+    			font-family: "Tahoma",arial,sans-serif;
+    			color: white;
+    			
+   
+    		}
+		body { 
+    background-color: 
+}
+		</style>
+</head>
+<body>
+	<center>
+        <form name="form_map" id=form_hunt action="featurehuntt.cgi" method="post" target="theiframe">
+        	
+      <br>
+      <br>
+      <br>
+      
+        <table >
+	<tr>
+		
+	<td><center><b>IOS</b></center></td>
+	<td></td>
+       <td><center><b>Polaris</b></center></td>
+</tr>
+<tr>        <td><textarea id="myTextArea" name="comment" style="font-family:serif;font:36px" rows="19" cols="50">
+
+</textarea></td>
+
+
+<td><input class="f-btn f-btn-CTA" id="search_button" type="submit"  value="Convert"></td>
+<td bgcolor="white" width="375" height="77" >
+	<iframe style="width:450px;height:350px;" frameborder='1' id="theiframe" style="font-family:serif;font:14px" name="theiframe" ></iframe></td>
+</tr>
+
+</table>	
+
+ 
+                </form>
+              </center>
+        </div>
+        
+<!--       <center> <form action="/action_page.php">
+  <input type="file" name="pic" accept="file_extension">
+<input type="submit"> </center>
+
+
+-->
+
+</form>
+
+
+
+
+<script> $( "#myTextArea1" ).load( "input.txt" ); </script>
+
+<script>$('#input.txt').load("theiframe");</script>
+
+<script>$("#theiframe").contents().find("a").css("background-color","#BAD.html");</script>
+
+<table >
+<tr >
+	<td width="20%"></td>
+    <td>Select a File to Load:</td>
+    <td><input class="f-btn f-btn-CTA" type="file" id="fileToLoad" onclick="loadFileAsText()"></input></td>
+    <td><button class="f-btn f-btn-CTA" onclick="loadFileAsText()">Load file</button><td>
+</tr></table>
+<form>
+<script>
+function loadFileAsText(){
+  var fileToLoad = document.getElementById("fileToLoad").files[0];
+
+  var fileReader = new FileReader();
+  fileReader.onload = function(fileLoadedEvent){
+      var textFromFileLoaded = fileLoadedEvent.target.result;
+      document.getElementById("myTextArea").value = textFromFileLoaded;
+  };
+
+  fileReader.readAsText(fileToLoad, "UTF-8");
+}
+</script>
+
+<a  href="http://wwwin-home.cisco.com/~kanbunat/starcli/clihunt/foo.txt" download="output.txt">
+  <img style="position:absolute;right:300px;" border="0" src="http://www.rkm-research.com/wp-content/uploads/2015/12/Download-Button.png" width="120" height="40">
+</a>
+
+
+</form>
+</script>
+
+
+
+
+<script>
+var data = document.getelementbyid("theiframe").html();
+var url = 'write.php';
+$.ajax({url: url,type:"POST",data: data});
+</script>
+
+
+
+
+</body>
+</html>

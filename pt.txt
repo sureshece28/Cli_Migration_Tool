@@ -1,0 +1,9 @@
+qwwwwwwww - test
+ip ospf - test
+pokokoko - test
+pokokoko - test
+pokokoko - test
+ - test
+ip osp 100 - test
+test platform debugger - test
+ip ospf - test

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<link rel="stylesheet" type="text/css" href="fruit/css/futurama.css">
+	<link href="fruit/3rdparty/prettify.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<script type="text/javascript" src="fruit/js/fruit.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="./js/main.js"></script>
+
+ <script>
+    var $container = $(".radiobox_item_type");
+$container.on("click","input[type='radio']", function(){
+$container.find('input[type="radio"]').each(function(){$(this).prop('checked',false);});
+$(this).prop('checked',true);    
+    
+});
+    $(document).ready(function () {
+  $('input[type=radio]').prop('checked', false);
+  $('input[type=radio]:first').prop('checked', true)
+
+  $('input[type=radio]').click(function (event) {
+    $('input[type=radio]').prop('checked', false);
+    $(this).prop('checked', true);
+
+    //event.preventDefault();
+  });
+});
+
+
+    
+    
+    </script>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </head>
+   
+    <style>
+    	body {
+    	
+    	}
+    	</style>
+    <body>
+	<div >
+
+	</div>
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div id="add_cli_main" align="center">
+	     <form name="hunt" id="form_hunt" action="act.php" method="post">
+	    <br>
+	    
+	    
+	     	<table><tr><b>IOS</b></tr>
+	  	<tr><td><b>Enter the CLI : </b></i></td>
+
+	  <td>
+	  	<textarea id="search" name="ios" style="font-family:serif;font:36px" rows="10" cols="50" required>
+
+</textarea>
+	  	
+	  	
+	  	
+	  	
+	  	</td>
+	  
+	  
+</tr>
+	  	
+
+	 
+	 
+	 
+		<tr><td>
+			
+	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	    Mode : <b></td>
+	    <td>
+	    	
+		<input type="radio" id="Exec" name="radio_be" value="Exec"> Exec 
+		 <input type="radio" id="config" name="radio_bc" value="config" > Config
+  <input type="radio" id="test" name="radio_bt" value="test" > Test </b>
+	    <small>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	    	 <input class="f-btn f-btn-CTA" id="search_button" type="submit" name="Add_new_map" value="Submit">
+                
+                
+	    	</td></tr>
+</table>
+
+
+    </form>
+
+
+
+
+
+
+
+
+    <form name="hunt" id="form_hunt" action="act.php" method="post">
+	    <br>
+	     	<table><tr><b>POLARIS</b></tr>
+	  	<tr><td><b>Enter the CLI : </b></i></td>
+
+	  <td>
+	  	
+	  	
+	  <!--<input id ="search_text" type="text" name="polaris" size=50 required>-->
+	  	
+	  	<textarea id="search" name="polaris" style="font-family:serif;font:36px" rows="10" cols="50" required>
+
+</textarea>
+	  	
+	  	
+	  	
+	  	</td></tr>
+	  	
+
+	 
+	 
+	 
+	 
+		<tr><td>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	    Mode : <b></td>
+	    <td>
+		<input type="radio" id="Exec" input type="radio" id="Exec" name="radio_be" value ="Exec" > Exec 
+		 <input type="radio" id="config" name="radio_bc" value="config" > Config
+  <input type="radio"  input type="radio" id="Exec" name="radio_bt" value ="test" ></b> Test
+	    <small>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	    	 <input class="f-btn f-btn-CTA" id="search_button" type="submit" name="Add_new_map" value="Submit">
+                
+                
+	    	</td></tr>
+</table>
+
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </div>
+<!--  <div class="misc1">
+        <a id="rn" href="./feature_cli.html" ><b>Profile migration</b></a>
+         </div>
+	<div class="misc">
+        <a id="rn" href="./add_cli.html" ><b>Add new IOS- Polaris CLI map</b></a>
+         </div>
+-->
+	   </body>
+    </html>
+

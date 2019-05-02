@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Textarea</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+    <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+
+    <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+    <script type="text/javascript" src="../stylesheet/js/fn.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../css/ui/form/textarea.css" media="all">
+
+</head>
+<body onload="prettyCode()">
+<div id="content" style="padding: 10px;">
+    <h1>Textarea</h1>
+
+    <p>
+    </p>
+
+    <h2>Common</h2>
+
+    <div class="f-textarea">
+        <div class="f-textarea-body" contenteditable="true" role="textarea" style="width: 300px;min-height: 50px;">
+        </div>
+        <textarea></textarea>
+    </div>
+
+
+    <h2>Focus</h2>
+
+    <div class="f-textarea f-textarea-focus">
+        <div class="f-textarea-body" contenteditable="true" style="width: 300px;min-height: 50px;">
+        </div>
+        <textarea role="textarea"></textarea>
+    </div>
+
+    <h2>Grow Textarea</h2>
+
+    <div class="f-textarea">
+        <div class="f-textarea-body" contenteditable="true" style="width: 300px;min-height: 50px;">
+            Test Text.
+            Please press Enter on your keyboard!
+        </div>
+        <textarea role="textarea"></textarea>
+    </div>
+
+    <h2>Overflow Textarea</h2>
+
+    <div class="f-textarea">
+        <div class="f-textarea-body" contenteditable="true"
+             style="width: 300px;min-height: 50px;height:50px; overflow-y:scroll;">
+            More and more Text<br>
+            More and more Text<br>
+            More and more Text<br>
+            More and more Text<br>
+        </div>
+        <textarea role="textarea"></textarea>
+    </div>
+
+    <h2>ReadOnly Textarea</h2>
+
+    <div class="f-textarea f-textarea-readonly" readonly="readonly ">
+        <div class="f-textarea-body" contenteditable="false" style="width: 300px;min-height: 50px;">
+            You can copy the text in this area,but can't edit!
+        </div>
+        <textarea role="textarea"></textarea>
+    </div>
+
+    <h2>Disabled Textarea</h2>
+
+    <div class="f-textarea f-textarea-disabled" disabled="disabled ">
+        <div class="f-textarea-body" contenteditable="false" style="width: 300px;min-height: 50px;">
+            Not allowed!
+        </div>
+        <textarea role="textarea"></textarea>
+    </div>
+
+
+    <h2>Error Textarea</h2>
+
+    <div class="f-textarea f-textarea-error">
+        <div class="f-textarea-body" contenteditable="false" style="width: 300px;min-height: 50px;">
+            Not allowed!
+        </div>
+        <textarea role="textarea"></textarea>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+platform ip cef load-sharing full
+platform ip cef load-sharing ip-only
+platform ip cef load-sharing dst-only
+hw-module slot WORD led beacon
+no hw-module slot WORD led beacon
+no power enable module WORD
+power enable module WORDmls qos
+mls qos

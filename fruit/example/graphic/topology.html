@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SVG</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+</head>
+<body>
+<style type="text/css">
+    image{
+        cursor: pointer;
+    }
+</style>
+<div class="f-container">
+    <h1>Topology</h1>
+
+    <div class="f-row">
+        <div class="f-col4" id="ctrl"></div>
+        <div class="f-col8" id="topology"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    r = function (number) {
+        return Math.floor(Math.random() * number);
+    }
+
+    var topo = {
+        name:"xxx",
+        node:[]
+    }
+    var typeArray = ["router", "switch", "hub", "server"];
+    var number = 12;
+
+
+    for (var i = 0; i < number; i++) {
+        var connection;
+        (function () {
+            connection = r(number);
+            if (connection == i) {
+                arguments.callee();
+            }
+        })();
+
+        //console.log(connection);
+        topo.node.push({
+            ip:"192.168.0." + i,
+            type:typeArray[r(4)],
+            name:"Device " + i,
+            connection:"192.168.0." + connection
+        })
+    }
+
+    //console.dir(JSON.stringify(topo.node));
+
+    model = new fruit.ui.data.ViewModel(topo);
+    var topology = new fruit.Graphic.Topology({
+        width:"600",
+        height:"600",
+        title:"This is a Topology"
+    });
+    topology.setModel(model);
+    topology.renderTo("topology");
+
+
+    fruit.define("fruit.demo.form", {
+        extend:"fruit.ui.Component",
+        view:{
+            content:[
+                {
+                    tag:"h3",
+                    content:"Config"
+                },
+                {
+                    content:[
+                        {
+                            tag:"label",
+                            attr:{
+                                'class':'f-label f-col1'
+                            },
+                            content:"Name"
+                        },
+                        {
+                            type:"fruit.ui.TextBox",
+                            options:{
+                                text:"{name}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    content:[
+                        {
+                            tag:"label",
+                            attr:{
+                                'class':'f-label f-col1'
+                            },
+                            content:"Type"
+                        },
+                        {
+                            type:"fruit.ui.TextBox",
+                            options:{
+                                text:"{type}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    content:[
+                        {
+                            tag:"label",
+                            attr:{
+                                'class':'f-label f-col1'
+                            },
+                            content:"IP"
+                        },
+                        {
+                            type:"fruit.ui.TextBox",
+                            options:{
+                                text:"{ip}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    content:[
+                        {
+                            model:"{connections}",
+                            template:{
+                                content:[
+                                    {
+                                        tag:"label",
+                                        attr:{
+                                            'class':'f-label f-col1'
+                                        },
+                                        content:"Connection"
+                                    },
+                                    {
+                                        type:"fruit.ui.TextBox",
+                                        options:{
+                                            text:"{@self}"
+                                        }
+                                    }
+                                ]}
+
+                        }
+                    ]
+                },
+                {
+                    content:[
+                        {
+                            tag:"label",
+                            attr:{
+                                'class':'f-label f-col1'
+                            },
+                            content:"x"
+                        },
+                        {
+                            type:"fruit.ui.NumberSpinner",
+                            options:{
+                                value:"{x}",
+                                step:20,
+                                minValue:0,
+                                maxValue:600
+                            }
+                        }
+                    ]
+                },
+                {
+                    content:[
+                        {
+                            tag:"label",
+                            attr:{
+                                'class':'f-label f-col1'
+                            },
+                            content:"y"
+                        },
+                        {
+                            type:"fruit.ui.NumberSpinner",
+                            options:{
+                                value:"{y}",
+                                step:20,
+                                minValue:0,
+                                maxValue:600
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    })
+
+
+    var form = new fruit.demo.form();
+    form.on("Change", function () {
+        topology.redraw();
+    })
+
+    form.renderTo("ctrl");
+
+
+
+
+    topology.on("nodeClick", function (sender, args) {
+        console.dir(args.connections);
+        form.setModel(args);
+    })
+
+</script>
+</body>
+</html>

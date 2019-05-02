@@ -1,0 +1,34 @@
+.ie7-restore-left-whitespace() {
+  *margin-left: .3em;
+
+  &:first-child {
+    *margin-left: 0;
+  }
+}
+.ie7-restore-right-whitespace() {
+  *margin-right: .3em;
+
+  &:last-child {
+    *margin-left: 0;
+  }
+}
+.size(@height: 12px, @width :12px) {
+  width: @width;
+  height: @height;
+}
+.square(@size: 5px) {
+  .size(@size, @size);
+}
+.placeholder(@color: @placeholderTextColor) {
+  :-moz-placeholder {
+    color: @color;
+    font-weight: normal;
+    font-style: normal;
+  }
+  ::-webkit-input-placeholder {
+    color: @color;
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+

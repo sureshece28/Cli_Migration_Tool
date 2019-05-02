@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Form layout</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+    <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+
+    <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+    <script type="text/javascript" src="../common/fn.js"></script>
+</head>
+<body>
+<div class="f-container">
+    <h1>Form layout</h1>
+    <h2>Form Horizontal Layout</h2>
+    <div class="f-form">
+        <div class="f-form-row f-row">
+            <label class="f-label f-col3">Textbox : </label>
+            <span class="f-textbox f-col9">
+                <input type="text" name="username" placeholder="Fill me …">
+            </span>
+        </div>
+        <div class="f-form-row f-row">
+            <label class="f-label f-col3">Multiple-Textbox : </label>
+            <span class="f-textbox f-col3">
+                <input type="text" name="username" placeholder="Fill me …">
+            </span>
+            <span class="f-textbox f-col3">
+                <input type="text" name="username" placeholder="Fill me …">
+            </span>
+            <span class="f-textbox f-col3">
+                <input type="text" name="username" placeholder="Fill me …">
+            </span>
+        </div>
+        <div class="f-form-row f-row">
+            <label class="f-label f-col3">Textbox with message : </label>
+            <span class="f-textbox f-col3">
+                <input type="text" name="username" placeholder="Fill me …">
+            </span>
+            <span class="f-confirmation f-col3">Confirmation</span>
+        </div>
+        <div class="f-form-row f-row">
+            <label class="f-label f-col3">Textbox with message : </label>
+            <span class="f-textbox f-col3">
+                <input type="text" name="username" placeholder="Fill me …">
+            </span>
+            <span class="f-error f-col4">Error</span>
+        </div>
+        <div class="f-form-row f-row">
+            <label class="f-label f-col3">Textbox with message : </label>
+            <span class="f-textbox f-col3">
+                <input type="text" name="username" placeholder="Fill me …">
+            </span>
+            <span class="f-alert f-col5">Alert</span>
+        </div>
+        <div class="f-form-row f-row">
+            <label class="f-label f-col3">Checkbox : </label>
+            <div class="f-checkbox-group f-col9">
+                <label class="f-checkbox">
+                    <i class="f-checkbox-img"></i>
+                    <input type="checkbox" value="option1" name="option[]">
+                    <span class='f-label'>Option1</span>
+                </label>
+                <label class="f-checkbox">
+                    <i class="f-checkbox-img"></i>
+                    <input type="checkbox" value="option2" name="option[]">
+                    <span class='f-label'>Option2</span>
+                </label>
+                <label class="f-checkbox">
+                    <i class="f-checkbox-img"></i>
+                    <input type="checkbox" value="option2" name="option[]">
+                    <span class='f-label'>Option3</span>
+                </label>
+            </div>
+        </div>
+        <div class="f-form-row f-row">
+            <label class="f-label f-col3">Checkbox : </label>
+            <div class="f-checkbox-group f-col9">
+            	Remember me?
+                <label class="f-checkbox">
+                    <i class="f-checkbox-img"></i>
+                    <input type="checkbox" value="option1" name="option[]">
+                    <span class='f-label'>Yes</span>
+                </label>
+                <label class="f-checkbox">
+                    <i class="f-checkbox-img"></i>
+                    <input type="checkbox" value="option1" name="option[]">
+                    <span class='f-label'>No</span>
+                </label>
+            </div>
+        </div>
+        <div class="f-form-row f-row">
+            <label class="f-label f-col3">Checkbox : </label>
+            <div class="f-checkbox-group f-col9">
+                <label class="f-checkbox f-col9">
+                    <i class="f-checkbox-img"></i>
+                    <input type="checkbox" value="option1" name="option[]">
+                    <span class='f-label'>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna ip Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna ip </span>
+                </label>                
+            </div>
+        </div>
+        
+        <div class="f-form-row f-row">
+            <label class="f-label f-col3">Checkbox : </label>
+            <div class="f-checkbox-group-vertical f-col9">
+                <label class="f-checkbox">
+                    <i class="f-checkbox-img"></i>
+                    <input type="checkbox" value="option1" name="option[]">
+                    <span class='f-label'>Option1</span>
+                </label>
+                <label class="f-checkbox">
+                    <i class="f-checkbox-img"></i>
+                    <input type="checkbox" value="option2" name="option[]">
+                    <span class='f-label'>Option2</span>
+                </label>
+                <label class="f-checkbox">
+                    <i class="f-checkbox-img"></i>
+                    <input type="checkbox" value="option2" name="option[]">
+                    <span class='f-label'>Option3</span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="f-form-row f-row">
+            <label class="f-label f-col3">Radio</label>
+            <div class="f-radio-group f-col9">
+            	Remember me?
+                <label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+                <label class="f-radio"  aria-checked="true"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option2</span></label>
+            </div>
+        </div>
+        
+        
+        <div class="f-form-row f-row">
+            <label class="f-label f-col3">Radio</label>
+            <div class="f-radio-group-vertical f-col9">
+                <label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+                <label class="f-radio"  aria-checked="true"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option2</span></label>
+                <label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option3</span></label>
+            </div>
+        </div>
+        <div class="f-form-row f-row">
+            <label class="f-label f-col3">Text</label>
+            <div class="f-text f-col9">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna ip Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna ip 
+            </div>
+        </div>
+        
+        <div class="f-form-row f-row">
+            <label class="f-label f-col3">Combobox</label>
+            <span role="combobox" class="f-combobox f-col3" aria-expanded="false" aria-haspopup="true"
+                          tabindex="1">
+                <input type="text" placeholder="Number Only" class="placeHolder">
+                <span role="combobox" class="f-combobox-btn"></span>
+            </span>
+             <span role="combobox" class="f-combobox f-col3" aria-expanded="false" aria-haspopup="true"
+                   tabindex="1">
+                <input type="text" placeholder="Number Only" class="placeHolder">
+                <span role="combobox" class="f-combobox-btn"></span>
+            </span>
+             <span role="combobox" class="f-combobox f-col3" aria-expanded="false" aria-haspopup="true"
+                   tabindex="1">
+                <input type="text" placeholder="Number Only" class="placeHolder">
+                <span role="combobox" class="f-combobox-btn"></span>
+            </span>
+        </div>
+        <div class="f-form-row f-row">
+            <label class="f-label f-col3">Combobox</label>
+            <span role="combobox" class="f-combobox f-col2" aria-expanded="false" aria-haspopup="true"
+                  tabindex="1">
+                <input type="text" placeholder="Number Only" class="placeHolder">
+                <span role="combobox" class="f-combobox-btn"></span>
+            </span>
+             <span role="combobox" class="f-combobox f-col3" aria-expanded="false" aria-haspopup="true"
+                   tabindex="1">
+                <input type="text" placeholder="Number Only" class="placeHolder">
+                <span role="combobox" class="f-combobox-btn"></span>
+            </span>
+             <span role="combobox" class="f-combobox f-col4" aria-expanded="false" aria-haspopup="true"
+                   tabindex="1">
+                <input type="text" placeholder="Number Only" class="placeHolder">
+                <span role="combobox" class="f-combobox-btn"></span>
+            </span>
+        </div>
+        <div class="f-form-row f-row">
+            <label class="f-label f-col3">Combo Button</label>
+            <span class="f-combobutton f-col3" aria-expanded="false" aria-haspopup="true" tabindex="1">
+                <span class="f-combobutton-text">Text</span>
+                <span class="f-combobutton-arrow"></span>
+            </span>
+            <span class="f-combobutton f-combobutton-CTA f-col3" aria-expanded="false" aria-haspopup="true" tabindex="1">
+                <span class="f-combobutton-text">Text</span>
+                <span class="f-combobutton-arrow"></span>
+            </span>
+            <span class="f-combobutton f-combobutton-primary  f-col3" aria-expanded="false" aria-haspopup="true" tabindex="1">
+                <span class="f-combobutton-text">Text</span>
+                <span class="f-combobutton-arrow"></span>
+            </span>
+        </div>
+        <div class="f-form-row f-row">
+            <label class="f-label f-col3">Number Spinner</label>
+            <span class="f-numberspinner f-col3">
+                <input type="text" placeholder="Number Only" class="placeHolder">
+                <span class="f-numberspinner-upBtn"></span>
+                <span class="f-numberspinner-downBtn"></span>
+            </span>
+            <span class="f-numberspinner f-col2">
+                <input type="text" placeholder="Number Only" class="placeHolder">
+                <span class="f-numberspinner-upBtn"></span>
+                <span class="f-numberspinner-downBtn"></span>
+            </span>
+            <span class="f-numberspinner f-col2">
+                <input type="text" placeholder="Number Only" class="placeHolder">
+                <span class="f-numberspinner-upBtn"></span>
+                <span class="f-numberspinner-downBtn"></span>
+            </span>
+            <span class="f-numberspinner f-col2">
+                <input type="text" placeholder="Number Only" class="placeHolder">
+                <span class="f-numberspinner-upBtn"></span>
+                <span class="f-numberspinner-downBtn"></span>
+            </span>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <h1>Form layout</h1>
+    <h2>Form Vertical Layout</h2>
+    
+    <div class="f-form">
+        <div class="f-form-row-vertical f-row">
+            <label class="f-label f-col3">Textbox : </label>
+            <span class="f-textbox f-col12">
+                <input type="text" name="username" placeholder="Fill me …">
+            </span>
+        </div>
+        <div class="f-form-row-vertical f-row">
+            <label class="f-label f-col3">Multiple-Textbox : </label>
+            <span class="f-textbox f-col4">
+                <input type="text" name="username" placeholder="Fill me …">
+            </span>
+            <span class="f-textbox f-col4">
+                <input type="text" name="username" placeholder="Fill me …">
+            </span>
+            <span class="f-textbox f-col4">
+                <input type="text" name="username" placeholder="Fill me …">
+            </span>
+        </div>
+        <div class="f-form-row-vertical f-row">
+            <label class="f-label f-col3">Textbox with message : </label>
+            <span class="f-textbox f-col3">
+                <input type="text" name="username" placeholder="Fill me …">
+            </span>
+            <span class="f-confirmation f-col3">Confirmation</span>
+        </div>
+        <div class="f-form-row-vertical f-row">
+            <label class="f-label f-col3">Textbox with message : </label>
+            <span class="f-textbox f-col3">
+                <input type="text" name="username" placeholder="Fill me …">
+            </span>
+            <span class="f-error f-col4">Error</span>
+        </div>
+        <div class="f-form-row-vertical f-row">
+            <label class="f-label f-col3">Textbox with message : </label>
+            <span class="f-textbox f-col3">
+                <input type="text" name="username" placeholder="Fill me …">
+            </span>
+            <span class="f-alert f-col5">Alert</span>
+        </div>
+        <div class="f-form-row-vertical f-row">
+            <label class="f-label f-col3">Checkbox : </label>
+            <div class="f-checkbox-group f-col9">
+                <label class="f-checkbox">
+                    <i class="f-checkbox-img"></i>
+                    <input type="checkbox" value="option1" name="option[]">
+                    <span class='f-label'>Option1</span>
+                </label>
+                <label class="f-checkbox">
+                    <i class="f-checkbox-img"></i>
+                    <input type="checkbox" value="option2" name="option[]">
+                    <span class='f-label'>Option2</span>
+                </label>
+                <label class="f-checkbox">
+                    <i class="f-checkbox-img"></i>
+                    <input type="checkbox" value="option2" name="option[]">
+                    <span class='f-label'>Option3</span>
+                </label>
+            </div>
+        </div>
+        <div class="f-form-row-vertical f-row">
+            <label class="f-label f-col3">Checkbox : </label>
+            <div class="f-checkbox-group f-col9">
+            	Remember me?
+                <label class="f-checkbox">
+                    <i class="f-checkbox-img"></i>
+                    <input type="checkbox" value="option1" name="option[]">
+                    <span class='f-label'>Yes</span>
+                </label>
+                <label class="f-checkbox">
+                    <i class="f-checkbox-img"></i>
+                    <input type="checkbox" value="option1" name="option[]">
+                    <span class='f-label'>No</span>
+                </label>
+            </div>
+        </div>
+        <div class="f-form-row-vertical f-row">
+            <label class="f-label f-col3">Checkbox : </label>
+            <div class="f-checkbox-group f-col9">
+                <label class="f-checkbox f-col9">
+                    <i class="f-checkbox-img"></i>
+                    <input type="checkbox" value="option1" name="option[]">
+                    <span class='f-label'>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna ip Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna ip </span>
+                </label>                
+            </div>
+        </div>
+        
+        <div class="f-form-row-vertical f-row">
+            <label class="f-label f-col3">Checkbox : </label>
+            <div class="f-checkbox-group-vertical f-col9">
+                <label class="f-checkbox">
+                    <i class="f-checkbox-img"></i>
+                    <input type="checkbox" value="option1" name="option[]">
+                    <span class='f-label'>Option1</span>
+                </label>
+                <label class="f-checkbox">
+                    <i class="f-checkbox-img"></i>
+                    <input type="checkbox" value="option2" name="option[]">
+                    <span class='f-label'>Option2</span>
+                </label>
+                <label class="f-checkbox">
+                    <i class="f-checkbox-img"></i>
+                    <input type="checkbox" value="option2" name="option[]">
+                    <span class='f-label'>Option3</span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="f-form-row-vertical f-row">
+            <label class="f-label f-col3">Radio</label>
+            <div class="f-radio-group f-col9">
+            	Remember me?
+                <label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+                <label class="f-radio"  aria-checked="true"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option2</span></label>
+            </div>
+        </div>
+        
+        
+        <div class="f-form-row-vertical f-row">
+            <label class="f-label f-col3">Radio</label>
+            <div class="f-radio-group-vertical f-col9">
+                <label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+                <label class="f-radio"  aria-checked="true"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option2</span></label>
+                <label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option3</span></label>
+            </div>
+        </div>
+        <div class="f-form-row-vertical f-row">
+            <label class="f-label f-col3">Text</label>
+            <div class="f-text f-col9">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna ip Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna ip 
+            </div>
+        </div>
+        
+        <div class="f-form-row-vertical f-row">
+            <label class="f-label f-col3">Combobox</label>
+            <span role="combobox" class="f-combobox f-col3" aria-expanded="false" aria-haspopup="true"
+                          tabindex="1">
+                <input type="text" placeholder="Number Only" class="placeHolder">
+                <span role="combobox" class="f-combobox-btn"></span>
+            </span>
+             <span role="combobox" class="f-combobox f-col3" aria-expanded="false" aria-haspopup="true"
+                   tabindex="1">
+                <input type="text" placeholder="Number Only" class="placeHolder">
+                <span role="combobox" class="f-combobox-btn"></span>
+            </span>
+             <span role="combobox" class="f-combobox f-col3" aria-expanded="false" aria-haspopup="true"
+                   tabindex="1">
+                <input type="text" placeholder="Number Only" class="placeHolder">
+                <span role="combobox" class="f-combobox-btn"></span>
+            </span>
+        </div>
+        <div class="f-form-row-vertical f-row">
+            <label class="f-label f-col3">Combobox</label>
+            <span role="combobox" class="f-combobox f-col2" aria-expanded="false" aria-haspopup="true"
+                  tabindex="1">
+                <input type="text" placeholder="Number Only" class="placeHolder">
+                <span role="combobox" class="f-combobox-btn"></span>
+            </span>
+             <span role="combobox" class="f-combobox f-col3" aria-expanded="false" aria-haspopup="true"
+                   tabindex="1">
+                <input type="text" placeholder="Number Only" class="placeHolder">
+                <span role="combobox" class="f-combobox-btn"></span>
+            </span>
+             <span role="combobox" class="f-combobox f-col4" aria-expanded="false" aria-haspopup="true"
+                   tabindex="1">
+                <input type="text" placeholder="Number Only" class="placeHolder">
+                <span role="combobox" class="f-combobox-btn"></span>
+            </span>
+        </div>
+        <div class="f-form-row-vertical f-row">
+            <label class="f-label f-col3">Combo Button</label>
+            <span class="f-combobutton f-col3" aria-expanded="false" aria-haspopup="true" tabindex="1">
+                <span class="f-combobutton-text">Text</span>
+                <span class="f-combobutton-arrow"></span>
+            </span>
+            <span class="f-combobutton f-combobutton-CTA f-col3" aria-expanded="false" aria-haspopup="true" tabindex="1">
+                <span class="f-combobutton-text">Text</span>
+                <span class="f-combobutton-arrow"></span>
+            </span>
+            <span class="f-combobutton f-combobutton-primary  f-col3" aria-expanded="false" aria-haspopup="true" tabindex="1">
+                <span class="f-combobutton-text">Text</span>
+                <span class="f-combobutton-arrow"></span>
+            </span>
+        </div>
+        <div class="f-form-row-vertical f-row">
+            <label class="f-label f-col3">Number Spinner</label>
+            <span class="f-numberspinner f-col3">
+                <input type="text" placeholder="Number Only" class="placeHolder">
+                <span class="f-numberspinner-upBtn"></span>
+                <span class="f-numberspinner-downBtn"></span>
+            </span>
+            <span class="f-numberspinner f-col2">
+                <input type="text" placeholder="Number Only" class="placeHolder">
+                <span class="f-numberspinner-upBtn"></span>
+                <span class="f-numberspinner-downBtn"></span>
+            </span>
+            <span class="f-numberspinner f-col2">
+                <input type="text" placeholder="Number Only" class="placeHolder">
+                <span class="f-numberspinner-upBtn"></span>
+                <span class="f-numberspinner-downBtn"></span>
+            </span>
+            <span class="f-numberspinner f-col2">
+                <input type="text" placeholder="Number Only" class="placeHolder">
+                <span class="f-numberspinner-upBtn"></span>
+                <span class="f-numberspinner-downBtn"></span>
+            </span>
+        </div>
+    </div>
+    
+    
+    
+    
+</div>
+</body>
+</html>

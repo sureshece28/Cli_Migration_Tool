@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+</head>
+<body style="padding: 10px; box-sizing: border-box;">
+<div class="f-container">
+    <h1>Calendar</h1>
+    <div id="calendarContainer"></div>
+    <br /><br />
+    <button class="f-btn" onclick="getSelectDay()">getSelectedDay</button>
+</div>
+<script type="text/javascript">
+    var calendar = new fruit.ui.Calendar({
+        selectedDay:"2012-9-20",
+        format:"ddd mmm dd yyyy"
+    });
+    calendar.on("itemClick",function(sender,args){
+        var date = args.date;
+        var dateObj = args.dateObj;
+        alert(date);
+    })
+    calendar.renderTo("calendarContainer");
+    function getSelectDay(){
+        alert(calendar.getSelctedDay());
+    }
+</script>
+</body>
+</html>

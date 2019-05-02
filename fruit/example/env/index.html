@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+
+    <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+    <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/jquery1.7.1.js"></script>
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+    <script type="text/javascript" src="../common/DemoRobot.js"></script>
+</head>
+<body>
+
+<script type="text/html" class="demo-source">
+    var util = fruit.util;
+    logger.info('your browser is '+util.browserName);
+    logger.info('browser version is '+util.browserVersion);
+    var name = 'is'+util.browserName
+    logger.info('fruit.util.'+name+'='+fruit.util[name]);
+    var nameVersion = 'is'+util.browserName+util.browserVersion;
+    logger.info('fruit.util.'+nameVersion+'='+fruit.util[nameVersion]);
+    
+</script>
+</body>
+</html>

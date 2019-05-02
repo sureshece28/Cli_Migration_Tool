@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="../../3rdparty/jquery1.7.1.js"></script>
+
+    <script type="text/javascript" src="../../3rdparty/Math.uuid.js"></script>
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+    <script>
+
+        jQuery(function () {
+            fruit.CONFIG.debug = true;
+
+            var testJsonData = [
+                {"fullName":"Jack22", "age":30, "isOld":false},
+                {"fullName":"Tom22", "age":70, "isOld":true}
+            ];
+
+            fruit.define('accountInfo', {
+                extend:'fruit.data.Model',
+                options:{
+                    fields:[
+                        {
+                            name:'name',
+                            type:'string',
+                            mapping:'fullName'
+                        },
+                        {
+                            name:'age',
+                            type:'int'
+                        },
+                        {
+                            name:'isRetire',
+                            type:'boolean',
+                            mapping:'isOld'
+                        }
+                    ]
+                }
+            });
+
+            var storeConf = {
+                writer:{
+                    //url:'files/testCreate.jsp',
+                    api:{
+                        create:'files/testCreate.jsp',
+                        update:'files/testUpdate.jsp',
+                        remove:'files/testRemove.jsp'
+                    },
+                    dataType:'json',
+                    //dataType : 'xml',
+                    model:'accountInfo',
+                    root:'accounts'
+                }
+            };
+
+            var accountStore = new fruit.data.Store(storeConf);
+
+            var AccountModel = fruit.getClass("accountInfo");
+            var record_1 = new AccountModel({
+                data:{
+                    name:"Sten",
+                    age:22,
+                    isRetire:false
+                }
+            });
+
+            var record_2 = new AccountModel({
+                data:{
+                    name:"Lily",
+                    age:32,
+                    isRetire:false
+                }
+            });
+
+            var record_3 = new AccountModel({
+                data:{
+                    name:"Jim",
+                    age:42,
+                    isRetire:false
+                }
+            });
+
+            var record_4 = new AccountModel({
+                data:{
+                    name:"Kevin",
+                    age:72,
+                    isRetire:true
+                }
+            });
+
+            var record_update = new AccountModel({
+                data:{
+                    name:"Kevin",
+                    age:68
+                }
+            });
+
+            var record_update2 = new AccountModel({
+                data:{
+                    name:"Jim",
+                    age:41
+                }
+            });
+
+            var record_remove = new AccountModel({
+                data:{
+                    name:"Lily"
+                }
+            });
+
+            var records = [];
+            records.push(record_1);
+            records.push(record_2);
+            accountStore.create(records);
+
+            var addedRec = [];
+            addedRec.push(record_3);
+            addedRec.push(record_4);
+            accountStore.create(addedRec);
+
+            accountStore.update([record_update]);
+
+            accountStore.remove([record_remove]);
+
+            accountStore.update([record_update2]);
+
+            accountStore.submit();
+
+            accountStore.on('submitSuccess', function (status) {
+                fruit.logger.info("All Success, status=" + status);
+            });
+        })
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

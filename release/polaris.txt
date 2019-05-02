@@ -1,0 +1,11 @@
+show platform software ip ...
+show platform software ipv6 ...
+No CLI present
+No CLI present
+No CLI present
+ip cef load-sharing algorithm include-ports destination
+ip cef load-sharing algorithm original
+ip cef load-sharing algorithm include-ports source ... 
+clear platform software fed switch active acl counters hardware
+show auto qos interface FortyGigabitEthernet 
+show ip 

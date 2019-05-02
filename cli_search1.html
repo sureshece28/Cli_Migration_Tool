@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<link rel="stylesheet" type="text/css" href="fruit/css/futurama.css">
+	<link href="fruit/3rdparty/prettify.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<script type="text/javascript" src="fruit/js/fruit.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/main.js"></script>
+
+    </head>
+    <style>
+    	body {
+    	
+    	}
+    	</style>
+    <body>
+	<div >
+
+	</div>
+	<div id="content">
+	     <form name="hunt" id="form_hunt" action="starhunt.cgi" method="post" target="results1">
+	    <br>
+	     	<table>
+	  	<tr><td><b>Enter the CLI : </b></i></td>
+
+	  <td><input id ="search_text" type="text" name="searchstring" size=50 required></td></tr>
+
+	   <tr><td><b>Find the equivalent CLI on:</b></td>
+		    <td><select name="image" id="branch">
+			<option value="cat6k,ios" width=400px selected>
+                                       IOS</option>
+		  	<option value="StarFleet,polaris">
+                                       Polaris</option>    
+		</select></td></tr>
+		<tr><td>
+	    Mode : <b></td>
+	    <td>
+		<input type="radio" id="Exec" input type="radio" id="Exec" name="radio_b" value ="Exec" CHECKED> Exec 
+		 <input type="radio" id="config" name="radio_b" value="config" > Config
+  <input type="radio"  input type="radio" id="Exec" name="radio_b" value ="test" ></b> Test
+	    <small>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	    	 <input class="f-btn f-btn-CTA" id="search_button" type="submit" name="submit" value="Search">
+	    	</td></tr>
+</table>
+
+
+    </form>
+
+</div>
+   <div id="wait">
+    <br><br>
+    <center><img src="fruit/css/images/gif/progress.gif"><b>Loading...<b></center>
+        </div>
+        
+	<iframe name="results1" id="results1" frameborder="0" width="100%"  marginwidth="20px" padding="5px">
+
+</iframe>
+        
+ </div>
+<!--  <div class="misc1">
+        <a id="rn" href="./feature_cli.html" ><b>Profile migration</b></a>
+         </div>
+	<div class="misc">
+        <a id="rn" href="./add_cli.html" ><b>Add new IOS- Polaris CLI map</b></a>
+         </div>
+-->
+	   </body>
+    </html>
+

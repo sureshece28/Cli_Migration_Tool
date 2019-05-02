@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Radio</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+    <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+
+    <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+    <script type="text/javascript" src="../common/fn.js"></script>
+</head>
+<body  style="padding: 10px;">
+<div id="content">
+    <h1>Radio</h1>
+
+    <p>
+
+    </p>
+
+    <h2>DOM Definition</h2>
+    <label class="f-radio">
+        <i class="f-radio-img"></i>
+        <input type="radio"  value="option1" name="option[]">
+        <span class='f-label'>Option1</span>
+    </label>
+    <p>
+        <br/>
+        <textarea type="html" class="hidden">
+            <label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+        </textarea>
+    </p>
+    <h2>Status</h2>
+    <table class="f-datagrid">
+        <thead>
+        <tr>
+            <th>Status</th>
+            <th>Demo</th>
+            <th>Code</th>
+            <th>CSS class</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Normal</td>
+            <td>
+                <label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+
+            </td>
+            <td><textarea type="html" class="hidden">
+                <label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+            </textarea></td>
+            <td><code>.f-radio</code></td>
+        </tr>
+        <tr>
+            <td>Checked</td>
+            <td>
+                <label class="f-radio" aria-checked="true"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]" checked="checked"><span class='f-label'>Option1</span></label>
+
+            </td>
+            <td>
+                <textarea type="html" class="hidden">
+                    <label class="f-radio" aria-checked="true"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]" checked="checked"><span class='f-label'>Option1</span></label>
+                </textarea>
+            </td>
+            <td><code>.f-radio[aria-checked="true"]</code></td>
+        </tr>
+        <tr>
+            <td>Focus</td>
+            <td>
+                <label class="f-radio f-radio-focus"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+
+            </td>
+            <td>
+                <textarea type="html" class="hidden">
+                    <label class="f-radio f-radio-focus"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+                </textarea>
+            </td>
+            <td><code>.f-radio-focus</code></td>
+        </tr>
+        <tr>
+            <td>Checked & Focus</td>
+            <td>
+                <label class="f-radio  f-radio-focus" aria-checked="true"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]" checked="checked"><span class='f-label'>Option1</span></label>
+
+            </td>
+            <td>
+                <textarea type="html" class="hidden">
+                    <label class="f-radio  f-radio-focus" aria-checked="true"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]" checked="checked"><span class='f-label'>Option1</span></label>
+                </textarea>
+            </td>
+            <td><code>.f-radio[aria-checked="true"]</code></td>
+        </tr>
+        <tr>
+            <td>Disabled</td>
+            <td>
+                <label class="f-radio" aria-disabled="true"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]" disabled="disabled"><span class='f-label'>Option1</span></label>
+            </td>
+            <td>
+                <textarea type="html" class="hidden">
+                    <label class="f-radio" aria-disabled="true"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]" disabled="disabled"><span class='f-label'>Option1</span></label>
+                </textarea>
+            </td>
+            <td><code>.f-radio[aria-disabled="true"]</code></td>
+        </tr>
+        <tr>
+            <td>Check & Disabled</td>
+            <td>
+                <label class="f-radio" aria-disabled="true" aria-checked="true"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+            </td>
+            <td>
+                <textarea type="html" class="hidden">
+                    <label class="f-radio" aria-disabled="true" aria-checked="true"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+                </textarea>
+            </td>
+            <td><code>.f-radio[aria-checked="true"][aria-disabled="true"] </code></td>
+        </tr>
+
+        </tbody>
+    </table>
+    <h2>Group</h2>
+    <p>
+          <div class="f-radio-group">
+            <label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+            <label class="f-radio"  aria-checked="true"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option2</span></label>
+            <label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option3</span></label>
+          </div>
+    </p>
+    <br/>
+    <textarea type="html" class="hidden">
+        <div class="f-radio-group">
+            <label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+            <label class="f-radio"  aria-checked="true"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option2</span></label>
+            <label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option3</span></label>
+        </div>
+    </textarea>
+    <h2>Vertical Group</h2>
+    <p>
+    <div class="f-radio-group-vertical">
+        <label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+        <label class="f-radio"  aria-checked="true"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option2</span></label>
+        <label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option3</span></label>
+    </div>
+    </p>
+    <br/>
+    <textarea type="html" class="hidden">
+        <div class="f-radio-group-vertical">
+            <label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]"><span class='f-label'>Option1</span></label>
+            <label class="f-radio"  aria-checked="true"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option2</span></label>
+            <label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option3</span></label>
+        </div>
+    </textarea>
+    <h2>Radio Group Button</h2>
+    <p>
+        Add <code> f-radio-group-btn</code> class to node.
+    </p>
+    <p>
+    <div class="f-radio-group f-radio-group-btn">
+        <label class="f-radio" tabindex="1"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]"><span class='f-label'>Option1</span></label><label tabindex="1" class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option2</span></label><label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option3</span></label>
+    </div>
+    </p>
+    <h2>Radio Group Button with selected</h2>
+    <p>
+    <div class="f-radio-group f-radio-group-btn">
+        <label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]"><span class='f-label'>Option1</span></label><label class="f-radio"  aria-checked="true"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option2</span></label><label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option3</span></label>
+    </div>
+    </p>
+    <h2>Radio Group Button with focus</h2>
+    <p>
+    <div class="f-radio-group f-radio-group-btn">
+        <label class="f-radio f-radio-focus"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]"><span class='f-label'>Option1</span></label><label class="f-radio"  aria-checked="true"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option2</span></label><label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option3</span></label>
+    </div>
+    </p>
+    <h2>Radio Group Button with selected & focus</h2>
+    <p>
+    <div class="f-radio-group f-radio-group-btn">
+        <label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option1" name="option[]"><span class='f-label'>Option1</span></label><label class="f-radio  f-radio-focus"  aria-checked="true"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option2</span></label><label class="f-radio"><i class="f-radio-img"></i><input type="radio"  value="option2" name="option[]"><span class='f-label'>Option3</span></label>
+    </div>
+    </p>
+    <br /><br /><br /><br /><br /><br />
+    <br/>
+</div>
+<script type="text/javascript">
+    setTimeout(prettyCode,500)
+</script>
+</body>
+</html>

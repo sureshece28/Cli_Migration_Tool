@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Buttons</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+    <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+
+    <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+    <script type="text/javascript" src="../common/fn.js"></script>
+
+    
+</head>
+<body style="padding: 10px;">
+<div id="content">
+<h1>Button</h1>
+
+
+<h2>DOM Definition</h2>
+<button class="f-btn">
+    <span class="f-btn-text">Button</span>
+</button>
+
+<br/> <br/>
+
+<textarea type="html" class="hidden">
+    <button class="f-btn">
+        <span class="f-btn-text">Button</span>
+    </button>
+</textarea>
+<br/><br/>
+<button class="f-btn  f-btn-arrow">
+    <span class="f-btn-text ">Button</span><i class="icon-arrow-down-large-dark"></i>
+</button>
+
+<br/> <br/>
+
+<textarea type="html" class="hidden">
+    <button class="f-btn  f-btn-arrow">
+        <span class="f-btn-text">Button</span><i class="icon-arrow-down-large-dark"></i>
+    </button>
+</textarea>
+
+<h2>Button types</h2>
+
+<p>
+    Provide 3 types of button <u>Common button</u> ,<u>Primary button</u> and <u>CTA button</u>.
+</p>
+<table class="f-table">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Demo</th>
+        <th>Code</th>
+        <th>CSS class</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Common button</td>
+        <td>
+            <button class="f-btn">Button</button>
+        </td>
+        <td><textarea type="html" class="hidden">
+            <button class="f-btn">Button</button>
+        </textarea> or <textarea type="html" class="hidden">
+            <button class="f-btn"><span class="f-btn-text">Button</span></button>
+        </textarea></td>
+        <td><code>.f-btn</code></td>
+    </tr>
+    <tr>
+        <td>Primary button</td>
+        <td>
+            <button class="f-btn f-btn-primary">Primary Button</button>
+        </td>
+        <td>
+            <textarea type="html" class="hidden">
+                <button class="f-btn f-btn-primary">Primary Button</button>
+            </textarea><span> or </span><textarea type="html" class="hidden">
+            <button class="f-btn f-btn-primary"><span class="f-btn-text">Primary Button</span></button>
+        </textarea>
+        </td>
+        <td><code>.f-btn-primary</code></td>
+    </tr>
+    <tr>
+        <td>CTA button</td>
+        <td>
+            <button class="f-btn f-btn-CTA">CTA button</button>
+        </td>
+        <td><textarea type="html" class="hidden">
+            <button class="f-btn f-btn-CTA">CTA button</button>
+        </textarea><span> or </span><textarea type="html" class="hidden">
+            <button class="f-btn f-btn-CTA"><span class="f-btn-text">CTA Button</span></button>
+        </textarea></td>
+        <td><code>.f-btn-CTA</code></td>
+    </tr>
+    </tbody>
+</table>
+<h2>Button status</h2>
+
+<p>
+    Check <a href="../stylesheet/color.html">Theme table</a>
+</p>
+<table class="f-table">
+    <thead>
+    <tr>
+        <th>Status</th>
+        <th>Demo</th>
+        <th>Code</th>
+        <th>CSS class</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Normal</td>
+        <td>
+            <button class="f-btn">Button</button>
+        </td>
+        <td><textarea type="html" class="hidden">
+            <button class="f-btn"><span class="f-btn-text">Button</span></button>
+        </textarea></td>
+        <td><code>.f-btn</code></td>
+    </tr>
+    <tr>
+        <td>Focus</td>
+        <td>
+            <button class="f-btn f-btn-focus"><span class="f-btn-text">Button</span></button>
+        </td>
+        <td>
+            <textarea type="html" class="hidden">
+                <button class="f-btn f-btn-focus"><span class="f-btn-text">Button</span></button>
+            </textarea>
+        </td>
+        <td><code>.f-btn-focus</code><br/><code>.f-btn:focus</code></td>
+    </tr>
+    <tr>
+        <td>Hover</td>
+        <td>
+            <button class="f-btn f-btn-hover"><span class="f-btn-text">Button</span></button>
+        </td>
+        <td>
+            <textarea type="html" class="hidden">
+                <button class="f-btn f-btn-hover"><span class="f-btn-text">Button</span></button>
+            </textarea>
+        </td>
+        <td><code>.f-btn-hover</code><br/><code>.f-btn:hover</code></td>
+    </tr>
+    <tr>
+        <td>Active</td>
+        <td>
+            <button class="f-btn f-btn-active"><span class="f-btn-text">Button</span></button>
+        </td>
+        <td>
+            <textarea type="html" class="hidden">
+                <button class="f-btn f-btn-active"><span class="f-btn-text">Button</span></button>
+            </textarea>
+        </td>
+        <td><code>.f-btn-active</code><br/><code>.f-btn:active</code></td>
+    </tr>
+    <tr>
+        <td>Disabled</td>
+        <td>
+            <button class="f-btn" aria-disabled="true"><span class="f-btn-text">Button</span></button>
+        </td>
+        <td>
+            <textarea type="html" class="hidden">
+                <button class="f-btn" aria-disabled="true"><span class="f-btn-text">Button</span></button>
+            </textarea>
+        </td>
+        <td><code>.f-btn[aria-disabled="true"]</code><br/><code>.f-btn[disabled]</code></td>
+    </tr>
+
+    </tbody>
+</table>
+<h2>Button size</h2>
+
+<p>
+    We provide two different size for button , <u>normal</u>(default) and <u>small</u> (<code>f-btn-small</code>) .<br/>
+    <span>Example : </span><br/><br/>
+    <button class="f-btn f-btn-small"><span class="f-btn-text">Button</span></button>
+    <br/><br/>
+    <textarea type="html" class="hidden">
+        <button class="f-btn f-btn-small"><span class="f-btn-text">Button</span></button>
+    </textarea>
+</p>
+<h2>Combination of type/size/status</h2>
+
+<p>
+    <span>Set class to button tag follow by this rule : <code>f-btn</code>+<code>size class</code>+<code>status
+        class</code>+<code>tylef class</code></span><br/>
+    <span>Example : </span>
+    <br/><br/>
+    <button class="f-btn f-btn-CTA f-btn-focus"><span class="f-btn-text">Button</span></button>
+    <br/><br/>
+    <textarea type="html" class="hidden">
+        <button class="f-btn f-btn-CTA f-btn-focus"><span class="f-btn-text">Button</span></button>
+    </textarea>
+    <br/><br/>
+    <button class="f-btn f-btn-small f-btn-primary f-btn-hover"><span class="f-btn-text">Button</span></button>
+    <br/><br/>
+    <textarea type="html" class="hidden">
+        <button class="f-btn f-btn-small f-btn-primary f-btn-hover"><span class="f-btn-text">Button</span></button>
+    </textarea>
+</p>
+
+<h2>Different tag for button</h2>
+<table class="f-table">
+    <tr>
+        <td>button</td>
+        <td>
+            <button class="f-btn"><span class="f-btn-text">Button</span></button>
+        </td>
+        <td><textarea type="html" class="hidden">
+            <button class="f-btn"><span class="f-btn-text">Button</span></button>
+        </textarea></td>
+    </tr>
+    <tr>
+        <td>a</td>
+        <td><a class="f-btn"><span class="f-btn-text">Button</span></a></td>
+        <td><textarea type="html" class="hidden">
+            <a class="f-btn"><span class="f-btn-text">Button</span></a>
+        </textarea></td>
+    </tr>
+    <tr>
+        <td>input</td>
+        <td><input type="submit" class="f-btn" value="Submit"></td>
+        <td><textarea type="html" class="hidden">
+            <input type="submit" class="f-btn" value="Submit">
+        </textarea></td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>With arrow icon</h2>
+
+<p>
+    Add <code><i class="icon-arrow-down-large-dark"></i></code> node to button node, and set theme class to button.
+</p>
+<table class="f-table">
+    <tr>
+        <td>Right icon</td>
+        <td>
+            <button class="f-btn f-btn-arrow"><span class="f-btn-text">Button</span><i class="icon-arrow-down-large-dark"></i>
+            </button>
+        </td>
+        <td><textarea type="html" class="hidden">
+            <button class="f-btn f-btn-arrow"><span class="f-btn-text">Button</span><i class="icon-arrow-down-large-dark"></i>
+            </button>
+        </textarea></td>
+    </tr>
+    <tr>
+        <td>Right icon</td>
+        <td>
+            <button class="f-btn f-btn-arrow f-btn-CTA"><span class="f-btn-text">Button</span><i class="icon-arrow-down-large-dark"></i>
+            </button>
+        </td>
+        <td><textarea type="html" class="hidden">
+            <button class="f-btn f-btn-arrow  f-btn-CTA"><span class="f-btn-text">Button</span><i class="icon-arrow-down-large-dark"></i>
+            </button>
+        </textarea></td>
+    </tr>
+    <tr>
+        <td>Right icon</td>
+        <td>
+            <button class="f-btn f-btn-arrow f-btn-primary"><span class="f-btn-text">Button</span><i class="icon-arrow-down-large-dark"></i>
+            </button>
+        </td>
+        <td><textarea type="html" class="hidden">
+            <button class="f-btn f-btn-arrow f-btn-primary"><span class="f-btn-text">Button</span><i class="icon-arrow-down-large-dark"></i>
+            </button>
+        </textarea></td>
+    </tr>
+
+    </tbody>
+</table>
+<h2>Wrap</h2>
+
+<p>
+    Set <code>max-width</code> to node.<br/>
+    <span>Example : </span>
+    <br/><br/>
+    <a class="f-btn" title="It's a long Button" style="max-width: 120px">
+        <span class="f-btn-text">Lorem ipsum dolor sit amet</span>
+    </a>
+    <button class="f-btn f-btn-arrow" id="f-btn-test1" title="Lorem ipsum dolor sit amet" style="max-width: 180px">
+        <span class="f-btn-text">Lorem ipsum dolor sit amet</span>
+        <i class="icon-arrow-down-large-dark"></i>
+    </button>
+    <br/><br/>
+    <textarea type="html" class="hidden">
+        <a class="f-btn" title="It's a long Button" style="max-width: 120px">
+            <span class="f-btn-text">Lorem ipsum dolor sit amet</span>
+        </a>
+    </textarea>
+</p>
+
+<h2>Ellipsis</h2>
+
+<p>
+    Set <code>max-width</code> to node.<br/>
+    <span>Example : </span>
+    <br/><br/>
+    <button class="f-btn f-btn-ellipsis" id="f-btn-test1" title="Lorem ipsum dolor sit amet">
+        <span class="f-btn-text" style="width:80px;">Lorem ipsum dolor sit amet</span>
+    </button>
+    <br/><br/>
+    <button class="f-btn f-btn-arrow  f-btn-ellipsis"  id="f-btn-test2"><span class="f-btn-text" style="width:80px">Lorem ipsum dolor sit amet</span><i class="icon-arrow-down-large-dark"></i>
+    </button>
+    <br /><br />
+    <textarea type="html" class="hidden">
+        <a class="f-btn f-btn-ellipsis" title="Lorem ipsum dolor sit amet" style="max-width: 80px;">
+            <span class="f-btn-text" style="width:80px">Lorem ipsum dolor sit amet</span>
+        </a>
+    </textarea>
+</p>
+
+<h2>ICON Button</h2>
+<button class="f-btn f-btn-icon"><span class="f-btn-text"></span><i class="icon-settings-x18"></i>
+</button>
+<br/> <br/>
+<textarea type="html" class="hidden">
+    <button class="f-btn f-btn-icon">
+        <span class="f-btn-text"></span><i class="icon-settings-x18"></i>
+    </button>
+</textarea>
+
+
+<h2>Button Group</h2>
+
+<p>
+    <span>Add <code>.f-btn-group</code> class to button container </span><br/>
+    <span>Example : </span>
+    <br/>
+
+<div class="f-btn-group">
+    <button class="f-btn"><span class="f-btn-text">Button</span></button>
+    <button class="f-btn"><span class="f-btn-text">Button</span></button>
+    <button class="f-btn"><span class="f-btn-text">Button</span></button>
+    <button class="f-btn"><span class="f-btn-text">Button</span></button>
+</div>
+<br/>
+<textarea type="html" class="hidden">
+    <div class="f-btn-group">
+        <button class="f-btn"><span class="f-btn-text">Button</span></button>
+        <button class="f-btn"><span class="f-btn-text">Button</span></button>
+        <button class="f-btn"><span class="f-btn-text">Button</span></button>
+        <button class="f-btn"><span class="f-btn-text">Button</span></button>
+    </div>
+</textarea>
+<br/>
+</div>
+</div>
+<script type="text/javascript">
+    setTimeout(prettyCode, 500)
+</script>
+</body>
+</html>

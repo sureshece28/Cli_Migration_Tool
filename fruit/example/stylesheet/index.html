@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>FUTURAMA</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script type="text/javascript" src="../../3rdparty/jquery1.7.1.js"></script>
+    <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+
+    <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+    <script type="text/javascript" src="../common/fn.js"></script>
+    <!--[if lt IE 9]>
+    <script src="../../3rdparty/html5shiv.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        td .f-popup {
+            position: static;
+        }
+    </style>
+</head>
+<body>
+<div class="f-header">
+
+</div>
+<div class="f-container">
+    <div class="f-row">
+        <div class="f-col3">&nbsp;
+            <dl class="f-list f-col3" id="side-nav">
+                <dt class="f-list-title">Form</dt>
+                <dd class="f-list-item"><a ref="../button/button_style.html">Button</a></dd>
+                <dd class="f-list-item"><a ref="../dropdownbutton/dropdownbutton_style.html">DropDown Button</a></dd>
+                <dd class="f-list-item"><a ref="../radiogroup/radio_style.html">Radio</a></dd>
+                <dd class="f-list-item"><a ref="../checkbox/checkbox_style.html">CheckBox</a></dd>
+                <dd class="f-list-item"><a ref="../textbox/textbox_style.html">TextBox</a></dd>
+                <dd class="f-list-item">Combo Box</dd>
+                <dd class="f-list-item">Form</dd>
+                <dt class="f-list-title">Components</dt>
+                <dd class="f-list-item"><a ref="../dialog/dialog_style.html">Dialog</a></dd>
+                <dd class="f-list-item"><a ref="../menubar/menubar_style.html">Menubar</a></dd>
+                <dd class="f-list-item">DropDown Menu</dd>
+                <dt class="f-list-title">LESS</dt>
+                <dd class="f-list-item"><a ref="color.html">Theme & Color</a></dd>
+                <dd class="f-list-item"><a ref="color-table.html">Color Table</a></dd>
+                <dd class="f-list-item"><a ref="icon_sprite.html">ICON Sprite</a></dd>
+                <dd class="f-list-item">Typography</dd>
+                <dd class="f-list-item">LESS Mixin</dd>
+            </dl>
+
+        </div>
+        <div class="f-col9" id="container">
+
+            </section>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $("#side-nav dd").click(function (event) {
+                var url = $(this).find("a").attr("ref");
+                var text = $(this).find("a").text().toLowerCase();
+                if (url) {
+                    $("#container").load(url + "?" + Math.random() + ' #content', function () {
+                        //
+                        //fruit.Frame.anchor(text);
+
+                        //
+                        prettyCode();
+                        //TODO , hard code, optimize
+                        if (url.indexOf("color-table") != -1) {
+                            loadColorTableLessFile();
+                        }
+                        if (url.indexOf("icon_sprite") != -1) {
+                            loadICONSprite();
+                        }
+
+
+                    });
+                }
+
+                event.preventDefault();
+                return false;
+            });
+
+            //
+            $("#side-nav a").eq(0).click()
+
+
+        })
+
+
+    </script>
+</body>
+</html>

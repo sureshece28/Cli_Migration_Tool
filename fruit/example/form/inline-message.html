@@ -1,0 +1,181 @@
+<!DOCTYPE HTML >
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../../3rdparty/jquery1.7.1.js"></script>
+        <script type="text/javascript" src="../../js/fruit/core.js"></script>
+        <script type="text/javascript" src="../../js/fruit/class.js"></script>
+        <script type="text/javascript" src="../../js/fruit/observable.js"></script>
+
+        <script type="text/javascript" src="../../js/fruit/func.js"></script>
+        <script type="text/javascript" src="../../js/fruit/logger.js"></script>
+        <script type="text/javascript" src="../../js/fruit/string.js"></script>
+        <script type="text/javascript" src="../../js/fruit/env/browser.js"></script>
+        <script type="text/javascript" src="../../js/fruit/env/os.js"></script>
+        <script type="text/javascript" src="../../js/fruit/lang.js"></script>
+        <script type="text/javascript" src="../../js/fruit/data/field.js"></script>
+        <script type="text/javascript" src="../../js/fruit/util/map.js"></script>
+
+        <script type="text/javascript" src="../../js/fruit/adapter/jquery/ajax.js"></script>
+
+        <script type="text/javascript" src="../../js/fruit/io/request.js"></script>
+        <script type="text/javascript" src="../../js/fruit/io/spirequest.js"></script>
+         <script type="text/javascript" src="../../js/fruit/io/mergespirequest.js"></script>
+        <script type="text/javascript" src="../../js/fruit/io/ajax.js"></script>
+        <script type="text/javascript" src="../../js/fruit/data/model.js"></script>
+
+        <script type="text/javascript" src="../../js/fruit/data/reader.js"></script>
+        <script type="text/javascript" src="../../js/fruit/data/writer.js"></script>
+        <script type="text/javascript" src="../../js/fruit/form/Field.js"></script>
+        <script type="text/javascript" src="../../js/fruit/form/Validation.js"></script>
+        <script type="text/javascript" src="../../js/fruit/form/Form.js"></script>
+
+        <style>
+			li, ul {
+				list-style: none;
+				margin: 0px;
+				padding: 3px 5px;
+			}
+			label {
+				display: inline-block;
+				width: 200px;
+				text-align: right;
+			}
+			.error-msg {
+				color: red;
+			}
+			.error {
+				border: 1px solid #FF0000;
+			}
+		</style>
+	</head>
+	<body>
+		<form id="abc">
+			<ul>
+				<li>
+					<label for="name">Name:</label>
+					<input name="name" type="text"  />
+				</li>
+				<li>
+					<label for="age">Age:</label>
+					<input name="age" type="text"  data-validate="min[18],max[20]"/>
+				</li>
+				<li>
+					<label for="options">Option:</label>
+					<select name="options" data-validate="required" >
+						<option >Please Select ...</option>
+						<option value="1">One</option>
+						<option value="2">Two</option>
+						<option value="3">Three</option>
+					</select>
+				</li>
+				<li>
+					<label for="password">Password:</label>
+					<input type="password" data-validate="required,maxSize[4]" data-position="bottom,left" id="password" name="password" />
+				</li>
+				<li>
+					<label for="repassword">Confirm Password</label>
+					<input type="password" data-validate="required,equals[password],maxSize[4]" id="repassword" name="repassword" />
+				</li>
+				<li>
+					<label for="type">Open</label>
+						<input type="radio" name="type" value="1" data-validate="required" />
+						
+				</li>
+				<li>
+					<label>Close</label>
+						<input type="radio" name="type" value="2" data-validate="required"/>
+						
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" name="confirm" value="true" />
+						I Agree</label>
+				</li>
+				<li>
+					<label>Birthday</label>
+					<input type="date" data-validate="past[now]" name="start">				
+					
+				</li>
+				<li>
+					<label>Start Time</label>
+					<input type="text" data-validate="past[:date2]" value="2011-5-1" id="date1" name="date1" />
+				</li>
+				<li>
+					<label>End Time</label>
+					<input type="text" data-validate="future['2012-2-1']" value="2011-1-3" id="date2" name="date2" />
+				</li>
+				<li>
+					<label>Desc</label>
+					<textarea name="desc"></textarea>
+				</li>
+			</ul>
+			<input type="button" value="Set Default Value" id='set' />
+			<input type="button" value="Save" id='save' />
+		</form>
+		<script>
+			var api = fruit.form.Validation;
+
+			$(function($, jForm) {
+				fruit.jQuery = $;
+				fruit.CONFIG.debug = true
+				//	log.listen('fruit.io.Request','fruit.form.Form')
+
+				var form = new fruit.form.Form({
+					id : 'abc',
+					reader : {
+						accessType : 'ajax',
+						source : 'formdata.json',
+						dataFormat : 'json'
+					},
+					/*
+					 writer:{
+					 url:'test.php',
+					 dataFormat:"xml",
+					 listeners:{
+					 writeSuccess:function(){
+
+					 },
+					 writeError:function(){
+
+					 }
+					 }
+					 },*/
+					messageType : 'inline',
+					validate : {
+						name : {
+							verifyAt : 'blue',
+							msgTarget : '#infobox',
+							rule : {
+								'required' : 'You need enter Name',
+								'maxSize[4]' : 'Name is 1-4 char'
+							}
+						}
+					},
+					listeners : {
+						fieldVerifyError : function(field, msg) {
+							field.el.addClass('error');
+							//maybe the el has multi-element like radio box
+							var box = field.el.eq(0).parent();
+							box.find('.error-msg').remove()
+							box.append("<span class='error-msg'>" + msg + "</span>");
+						},
+						fieldVerifyPass : function(field, msg) {
+							field.el.removeClass('error');
+							field.el.parent().find('.error-msg').remove();
+						}
+					}
+				});
+				$('#set').click(function() {
+					form.load({
+						id : 123
+					});
+				})
+				$('#save').click(function() {
+					form.submit();
+				})
+			});
+
+		</script>
+	</body>
+</html>

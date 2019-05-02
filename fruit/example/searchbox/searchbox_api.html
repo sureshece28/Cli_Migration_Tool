@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SearchBox</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+</head>
+<body>
+<h1>Default</h1>
+<div class="f-searchbox" tabindex="1">
+    <input type="text"  type="text" name="username" placeholder="Fill me …"/>
+</div>
+<br /><br />
+<h2>Focus</h2>
+<div class="f-searchbox f-searchbox-focus" tabindex="1">
+    <input type="text"  type="text" name="username" placeholder="Fill me …"/>
+</div>
+
+<br /><br />
+<h2>JS Instance</h2>
+<pre>
+    var searcbox = new fruit.ui.SearchBox({
+        placeholder:"text",
+        text:"123"
+    })
+    searcbox.on('command',function(sender,value){
+        console.dir(sender);
+        console.log(value);
+    })
+    searcbox.renderTo("searchbox")
+</pre>
+<br />
+<div id="searchbox"></div>
+<br /><br />
+<h2>API</h2>
+<button class="f-btn" onclick="searcbox.open()">Open</button>
+<button class="f-btn" onclick="searcbox.close()">Close</button>
+
+<h2>Event</h2>
+<pre>
+    searcbox.on('command',function(sender,value){
+        console.dir(sender);
+        console.log(value);
+    })
+</pre>
+<script type="text/javascript">
+    var searcbox = new fruit.ui.SearchBox({
+        placeholder:"text",
+        text:"123"
+    })
+    searcbox.on('command',function(sender,value){
+        console.dir(sender);
+        console.log(value);
+    })
+    searcbox.renderTo("searchbox")
+
+</script>
+</body>
+</html>

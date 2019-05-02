@@ -1,0 +1,107 @@
+
+#header{
+    background-color:#9999FF;
+}
+#content,#cli_search,#actionfunc{
+    background-color:#DAF1FA;
+    padding:5px;
+    overflow:hidden;
+}
+
+#branch_main {
+    padding:5px;
+    overflow:hidden;
+}
+#add_cli_main {
+    position:relative;
+    padding:5px;
+    overflow:hidden;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+#platform_all,#sup {
+    position:relative;
+    float:left;
+    overflow:hidden;
+    left:20px;
+}
+
+#sup {
+    display:none;
+}
+
+#branch,#platform {
+    border-radius:5px;
+}
+
+#search_text {
+    border-radius:5px;
+    height:22px;
+    padding-left:5px;
+}
+
+#cli_search,#actionfunc{
+    zoom:1;
+
+}
+
+.cisco-logo {
+    display: inline-block;
+	     *zoom: 1;
+	     *display: inline;
+	     margin-right: 40px;
+	     background-image: url("../fruit/css/images/icon_sprite.png");
+	     width: 46px;
+	     height: 25px;
+	     background-position: -145px -96px;
+	     vertical-align: middle;
+}
+
+.hunt-logo {
+    position:absolute;
+    top:55px;
+    right:40px;
+
+}
+
+
+iframe {
+    margin-left:20px;
+    float:right; 
+    width:100%;
+    height:408px;
+	
+}
+
+.misc{
+    position:absolute;
+    right:50px;
+    top:180px;
+}
+
+.misc1{
+    position:absolute;
+    right:300px;
+    top:180px;
+}
+
+#help, #about, #rn {
+	
+    font-size:16px;
+}
+
+#powered {
+    position:relative;
+    float:right;
+    right:10px;
+    bottom:10px;
+}
+
+.f-header-info, .f-user {
+    position:fixed;
+    top:13px;
+    right:50px;
+}

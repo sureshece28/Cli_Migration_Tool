@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown Button</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheet/style/style.css">
+    <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+
+    <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+    <script type="text/javascript" src="../common/fn.js"></script>
+</head>
+<style type="text/css">
+    .f-dropdown-btn-demo {
+        position: relative;
+    }
+</style>
+<body style="padding: 10px;box-sizing: border-box;">
+<div id="content">
+
+<h1>Dropdown Button</h1>
+
+<h2>Example</h2>
+<br/>
+
+    <span class="f-dropdown-btn" role="dropdownbutton" aria-expanded="false" aria-haspopup="true">
+        <button class="f-btn  f-btn-arrow ">
+            <span class="f-btn-text">DropDown</span><i class="icon-arrow-down-large-dark"></i>
+        </button>
+    </span>
+<br/><br/>
+<textarea type="html" class="hidden">
+        <span class="f-dropdown-btn" role="dropdownbutton" aria-expanded="false" aria-haspopup="true">
+            <button class="f-btn  f-btn-arrow ">
+                <span class="f-btn-text">DropDown</span><i class="icon-arrow-down-large-dark"></i>
+            </button>
+        </span>
+</textarea>
+
+<h2>Focus</h2>
+
+<p>
+    Add <code>f-dropdown-btn-focus</code> class to node , and add <code> f-btn-focus</code> class to btn node.
+</p>
+<br/>
+
+    <span class="f-dropdown-btn f-dropdown-btn-focus" role="dropdownbutton" aria-expanded="false" aria-haspopup="true">
+        <button class="f-btn  f-btn-arrow  f-btn-focus">
+            <span class="f-btn-text">DropDown</span><i class="icon-arrow-down-large-dark"></i>
+        </button>
+    </span>
+<br/>
+<br/>
+<textarea type="html" class="hidden">
+         <span class="f-dropdown-btn f-dropdown-btn-focus" role="dropdownbutton" aria-expanded="false" aria-haspopup="true">
+        <button class="f-btn  f-btn-arrow  f-btn-focus">
+            <span class="f-btn-text">DropDown</span><i class="icon-arrow-down-large-dark"></i>
+        </button>
+    </span>
+</textarea>
+
+<h2>Open</h2>
+
+<p>Set <code>31px</code> offset at <code>Y axle</code> from button node. <br />
+   Set <code>left,width</code> style base on dropdown button's offset and width. <br />
+   Set <code>aria-labelledby="dropdownbutton" role="menu"</code> two attributes to popup element.
+</p>
+
+<div class="f-dropdown-btn-demo">
+    <span class="f-dropdown-btn f-dropdown-btn-focus" role="dropdownbutton" aria-expanded="true" aria-haspopup="true">
+        <button class="f-btn  f-btn-arrow  f-btn-focus">
+            <span class="f-btn-text">DropDown</span><i class="icon-arrow-down-large-dark"></i>
+        </button>
+    </span>
+
+    <div class="f-popup" aria-labelledby="dropdownbutton" role="menu" style="top:31px;width: 114px; left: 0px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item">
+                    Item 1
+                </li>
+                <li class="f-list-item">
+                    Item 2
+                </li>
+                <li class="f-list-item">
+                    Item 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<textarea type="html" class="hidden">
+        <span class="f-dropdown-btn f-dropdown-btn-focus" role="dropdownbutton" aria-expanded="true" aria-haspopup="true">
+            <button class="f-btn  f-btn-arrow ">
+                <span class="f-btn-text">DropDown</span><i class="icon-arrow-down-large-dark"></i>
+            </button>
+        </span>
+
+    <div class="f-popup" aria-labelledby="dropdownbutton" role="menu" style="left:0px;top:31px;width: 113px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item">
+                    Item 1
+                </li>
+                <li class="f-list-item">
+                    Item 2
+                </li>
+                <li class="f-list-item">
+                    Item 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</textarea>
+
+<h2>Open above</h2>
+
+<p>Set <code>-1*menu's hright + -1px </code> offset at <code>Y axle</code> from button node.</p>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+<div class="f-dropdown-btn-demo">
+    <span class="f-dropdown-btn f-dropdown-btn-focus" role="dropdownbutton" aria-expanded="true" aria-haspopup="true" aria-popupposition="above">
+        <button class="f-btn  f-btn-arrow  f-btn-focus">
+            <span class="f-btn-text">DropDown</span><i class="icon-arrow-down-large-dark"></i>
+        </button>
+    </span>
+
+    <div class="f-popup f-popup-above" aria-labelledby="dropdownbutton" role="menu" style="top:-97px;width: 113px; left: 0px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item">
+                    Item 1
+                </li>
+                <li class="f-list-item">
+                    Item 2
+                </li>
+                <li class="f-list-item">
+                    Item 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<br/><br/>
+<textarea type="html" class="hidden">
+    <span class="f-dropdown-btn f-dropdown-btn-focus" role="dropdownbutton" aria-expanded="true" aria-haspopup="true" aria-popupposition="above">
+        <button class="f-btn  f-btn-arrow  f-btn-focus">
+            <span class="f-btn-text">DropDown</span><i class="icon-arrow-down-large-dark"></i>
+        </button>
+    </span>
+
+    <div class="f-popup f-popup-above" aria-labelledby="dropdownbutton" role="menu" style="top:-99px;width: 113px; left: 0px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item">
+                    Item 1
+                </li>
+                <li class="f-list-item">
+                    Item 2
+                </li>
+                <li class="f-list-item">
+                    Item 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</textarea>
+<br/><br/>
+
+<h2>Select Item</h2>
+
+<p>
+    Add <code>aria-selected="true"</code> attribute to <code>f-list-item</code> node which should be selected.
+</p>
+<br/>
+
+<div class="f-dropdown-btn-demo">
+        <span class="f-dropdown-btn f-dropdown-btn-focus" role="dropdownbutton" aria-expanded="true" aria-haspopup="true">
+            <button class="f-btn  f-btn-arrow  f-btn-focus">
+                <span class="f-btn-text">DropDown</span><i class="icon-arrow-down-large-dark"></i>
+            </button>
+        </span>
+
+    <div class="f-popup" aria-labelledby="dropdownbutton" role="menu" style="left:0px;top:31px;width: 113px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item">
+                    Item 1
+                </li>
+                <li class="f-list-item" aria-selected="true">
+                    Item 2
+                </li>
+                <li class="f-list-item">
+                    Item 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<textarea type="html" class="hidden">
+        <span class="f-dropdown-btn" role="dropdownbutton" aria-expanded="true" aria-haspopup="true">
+            <button class="f-btn  f-btn-arrow ">
+                <span class="f-btn-text">DropDown</span><i class="icon-arrow-down-large-dark"></i>
+            </button>
+        </span>
+
+    <div class="f-popup" aria-labelledby="dropdownbutton" role="menu" style="left:0px;top:30px;width: 113px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item">
+                    Item 1
+                </li>
+                <li class="f-list-item" aria-selected="true">
+                    Item 2
+                </li>
+                <li class="f-list-item">
+                    Item 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</textarea>
+
+
+<h2>Minimal Dropdown Button </h2>
+
+<h2>Example</h2>
+<br/>
+Add class <code>f-dropdown-btn-mini</code> class to node.
+<br/> <br/>
+
+<span class="f-dropdown-btn f-dropdown-btn-mini" role="dropdownbutton" aria-expanded="false" aria-haspopup="true">
+    <button class="f-btn  f-btn-arrow ">
+        <span class="f-btn-text"></span>
+        <i class="icon-arrow-down-large-dark"></i>
+    </button>
+</span>
+<br /><br />
+<textarea type="html" class="hidden">
+        <span class="f-dropdown-btn f-dropdown-btn-mini" role="dropdownbutton" aria-expanded="false"
+              aria-haspopup="true">
+            <button class="f-btn  f-btn-arrow ">
+                <span class="f-btn-text"></span>
+                <i class="icon-arrow-down-large-dark"></i>
+            </button>
+        </span>
+</textarea>
+
+<h2>Open</h2>
+<br/>
+When open change <code>aria-labelledby</code> to <code>"menu"</code> to popup. And popup's Y add <code>6 px</code> for keep
+distance.
+<br/><br/>
+
+<div class="f-dropdown-btn-demo">
+        <span class="f-dropdown-btn f-dropdown-btn-mini" role="dropdownbutton" aria-expanded="true"
+              aria-haspopup="true">
+            <button class="f-btn  f-btn-arrow ">
+                <span class="f-btn-text"></span>
+                <i class="icon-arrow-down-large-dark"></i>
+            </button>
+        </span>
+
+    <div class="f-popup" aria-labelledby="menu" role="menu" style="left:0px;top:25px;width: 113px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item">
+                    Item 1
+                </li>
+                <li class="f-list-item">
+                    Item 2
+                </li>
+                <li class="f-list-item">
+                    Item 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<textarea type="html" class="hidden">
+        <span class="f-dropdown-btn f-dropdown-btn-mini" role="dropdownbutton" aria-expanded="true"
+              aria-haspopup="true">
+            <button class="f-btn  f-btn-arrow ">
+                <span class="f-btn-text"></span>
+                <i class="icon-arrow-down-large-dark"></i>
+            </button>
+        </span>
+
+    <div class="f-popup" aria-labelledby="menu" role="menu" style="left:0px;top:25px;width: 113px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item">
+                    Item 1
+                </li>
+                <li class="f-list-item">
+                    Item 2
+                </li>
+                <li class="f-list-item">
+                    Item 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</textarea>
+
+<h2>Text dropdown </h2>
+
+<p>Add <code>f-dropdown-btn-text</code> class to node</p>
+
+    <span class="f-dropdown-btn f-dropdown-btn-text" role="dropdownbutton" aria-expanded="false" aria-haspopup="true">
+        <button class="f-btn  f-btn-arrow ">
+            <span class="f-btn-text">DropDown</span><i class="icon-arrow-down-medium-dark"></i>
+        </button>
+    </span>
+<br/> <br/>
+<textarea type="html" class="hidden">
+    <span class="f-dropdown-btn f-dropdown-btn-text" role="dropdownbutton" aria-expanded="false" aria-haspopup="true">
+        <button class="f-btn  f-btn-arrow ">
+            <span class="f-btn-text">DropDown</span><i class="icon-arrow-down-medium-dark"></i>
+        </button>
+    </span>
+</textarea>
+
+<h2>Open</h2>
+<br/>
+When open add <code>aria-labelledby="menu" role="menu"</code> to popup. And popup's Y add <code>6 px</code> for keep
+distance.
+<br/><br/>
+
+<div class="f-dropdown-btn-demo">
+    <span class="f-dropdown-btn f-dropdown-btn-text" role="dropdownbutton" aria-expanded="true" aria-haspopup="true">
+        <button class="f-btn  f-btn-arrow ">
+            <span class="f-btn-text">DropDown</span><i class="icon-arrow-down-medium-dark"></i>
+        </button>
+    </span>
+
+    <div class="f-popup" aria-labelledby="menu" role="menu" style="left:0px;top:24px;width: 113px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item">
+                    Item 1
+                </li>
+                <li class="f-list-item">
+                    Item 2
+                </li>
+                <li class="f-list-item">
+                    Item 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<textarea type="html" class="hidden">
+   <span class="f-dropdown-btn f-dropdown-btn-text" role="dropdownbutton" aria-expanded="true" aria-haspopup="true">
+        <button class="f-btn  f-btn-arrow ">
+            <span class="f-btn-text">DropDown</span><i class="icon-arrow-down-medium-dark"></i>
+        </button>
+    </span>
+
+    <div class="f-popup" aria-labelledby="menu" role="menu" style="left:0px;top:24px;width: 113px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item">
+                    Item 1
+                </li>
+                <li class="f-list-item">
+                    Item 2
+                </li>
+                <li class="f-list-item">
+                    Item 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</textarea>
+
+
+<h2>Arrow dropdown </h2>
+
+<p>Add <code>f-dropdown-btn-arrow</code> class to node and don't set text.</p>
+
+    <span class="f-dropdown-btn f-dropdown-btn-arrow" role="dropdownbutton" aria-expanded="false" aria-haspopup="true">
+        <button class="f-btn  f-btn-arrow ">
+            <span class="f-btn-text"></span><i class="icon-arrow-down-medium-dark"></i>
+        </button>
+    </span>
+<textarea type="html" class="hidden">
+    <span class="f-dropdown-btn f-dropdown-btn-arrow" role="dropdownbutton" aria-expanded="false" aria-haspopup="true">
+        <button class="f-btn  f-btn-arrow ">
+            <span class="f-btn-text"></span><i class="icon-arrow-down-medium-dark"></i>
+        </button>
+    </span>
+</textarea>
+
+<h2>Open</h2>
+<br/>
+When open add <code>aria-labelledby="menu" role="menu"</code> to popup. And popup's Y add <code>3 px</code> for keep
+distance.
+<br/><br/>
+
+<div class="f-dropdown-btn-demo">
+    <span class="f-dropdown-btn f-dropdown-btn-arrow" role="dropdownbutton" aria-expanded="true" aria-haspopup="true">
+        <button class="f-btn  f-btn-arrow ">
+            <span class="f-btn-text"></span><i class="icon-arrow-down-medium-dark"></i>
+        </button>
+    </span>
+
+    <div class="f-popup" aria-labelledby="menu" role="menu" style="left:0px;top:25px;width: 113px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item">
+                    Item 1
+                </li>
+                <li class="f-list-item">
+                    Item 2
+                </li>
+                <li class="f-list-item">
+                    Item 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<textarea type="html" class="hidden">
+    <span class="f-dropdown-btn f-dropdown-btn-text" role="dropdownbutton" aria-expanded="true" aria-haspopup="true">
+        <button class="f-btn  f-btn-arrow ">
+            <span class="f-btn-text"></span><i class="icon-arrow-down-medium-dark"></i>
+        </button>
+    </span>
+
+    <div class="f-popup" aria-labelledby="menu" role="menu" style="left:0px;top:25px;width: 113px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item">
+                    Item 1
+                </li>
+                <li class="f-list-item">
+                    Item 2
+                </li>
+                <li class="f-list-item">
+                    Item 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</textarea>
+
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<script type="text/javascript">
+    setTimeout(prettyCode, 500)
+</script>
+</body>
+</html>

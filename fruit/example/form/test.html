@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>My Form</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+    <script type="text/javascript" src="./MyForm.js"></script>
+</head>
+<body>
+<p>
+    <button type="button" class="f-btn" role="button" data-fruit-type="fruit.ui.Button"
+            data-fruit-name="btnLoad">
+        <i data-fruit-name="pIcon"></i>
+        <span data-fruit-name="text" class="f-btn-text">Load model</span>
+        <i data-fruit-name="sIcon"></i>
+    </button>
+</p>
+<div data-fruit-type='demo.MyFormFromHtml' style="width:300px" data-fruit-name="form1">
+    <fieldset>
+        <legend>My Form From Html</legend>
+        <dl>
+            <dt>
+                First Name:
+            </dt>
+            <dd>
+                <span class="f-textbox" role="textbox" data-fruit-type="fruit.ui.TextBox"
+                      data-fruit-bindings='[{"prop":"options.text","expr":"{firstName}"}]'>
+                    <input type="text" data-fruit-name="text"/>
+                    <a data-fruit-name="icon"></a>
+                </span>
+            </dd>
+            <dt>
+                Last Name:
+            </dt>
+            <dd>
+                <span class="f-textbox" role="textbox" data-fruit-type="fruit.ui.TextBox"
+                      data-fruit-bindings='[{"prop":"options.text","expr":"{lastName}"}]'>
+                    <input type="text" data-fruit-name="text"/>
+                    <a data-fruit-name="icon"></a>
+                </span>
+            </dd>
+            <dt>
+                Email:
+            </dt>
+            <dd>
+                <span class="f-textbox" role="textbox" data-fruit-type="fruit.ui.TextBox"
+                      data-fruit-bindings='[{"prop":"options.text","expr":"{email}"}]'>
+                    <input type="text" data-fruit-name="text"/>
+                    <a data-fruit-name="icon"></a>
+                </span>
+            </dd>
+            <dd>
+                <label class="f-checkbox" role="checkbox" data-fruit-type="fruit.ui.CheckBox"
+                       data-fruit-bindings='[{"prop":"options.checked","expr":"{accepted}"}]'>
+                    <i data-fruit-name="checkPic" class="f-checkbox-img" tabindex="0"></i>
+                    <input type="checkbox" data-fruit-name="check">
+                    <span data-fruit-name="text" class="f-label" role="label">I Accept the Agreement</span>
+                </label>
+            </dd>
+        </dl>
+        <p>
+            <button type="button" class="f-btn" role="button" data-fruit-type="fruit.ui.Button"
+                    data-fruit-name="btnSubmit"
+                    data-fruit-options='{"theme":"CTA"}'>
+                <i data-fruit-name="pIcon"></i>
+                <span data-fruit-name="text" class="f-btn-text">Submit</span>
+                <i data-fruit-name="sIcon"></i>
+            </button>
+        </p>
+    </fieldset>
+</div>
+<script type="text/javascript">
+    var model1 = {
+        firstName:'Mars',
+        lastName:'Wu',
+        email:'taojwu@cisco.com',
+        accepted:true
+    };
+
+    var model2 = {
+        firstName:'Mars',
+        lastName:'Wu',
+        email:'taojwu@cisco.com',
+        accepted:true
+    };
+
+    fruit.ready(function () {
+        var app = fruit.Application;
+        var form1 = app.form1;
+        var form2 = new demo.MyFormFromJs();
+        app.load(form2);
+
+        app.btnLoad.on('onClick', function () {
+            form1.setModel(model1);
+            form2.setModel(model2);
+        });
+    });
+</script>
+</body>
+</html>

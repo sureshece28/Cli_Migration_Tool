@@ -1,0 +1,60 @@
+.font-family-ciscoFont() {
+  @font-face {
+    font-family: "Cisco Sans Extra Light";
+    src: ~"url('@{fontFolder}/ciscosansextralight-webfont.eot')";
+    src: ~"url('@{fontFolder}/ciscosansextralight-webfont.eot?#iefix') format('embedded-opentype'), url('@{fontFolder}/ciscosansextralight-webfont.woff') format('woff'), url('@{fontFolder}/ciscosansextralight-webfont.ttf') format('truetype'), url('@{fontFolder}/ciscosansextralight-webfont.svg#CiscoSansExtraLight') format('svg')";
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+  font-family: "Cisco Sans Reg";
+    src: ~"url('@{fontFolder}/ciscosansregular-webfont.eot')";
+    src: ~"url('@{fontFolder}/ciscosansregular-webfont.eot?#iefix') format('embedded-opentype'), url('@{fontFolder}/ciscosansregular-webfont.woff') format('woff'), url('@{fontFolder}/ciscosansregular-webfont.ttf') format('truetype'), url('@{fontFolder}/ciscosansregular-webfont.svg#CiscoSansReg') format('svg')";
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+.font-family-serif() {
+  font-family: @baseFontFamily;
+}
+
+.font-family-sans-serif() {
+  font-family: @sans-serifFontFamily;
+}
+
+.font-family-monospace() {
+  font-family: @monospaceFontFamily;
+}
+
+.font(@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight) {
+  font-size: @size;
+  font-weight: @weight;
+  line-height: @lineHeight;
+}
+
+.text-overflow() {
+  .text-overflow-ellipsis();
+}
+
+.text-overflow-ellipsis() {
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -ms-text-overflow: ellipsis;
+  word-wrap: normal;
+  overflow: hidden;
+  //*overflow: visible;
+}
+
+.text-overflow-clip() {
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+
+.word-wrap() {
+  word-wrap: break-word;
+  word-break: break-all;
+}

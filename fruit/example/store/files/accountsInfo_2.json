@@ -1,0 +1,18 @@
+[
+    {
+        "age":20,
+        "sex":"M",
+        "isOld":false,
+        "firstName":"Jack",
+        "lastName":"Wang"
+    },
+    {
+        "age":60,
+        "sex":"M",
+        "isOld":true,
+        "firstName":"Tom",
+        "lastName":"Liu"
+    }
+] 
+
+

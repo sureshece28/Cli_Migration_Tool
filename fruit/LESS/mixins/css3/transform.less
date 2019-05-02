@@ -1,0 +1,55 @@
+.transform(@deg: 0deg) {
+  transform: @deg;
+  -ms-transform: @deg; /* Internet Explorer */
+  -moz-transform: @deg; /* Firefox */
+  -webkit-transform: @deg; /* Safari and Chrome */
+  -o-transform: @deg; /* Opera */
+}
+
+.transform-origin(@h: top, @v: center) {
+  -webkit-transform-origin: @h @v;
+  -moz-transform-origin: @h @v;
+  -o-transform-origin: @h @v;
+  transform-origin: @h @v;
+}
+
+.animation-name(@name) {
+  -webkit-animation-name: @name;
+  -moz-animation-name: @name;
+  -o-animation-name: @name;
+  animation-name: @name;
+}
+.backface-visibility(@value){
+  -webkit-backface-visibility: @value;
+  -moz-backface-visibility: @value;
+  -o-backface-visibility: @value;
+  backface-visibility: @value;
+}
+
+.keyframes(@selector, @name, @from, @to) {
+  @newline: `"\n"`; // Newline
+  .setVendor(@pre, @post, @vendor) {
+    (~"@{pre}@@{vendor}keyframes @{name} {@{newline}from") {
+      .from(@from);
+    }
+    to  {
+      .to(@to);
+    }
+    .Local(){}
+    .Local() when (@post=1) {
+      (~"}@{newline}@{selector}") {
+        -moz-animation: @name;
+        -webkit-animation: @name;
+        -o-animation: @name;
+        -ms-animation: @name;
+        animation: @name;
+      }
+    }
+    .Local;
+  }
+  .setVendor(""            , 0,    "-moz-");
+  .setVendor(~"}@{newline}", 0, "-webkit-");
+  .setVendor(~"}@{newline}", 0,      "-o-");
+  .setVendor(~"}@{newline}", 0,     "-ms-");
+  .setVendor(~"}@{newline}", 1,         "");
+}

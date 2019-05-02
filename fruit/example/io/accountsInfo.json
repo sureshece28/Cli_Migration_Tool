@@ -1,0 +1,22 @@
+{
+    "accountsInfo":[
+        {
+            "fullName":"Jack",
+            "age":20,
+            "isOld":false
+        },
+        {
+            "fullName":"Tom",
+            "age":60,
+            "isOld":true
+        }
+    ],
+    "others":{
+        "fullName":"zhang",
+        "age":100,
+        "isOld":true
+    }
+}
+
+
+

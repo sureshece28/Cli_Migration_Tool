@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TextBox</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+</head>
+<body>
+<h1>Tree from options</h1>
+<div id='tree1'>test focus</div>
+<button class="f-btn"></button>
+<h1>Tree from Model</h1>
+<div id='tree2'></div>
+<script type="text/javascript">
+    var model = [
+        {
+            title:"Blue",
+            value:"blue",
+
+            node:[
+                {
+                    title:"Dark Blue",
+                    value:"100"
+
+                },
+                {
+                    title:"Light Blue",
+                    value:"50",
+                    node:[
+                        {
+                            title:"Lighter",
+                            value:"40"
+
+                        },
+                        {
+                            title:"Lightest",
+                            value:"30",
+                            iconClass:"icon-monitoring-x18"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            title:"MyIcon",
+            value:"icon",
+            iconClass:"icon-global-x18"
+        }
+    ];
+    var tree = new fruit.ui.Tree({
+        items:[
+            {"title":"Blue", "value":"blue", "node":[
+                {"title":"Dark Blue", "value":"100"},
+                {"title":"Light Blue", "value":"50", "node":[
+                    {"title":"Lighter", "value":"40"},
+                    {"title":"Lightest", "value":"30", "iconClass":"icon-monitoring-x18"}
+                ]}
+            ]},
+            {"title":"MyIcon", "value":"icon", "iconClass":"icon-global-x18"}
+        ]
+    });
+    tree.on('itemClick', function (inSender, args) {
+       // alert(args.value);
+    });
+    tree.renderTo("tree1");
+
+
+
+//    var tree2 = new fruit.ui.Tree();
+//    tree2.on('itemClick', function (inSender, args) {
+//        alert(args.value);
+//    });
+//    tree2.setModel(model);
+//    tree2.renderTo("tree2");
+</script>
+</body>
+</html>

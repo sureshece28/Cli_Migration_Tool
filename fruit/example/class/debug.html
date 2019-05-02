@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript" src="../../3rdparty/jquery1.7.1.js"></script>
+
+	</head>
+	<body>
+    <div id="abc"></div><div id="abc2"></div>
+		<script type="text/javascript" >
+
+    $('<div>&lt;'+'script>alert(1)</'+'script></div>').appendTo('#abc');
+        $('#abc2').html($('#abc').html());
+        </script>
+	</body>
+</html>

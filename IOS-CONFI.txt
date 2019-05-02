@@ -1,0 +1,7 @@
+router ospf 10
+router ospf 100
+network 10.0.0.0 0.0.0.255 area 0
+
+router eigrp as 100
+router bgp 100
+router bgp 100

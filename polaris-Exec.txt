@@ -1,0 +1,24 @@
+show redundancy
+show module
+show stackwise-virtual
+show mac address-table count summary
+show platform hardware fed active fwd-asic drops exceptions
+clear platform software fed switch active acl counters hardware
+Show platform software trace
+show usb-devices summary
+show usb-devices summary
+show license right-to-use detail
+show license right-to-use summary
+show fips status
+show env power          
+hw-module beacon RP/fan-tray/slot <slot no.> status or show hardware led
+show idprom module <0-13> eeprom
+show idprom power-supply <0-13> eeprom
+show idprom supervisor eeprom
+show idprom all eeprom
+hw-module slot <0-13> shutdown
+no hw-module slot <0-13> shutdown
+show env
+show power detail
+
+

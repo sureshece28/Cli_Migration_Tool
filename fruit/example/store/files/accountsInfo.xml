@@ -1,0 +1,14 @@
+﻿<person>
+    <accounts>
+        <account>
+            <fullName>Jaxml</fullName>
+            <age>20</age>
+            <isOld>false</isOld>
+        </account>
+        <account>
+            <fullName>Tom</fullName>
+            <age>60</age>
+            <isOld>true</isOld>
+        </account>
+    </accounts>
+</person>

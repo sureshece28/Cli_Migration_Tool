@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+        <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+
+        <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+        <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+        <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+        <script type="text/javascript" src="../../3rdparty/jquery1.7.1.js"></script>
+        <script type="text/javascript" src="../../js/fruit.js"></script>
+        <script type="text/javascript" src="../common/DemoRobot.js"></script>
+	</head>
+	<body>
+<script type="text/html" class="demo-source">
+
+fruit.define('demo.Component', {
+    //define the options you can use getOption('name') to get they.
+     mixins:'fruit.Observable',
+    options :{
+        name:'Lulu',
+        age:20
+    },
+    methods: {
+        init : function() {
+            logger.debug('demo.Component init');
+        },
+        show : function() {
+            logger.debug('option: name='+this.getOption('name')+ ',age='+this.getOption('age'));
+        }
+    }
+});
+var a = fruit.create('demo.Component',{name:'Colin'});
+a.show();
+a.setOption('age',30);
+a.show();
+
+</script>
+	</body>
+</html>

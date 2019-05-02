@@ -1,0 +1,18 @@
+show ip interface brief @
+ip address @
+ip base @
+gg int @
+ip base 12 @
+ip base 03 @
+ip base 33 @
+ip base base @
+ip base 0 @
+no analyze memory-leak @
+jj analyze memory-leak @
+analyze memory-leak KK @
+reload @
+asdasd @
+show ip ospf neigh @
+kitty cat
+
+

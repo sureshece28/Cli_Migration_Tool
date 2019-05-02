@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+</head>
+<body>
+<button class="f-btn" type="button" role="button" data-fruit-type="fruit.ui.Button" data-fruit-name="btn1">
+    <span
+            data-fruit-name="text" class="f-btn-text">Button 1</span>
+    <i data-fruit-name="arrow"></i>
+</button>
+<div>
+    <p>
+        <button class="f-btn" type="button" role="button" data-fruit-type="fruit.ui.Button" data-fruit-name="btn2"
+                data-fruit-options='{"text":"Button 2","size":"small"}'>
+            <span data-fruit-name="text" class="f-btn-text">Button</span>
+            <i data-fruit-name="arrow"></i>
+        </button>
+    </p>
+</div>
+<script type="text/javascript">
+    fruit.ready(function () {
+        var app = fruit.Application;
+        var btn1 = app.btn1;
+        var btn2 = app.btn2;
+        var btn3 = fruit.ui.createComponent('Button', {text:'Button 3', theme:'primary'});
+
+        app.load(btn3);
+
+        btn1.on('onClick', function () {
+            alert('Button 1 Clicked!');
+        });
+
+        btn2.on('onClick', function () {
+            alert('Button 2 Clicked!');
+        });
+
+        btn3.on('onClick', function () {
+            alert('Button 3 Clicked!');
+        });
+
+        setTimeout(function () {
+            btn1.setOption('theme', 'CTA');
+        }, 500);
+
+        setTimeout(function () {
+            btn1.setOption('size', 'small');
+        }, 1000);
+
+        setTimeout(function () {
+            btn1.setOption('icons', {primary:'icon-core-rss-feed-x16', secondary:'icon-core-webex-x16'});
+        }, 1500);
+    });
+</script>
+</body>
+</html>

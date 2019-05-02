@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+        <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+
+        <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+        <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+        <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+        <script type="text/javascript" src="../../3rdparty/jquery1.7.1.js"></script>
+        <script type="text/javascript" src="../../js/fruit.js"></script>
+        <script type="text/javascript" src="../common/DemoRobot.js"></script>
+	</head>
+	<body>
+		<ul id="console"></ul>
+		<script type="text/javascript">
+			fruit.config.debug = true;
+			fruit.define('fruit.Component', {
+				options : {
+					width : 0
+				},
+				methods: {
+
+					init : function() {
+						logger.debug('component init')
+
+					},
+					show : function() {
+						logger.debug('show in component');
+					}
+				}
+			});
+
+			fruit.Component.regProcessor('requires', function(cls, data) {
+				logger.debug('component processor-- requires');
+			});
+			fruit.Component.regProcessor('events', function(cls, data) {
+				logger.debug('component processor-- events');
+			});
+			fruit.Component.regProcessor('options', function(cls, data) {
+				logger.debug('component processor-- options');
+			});
+			fruit.Component.setProcessorOrder(['requires', 'options', 'events'])
+			logger.info('----------define Button')
+
+			fruit.define('fruit.ui.Button', {
+				extend : 'fruit.Component',
+				options : {
+					width : 0,
+					text : 'Save'
+				},
+				methods: {
+					init : function() {
+						logger.debug('button init')
+					},
+					disable : function() {
+
+					},
+					text : function() {
+
+					},
+					show : function() {
+						logger.debug('call button show')
+						this.superMethod();
+					}
+				}
+			});
+			fruit.ui.Button.regProcessor('group', function() {
+				logger.debug('button processor -- group');
+			})
+
+			fruit.ui.Button.setProcessorOrder(['group', 'options', 'events'])
+
+			logger.info('----------define GroupButton')
+
+			fruit.define('fruit.ui.GroupButton', {
+				extend : 'fruit.ui.Button',
+				methods: {
+					init : function() {
+						logger.debug('groupbutton init')
+					},
+					show : function() {
+						logger.debug('call groupbutton show');
+						this.superMethod()
+					}
+				}
+			})
+
+			logger.info('----------new Button')
+
+			var btn = new fruit.ui.Button({
+				width : 10,
+				listeners : {
+					click : function() {
+
+					}
+				}
+			});
+			btn.show();
+			logger.info('----------new GroupButton')
+
+			new fruit.ui.GroupButton().show();
+
+		</script>
+	</body>
+</html>

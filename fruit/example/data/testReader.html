@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="../../3rdparty/jquery1.7.1.js"></script>
+
+    <script type="text/javascript" src="../../3rdparty/Math.uuid.js"></script>
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+    <script>
+
+        jQuery(function () {
+        	
+        	fruit.CONFIG.debug = true;
+
+            var testJsonData = [
+                {"fullName":"Jack22", "age":30, "isOld":false},
+                {"fullName":"Tom22", "age":70, "isOld":true}
+            ];
+
+            fruit.define('accountInfo', {
+                extend:'fruit.data.Model',
+                options:{
+                    fields:[
+                        {
+                            name:'name',
+                            type:'string',
+                            mapping:'fullName'
+                        },
+                        {
+                            name:'age',
+                            type:'int'
+                        },
+                        {
+                            name:'isRetire',
+                            type:'boolean',
+                            mapping:'isOld'
+                        }
+                    ]
+                }
+            });
+
+
+            var storeConf = {
+                reader:{
+                    accessType:'ajax',
+                    dataType:'json',
+                    root:'accountsInfo',
+                    url:'files/accountsInfo.json',
+                    model:'accountInfo',
+                    params:{
+                        id:'1',
+                        name:'James'
+                    }
+                }
+            };
+
+            var accountStore = new fruit.data.Store(storeConf);
+            
+            var writerStore = new fruit.data.Store(storeConf);
+
+            accountStore.on('loadSuccess', function (data, status, xhr) {
+                fruit.logger.info("records.length:"+data.length);
+                var record_1 = accountStore.getAt(0);
+                var record_2 = accountStore.getAt(1);
+
+                //fruit.logger.info("records[0]:"+record_1.get(0) + ",age:" + record_1.get(1) + ",isRetire:" + record_1.get(2));
+                //fruit.logger.info("records[1] :"+record_2.get(0) + ",age:" + record_2.get(1) + ",isRetire:" + record_2.get(2));
+
+                fruit.logger.info("records[0] name:" + record_1.get("name") + ",age:" + record_1.get("age") + ",isRetire:" + record_1.get("isRetire"));
+                fruit.logger.info("records[1] name:"+record_2.get("name") + ",age:" + record_2.get("age") + ",isRetire:" + record_2.get("isRetire"));
+
+            });
+            accountStore.load();
+            
+            
+            writerStore.on('loadSuccess', function (data, status, xhr) {
+                fruit.logger.info("----------records.length:"+data.length);
+                var record_1 = writerStore.getAt(0);
+                var record_2 = writerStore.getAt(1);
+
+                //fruit.logger.info("records[0]:"+record_1.get(0) + ",age:" + record_1.get(1) + ",isRetire:" + record_1.get(2));
+                //fruit.logger.info("records[1] :"+record_2.get(0) + ",age:" + record_2.get(1) + ",isRetire:" + record_2.get(2));
+
+                fruit.logger.info("-----------records[0] name:" + record_1.get("name") + ",age:" + record_1.get("age") + ",isRetire:" + record_1.get("isRetire"));
+                fruit.logger.info("----------records[1] name:"+record_2.get("name") + ",age:" + record_2.get("age") + ",isRetire:" + record_2.get("isRetire"));
+
+            });
+            writerStore.load();
+        })
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

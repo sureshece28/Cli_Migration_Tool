@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    fruit.ready(function () {
+
+        var btn = new fruit.ui.Button({
+            text:'x',
+            size:'small'
+        });
+        btn.attachBehavior([{
+            behavior:'Draggable',
+            params:{
+                handle:btn
+            }
+        },{
+            behavior:'Resizable',
+            params:{
+                'direction':'se',
+                target:btn
+            }
+        }]);
+
+        btn.on('click', log);
+
+
+        function log(sender, event) {
+            console.log('click!');
+        };
+
+        btn.renderTo();
+    });
+</script>
+</body>
+</html>

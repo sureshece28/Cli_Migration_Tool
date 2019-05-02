@@ -1,0 +1,54 @@
+#!/usr/cisco/python/bin/python3
+import cgi
+import re
+def htmlTop():
+	print("""Content-type:text/html\n\n
+		 <!DOCTYPE html>
+		 <html lang="en">
+		    <head>
+			<meta charset="utf-8"/>
+				<title>My server</title>
+		     </head>
+	            <body>""")
+def htmlTail():
+	print("""</body>
+		</html>""")
+
+#main
+if __name__ =="__main__":
+	try:
+		htmlTop()
+		print('<h3> Search Result- </h3>')
+		form = cgi.FieldStorage()
+		pattern=form.getvalue('searchstring')
+		image=form.getvalue('image')
+		pattern=pattern.replace(".","\.")
+		#print(pattern,'<br>')
+		#pattern=re.sub(r'[^\w]', ' ', pattern)
+		words = pattern.split() 
+		pattern ='.*'.join(words)
+		#print(pattern,'<br>')
+		pattern=".*"+pattern+".*"
+		#print(pattern,'<br>')
+		p=re.compile(pattern,re.IGNORECASE)
+		#print(p.pattern,'<br>')
+		check= form.getvalue('radio_b')
+		filename = check+"."+image+".txt"
+		#filename="config.s6t64-adventerprisek9_dbg-mz.SSA.txt"
+		#print(check)
+		#print(image)
+		#print(filen)		
+		txt = open(filename)
+		flag=1
+		for line in txt:
+			m=p.search(line)
+			if m:
+				flag=0
+				print(line,'<br>')
+		if flag:
+			print("NO MATCH FOUND",'<br>')
+		htmlTail()
+	except:
+		cgi.print_exception()
+
+

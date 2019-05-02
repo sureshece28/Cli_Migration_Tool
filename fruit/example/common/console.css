@@ -1,0 +1,14 @@
+#console{
+    margin: 0;
+    padding: 0; list-style: none;
+    background-color: #000;
+    color:#fff;
+    padding: 10px;
+    height:200px;
+    overflow: auto;
+}
+#console li{
+    font-size: 12px;
+    font-family: verdana;
+    line-height: 1.5em;
+}

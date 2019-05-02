@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+</head>
+<body>
+<div class="f-col9" id="content" style="padding: 30px ;width: 400px;">
+
+</div>
+</body>
+<script type="text/javascript">
+    var currentComponent;
+    var dialogOption;
+    function l(str) {
+        try {
+            console.dir(str);
+        } catch (e) {
+
+        }
+    }
+
+    setComponent = function (componentName, inOptions) {
+        //
+        if (currentComponent && currentComponent.$fullname == "fruit.ui.Dialog") {
+            processDialog(inOptions);
+            return;
+        } else if (currentComponent) {
+            currentComponent.destroy();
+        }
+        //
+        //inOptions.renderTo = "content";
+        var demoComponent = fruit.create(componentName, inOptions);
+        fruit.Application.load(demoComponent, document.getElementById('content'));
+
+        currentComponent = demoComponent;
+        //
+        if (componentName == "fruit.ui.Dialog") {
+            dialogOption = inOptions;
+            demoComponent.open();
+        }
+        if (componentName == "fruit.ui.Loading") {
+
+            demoComponent.show();
+        }
+    }
+
+    run = function (methodName, param) {
+        window[methodName].call(this, param);
+    }
+
+    runAPI = function (methodName, param) {
+        currentComponent[methodName].call(currentComponent, param);
+    }
+
+    function processDialog(config) {
+        for (var i in dialogOption) {
+            if (config[i] != dialogOption[i] && i.substr(0, 2) != "on") {
+                currentComponent.setOption(i, config[i]);
+            }
+        }
+    }
+
+</script>
+</html>

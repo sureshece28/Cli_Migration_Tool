@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Accordion-js</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+    <script type="text/javascript" src="./Main.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    fruit.ready(function () {
+
+        var myAccordion1 = new fruit.ui.Accordion({
+            items:[
+                {
+                    id:1,
+                    title:'Accordion1',
+                    content:'<p>This is Accordion-1</p>'
+                },
+                {
+                    id:2,
+                    title:'Accordion2',
+                    content:'<p>This is Accordion-2</p>'
+                }
+            ],
+            defaultActive:0
+        });
+
+
+        var myAccordion2 = new fruit.ui.Accordion({
+            items:[
+                {
+                    id:1,
+                    title:'Accordion1',
+                    content:'<p>This is Accordion-1</p>'
+                },
+                {
+                    id:2,
+                    title:'Accordion2',
+                    content:'<p>This is Accordion-2</p>'
+                },
+                {
+                    id:3,
+                    title:'Accordion3',
+                    content:{
+                        type:'fruit.ui.AjaxContainer',
+                        options:{
+                            url:'files/1.txt',
+                            useJscript:false
+                        }
+                    }
+                }
+            ],
+            defaultActive:1
+        });
+
+        var myAccordion3 = new fruit.ui.Accordion({
+            items:[
+                {
+                    id:1,
+                    title:'Accordion1',
+                    content:'<p>This is Accordion-1</p>'
+                },
+                {
+                    id:2,
+                    title:'Accordion2',
+                    content:'<p>This is Accordion-2</p>'
+                },
+                {
+                    id:3,
+                    title:'Accordion3',
+                    content:{
+                        type:'fruit.ui.AjaxContainer',
+                        options:{
+                            url:'files/2.txt',
+                            useJscript:true
+                        }
+                    }
+                }
+            ],
+            defaultActive:1
+        });
+
+        var myAccordion4 = new fruit.ui.Accordion({
+            items:[
+                {
+                    id:1,
+                    title:'Accordion1',
+                    content:'<p>This is Accordion-1</p>'
+                },
+                {
+                    id:2,
+                    title:'Accordion2',
+                    content:{
+                        type:'fruit.ui.IframeContainer',
+                        options:{
+                            url:'files/Accordion_iframe.html'
+                        }
+                    }
+                }
+            ],
+            defaultActive:0
+        });
+
+        /*
+         //anohter method
+         var myAccordion = new fruit.ui.Accordion();
+         var myAccordionModel = [{
+         title:'Accordion1',
+         content: '<p>This is Accordion-1</p>'
+         },{ title:'Accordion2',
+         content: '<p>This is Accordion-2</p>'
+         }];
+
+         myAccordion.setModel(myAccordionModel);
+         */
+
+        myAccordion1.renderTo();
+
+
+        myAccordion2.renderTo();
+        myAccordion3.renderTo();
+        myAccordion4.renderTo();
+
+
+        myAccordion2.addPanel({
+            id:4,
+            title:'Accordion4',
+            content:'<p>This is my added Accordion</p>'
+        }, 4);
+
+        myAccordion2.removePanel(0);
+
+    });
+
+</script>
+</body>
+</html>

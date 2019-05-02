@@ -1,0 +1,123 @@
+//Common
+//--------------------
+.f-common(){
+    color: @commonDefaultText;
+    .gradient-v(@commonDefaultBgTop,@commonDefaultBgBottom);
+    border: 1px solid @commonDefaultBorder;
+}
+
+.f-common-hover(){
+    .gradient-v(@commonHoverBgTop,@commonHoverBgBottom);
+    border: 1px solid @commonHoverBorder;
+    color: @commonHoverText;
+}
+
+.f-common-focus(){
+    .gradient-v(@commonFocusBgTop,@commonFocusBgBottom);
+    border: 1px solid @commonFocusBorder;
+    color: @commonFocusText;
+    box-shadow: 0px 0px 0px 1px @commonFocusBorder; //2px border
+}
+
+.f-common-active(){
+    color: @commonActiveText;
+    .gradient-v(@commonActiveBgTop,@commonActiveBgBottom);
+    border: 1px solid @commonActiveBorder;
+}
+
+.f-common-disabled(){
+    color: @commonDisabledText;
+    .gradient-v(@commonDisabledBgTop,@commonDisabledBgBottom);
+    border: 1px solid @commonDisabledBorder;
+    cursor: default;
+    box-shadow: 0px 0px 0px 0px @white ; //2px border
+}
+
+
+//Primary
+//--------------------
+.f-primary(){
+    color: @primaryDefaultText;
+    .gradient-v(@primaryDefaultBgTop,@primaryDefaultBgBottom);
+    border: 1px solid @primaryDefaultBorder;
+}
+
+.f-primary-hover(){
+    .gradient-v(@primaryHoverBgTop,@primaryHoverBgBottom);
+    border: 1px solid @primaryHoverBorder;
+    color: @primaryHoverText;
+}
+
+.f-primary-focus(){
+    .gradient-v(@primaryFocusBgTop,@primaryFocusBgBottom);
+    border: 1px solid @primaryFocusBorder;
+    color: @primaryFocusText;
+    box-shadow: 0px 0px 0px 1px @primaryFocusBorder; //2px border
+}
+
+.f-primary-active(){
+    color: @primaryActiveText;
+    .gradient-v(@primaryActiveBgTop,@primaryActiveBgBottom);
+    border: 1px solid @primaryActiveBorder;
+}
+
+.f-primary-disabled(){
+    color: @primaryDisabledText;
+    .gradient-v(@primaryDisabledBgTop,@primaryDisabledBgBottom);
+    border: 1px solid @primaryDisabledBorder;
+    cursor: default;
+}
+
+//CTA
+//--------------------
+.f-CTA(){
+    color: @CTADefaultText;
+    .gradient-v(@CTADefaultBgTop,@CTADefaultBgBottom);
+    border: 1px solid @CTADefaultBorder;
+}
+
+.f-CTA-hover(){
+    .gradient-v(@CTAHoverBgTop,@CTAHoverBgBottom);
+    border: 1px solid @CTAHoverBorder;
+    color: @CTAHoverText;
+}
+
+.f-CTA-focus(){
+    .gradient-v(@CTAFocusBgTop,@CTAFocusBgBottom);
+    border: 1px solid @CTAFocusBorder;
+    color: @CTAFocusText;
+    box-shadow: 0px 0px 0px 1px @CTAFocusBorder ; //2px border
+}
+
+.f-CTA-active(){
+    color: @CTAActiveText;
+    .gradient-v(@CTAActiveBgTop,@CTAActiveBgBottom);
+    border: 1px solid @CTAActiveBorder;
+}
+
+.f-CTA-disabled(){
+    color: @CTADisabledText;
+    .gradient-v(@CTADisabledBgTop,@CTADisabledBgBottom);
+    border: 1px solid @CTADisabledBorder;
+    cursor: default;
+}
+
+
+
+//
+.brand-small() {
+  height: 75px;
+  .gradient-v(@brandGradientStart,@brandGradientEnd);
+}
+.brand-middle() {
+  height: 125px;
+  .gradient-v(@brandGradientStart,@brandGradientEndMiddle);
+}
+.brand-large() {
+  height: 250px;
+  .gradient-v(@brandGradientStart,@brandGradientEndLarge);
+}
+.brand-full() {
+  height: 350px;
+  .gradient-v(@brandGradientStart,@brandGradientEndFull);
+}

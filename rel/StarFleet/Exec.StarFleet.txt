@@ -1,0 +1,18 @@
+show ip interface brieff @ 
+ip address link @
+ip base v7 @
+gg ggg @
+ip base 15 @
+ip base 0 @
+ip base 50 @
+ip ir @
+ip b @
+ip ba @
+jjj analyze memory-leak @
+analyze memory-leak pp @
+analyze memory-leak jj @
+asdaa @
+show ip ospf neigh @
+no ip @
+cat kitty
+

@@ -1,0 +1,11 @@
+show platform hardware cef ... 
+show platform hardware cef ...
+ip access-list extended <100-199> 
+ip access-list extended <2000-2699>
+mac access-list extended WORD 
+platform ip cef load-sharing dst-only 
+platform ip cef load-sharing ip-only
+platform ip cef load-sharing full 
+clear platform hardware acl hit-counts all 
+show auto qos interface FortyGigabitEthernet  
+show ip

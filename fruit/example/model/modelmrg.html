@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Manager</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+
+    var model = {
+        firstName:'Mars',
+        lastName:'Wu',
+        fullName:{
+            get:function () {
+                return this.getValue('firstName') + ' ' + this.getValue('lastName');
+            },
+            set:function (value) {
+                var arr = value.split(' ');
+                this.firstName = arr[0];
+                this.lastName = arr[1];
+            }
+        }
+    };
+
+    var users = [
+        {
+            firstName:'Mars',
+            lastName:'Wu',
+            age:28
+        },
+        {
+            firstName:'Kai',
+            lastName:'Liu',
+            age:34
+        },
+        {
+            firstName:'Fei',
+            lastName:'Zheng',
+            age:26
+        },
+        {
+            firstName:'Wei',
+            lastName:'Qiao',
+            age:27
+        }
+    ]
+
+    fruit.define('demo.UserViewModel', {
+        extend:'fruit.ui.data.ViewModel',
+        properties:{
+            fullName:{
+                dependencies:['firstName', 'lastName'],
+                get:function () {
+                    return this.getValue('firstName') + ' ' + this.getValue('lastName');
+                }
+            }
+        }
+    });
+
+    var vm = new fruit.ui.data.ViewModel(model);
+
+    var vmc = new fruit.ui.data.ViewModelCollection(users, 'demo.UserViewModel');
+
+    fruit.define('demo.mvvm.Main', {
+        extend:'fruit.ui.Component',
+        view:{
+            tag:'ul',
+            template:{
+                tag:'li',
+                content:[
+                    {
+                        type:'TextBox',
+                        options:{
+                            text:'{firstName}'
+                        }
+                    },
+                    {
+                        type:'TextBox',
+                        options:{
+                            text:'{lastName}'
+                        }
+                    },
+                    {
+                        type:'TextBox',
+                        options:{
+                            text:'{fullName}'
+                        }
+                    },
+                    {
+                        type:'Button',
+                        options:{
+                            text:'X'
+                        }
+                    }
+                ]}
+        },
+        triggers:{
+            event:{
+                click:{
+                    action:'__click'
+                }
+            }
+        },
+        methods:{
+            __click:function (sender, event) {
+                if (event.target instanceof fruit.ui.Button) {
+                    this.model.removeItem(event.target.model);
+                }
+            }
+        }
+    });
+
+    fruit.ready(function () {
+        var main = new demo.mvvm.Main();
+        var btn = new fruit.ui.Button({
+            text:'Add Item'
+        });
+
+        btn.on('click', function () {
+            vmc.insertItem({firstName:'Fei', lastName:'Zheng'}, 1);
+        });
+
+        main.renderTo();
+        btn.renderTo();
+
+        main.setModel(vmc);
+    });
+
+</script>
+</html>

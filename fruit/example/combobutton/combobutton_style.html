@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Combo Button</title>
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheet/style/style.css">
+    <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+
+    <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+    <script type="text/javascript" src="../common/fn.js"></script>
+</head>
+<body  style="padding: 10px;">
+<div id="content">
+    <style type="text/css">
+        .f-combobutton-demo {
+            position: relative;
+        }
+    </style>
+    <h1>Combo Button</h1>
+
+    <h2>Example</h2>
+    <br/>
+    <a href="" z-in></a>
+    <span class="f-combobutton"  aria-expanded="false" aria-haspopup="true" tabindex="1">
+        <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+    </span>
+    &nbsp;
+    <span class="f-combobutton f-combobutton-CTA"  aria-expanded="false" aria-haspopup="true" tabindex="1">
+        <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+    </span>
+    &nbsp;
+    <span class="f-combobutton f-combobutton-primary"  aria-expanded="false" aria-haspopup="true" tabindex="1">
+        <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+    </span>
+    <h5>Normal</h5>
+    <textarea type="html" class="hidden">
+        <span class="f-combobutton"  aria-expanded="false" aria-haspopup="true" tabindex="1">
+            <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+        </span>
+    </textarea>
+    <h5>CTA</h5>
+    <textarea type="html" class="hidden">
+        <span class="f-combobutton f-combobutton-CTA"  aria-expanded="false" aria-haspopup="true" tabindex="1">
+        <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+    </span>
+    </textarea>
+    <h5>Primary</h5>
+    <textarea type="html" class="hidden">
+        <span class="f-combobutton f-combobutton-primary"  aria-expanded="false" aria-haspopup="true" tabindex="1">
+        <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+    </span>
+    </textarea>
+    <h2>Focus</h2>
+    <p>Add <code>f-combobutton-focus</code> class to node.</p>
+    <span class="f-combobutton f-combobutton-focus"  aria-expanded="false" aria-haspopup="true" tabindex="1">
+        <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+    </span>
+    &nbsp;
+    <span class="f-combobutton f-combobutton-focus f-combobutton-CTA"  aria-expanded="false" aria-haspopup="true" tabindex="1">
+        <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+    </span>
+    &nbsp;
+    <span class="f-combobutton f-combobutton-focus f-combobutton-primary"  aria-expanded="false" aria-haspopup="true" tabindex="1">
+        <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+    </span>
+
+    <textarea type="html" class="hidden">
+        <span class="f-combobutton f-combobutton-focus"  aria-expanded="false" aria-haspopup="true" tabindex="1">
+        <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+    </span>
+    </textarea>
+
+    <h2>Disabled</h2>
+    <p>Add <code>aria-disabled="true"</code> to node.</p>
+    <span class="f-combobutton" aria-disabled="true"  aria-expanded="false" aria-haspopup="true" tabindex="1">
+        <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+    </span>
+    &nbsp;
+    <span class="f-combobutton f-combobutton-CTA" aria-disabled="true"  aria-expanded="false" aria-haspopup="true" tabindex="1">
+        <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+    </span>
+    &nbsp;
+    <span class="f-combobutton f-combobutton-primary" aria-disabled="true" aria-expanded="false" aria-haspopup="true" tabindex="1">
+        <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+    </span>
+
+    <textarea type="html" class="hidden">
+        <span class="f-combobutton"  aria-expanded="false" aria-disabled="true" aria-haspopup="true" tabindex="1">
+        <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+    </span>
+    </textarea>
+
+
+
+
+    <h2>Open</h2>
+
+    <ol>
+        <li>Set <code>aria-expanded</code> to <code>true</code>.</li>
+        <li>Set two attribute to popup node : <code>aria-labelledby="combobutton"</code> <code>role="menu"</code>.</li>
+        <li>Set <code>30px</code> offset at <code>Y axle</code> from button node to popup node.</li>
+    </ol>
+
+    <div class="f-combobutton-demo">
+        <span class="f-combobutton"  aria-expanded="true" aria-haspopup="true" tabindex="1">
+         <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+        </span>
+
+        <div class="f-popup" role="menu" aria-labelledby="combobutton" style="top:30px; left: 0px;">
+            <div class="f-list">
+                <ul class="f-list-wrap">
+                    <li class="f-list-item">
+                        Item 1
+                    </li>
+                    <li class="f-list-item">
+                        Item 2
+                    </li>
+                    <li class="f-list-item">
+                        Item 3
+                    </li>
+                </ul>
+            </div>
+        </div>
+        &nbsp;
+        <span class="f-combobutton f-combobutton-CTA"  aria-expanded="true" aria-haspopup="true" tabindex="1">
+         <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+        </span>
+
+        <div class="f-popup" role="menu" aria-labelledby="combobutton" style="top:30px; left: 102px">
+            <div class="f-list">
+                <ul class="f-list-wrap">
+                    <li class="f-list-item">
+                        Item 1
+                    </li>
+                    <li class="f-list-item">
+                        Item 2
+                    </li>
+                    <li class="f-list-item">
+                        Item 3
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        &nbsp;
+        <span class="f-combobutton f-combobutton-primary"  aria-expanded="true" aria-haspopup="true" tabindex="1">
+         <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+        </span>
+
+        <div class="f-popup" role="menu" aria-labelledby="combobutton" style="top:30px; left: 204px">
+            <div class="f-list">
+                <ul class="f-list-wrap">
+                    <li class="f-list-item">
+                        Item 1
+                    </li>
+                    <li class="f-list-item">
+                        Item 2
+                    </li>
+                    <li class="f-list-item">
+                        Item 3
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <textarea type="html" class="hidden">
+        <span class="f-combobutton"  aria-expanded="true" aria-haspopup="true" tabindex="1">
+         <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+        </span>
+
+        <div class="f-popup" role="menu" aria-labelledby="combobutton" style="top:30px;">
+            <div class="f-list">
+                <ul class="f-list-wrap">
+                    <li class="f-list-item">
+                        Item 1
+                    </li>
+                    <li class="f-list-item">
+                        Item 2
+                    </li>
+                    <li class="f-list-item">
+                        Item 3
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </textarea>
+    <h2>Open & focus</h2>
+
+    <p>Combination of several state</p>
+    <p>Set <code>31px</code> offset at <code>Y axle</code> from button node.</p>
+
+    <div class="f-combobutton-demo">
+        <span class="f-combobutton f-combobutton-focus"  aria-expanded="true" aria-haspopup="true" tabindex="1">
+         <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+        </span>
+
+        <div class="f-popup" role="menu" aria-labelledby="combobutton" style="top:31px; left: 0px;">
+            <div class="f-list">
+                <ul class="f-list-wrap">
+                    <li class="f-list-item">
+                        Item 1
+                    </li>
+                    <li class="f-list-item">
+                        Item 2
+                    </li>
+                    <li class="f-list-item">
+                        Item 3
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        &nbsp;
+        <span class="f-combobutton f-combobutton-focus f-combobutton-CTA"  aria-expanded="true" aria-haspopup="true" tabindex="1">
+         <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+        </span>
+
+        <div class="f-popup" role="menu" aria-labelledby="combobutton" style="top:31px; left: 102px;">
+            <div class="f-list">
+                <ul class="f-list-wrap">
+                    <li class="f-list-item">
+                        Item 1
+                    </li>
+                    <li class="f-list-item">
+                        Item 2
+                    </li>
+                    <li class="f-list-item">
+                        Item 3
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        &nbsp;
+        <span class="f-combobutton f-combobutton-focus f-combobutton-primary"  aria-expanded="true" aria-haspopup="true" tabindex="1">
+         <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+        </span>
+
+        <div class="f-popup" role="menu" aria-labelledby="combobutton" style="top:31px; left: 204px;">
+            <div class="f-list">
+                <ul class="f-list-wrap">
+                    <li class="f-list-item">
+                        Item 1
+                    </li>
+                    <li class="f-list-item">
+                        Item 2
+                    </li>
+                    <li class="f-list-item">
+                        Item 3
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <textarea type="html" class="hidden">
+        <span class="f-combobutton f-combobutton-focus f-combobutton-CTA"  aria-expanded="true" aria-haspopup="true" tabindex="1">
+         <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+        </span>
+
+        <div class="f-popup" role="menu" aria-labelledby="combobutton" style="top:31px; left: 102px;">
+            <div class="f-list">
+                <ul class="f-list-wrap">
+                    <li class="f-list-item">
+                        Item 1
+                    </li>
+                    <li class="f-list-item">
+                        Item 2
+                    </li>
+                    <li class="f-list-item">
+                        Item 3
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </textarea>
+</div>
+<h2>Open above & focus</h2>
+<p>Add <code>  aria-popupposition="above"</code> attribute to node</p>
+<p>Add <code>f-popup-above</code> class to f-popup</p>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<div class="f-combobutton-demo">
+
+        <span class="f-combobutton f-combobutton-focus"  aria-expanded="true" aria-haspopup="true" tabindex="1"  aria-popupposition="above">
+         <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+        </span>
+
+    <div class="f-popup  f-popup-above" role="menu" aria-labelledby="combobutton" style="top:-104px; left: 0px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item">
+                    Item 1
+                </li>
+                <li class="f-list-item">
+                    Item 2
+                </li>
+                <li class="f-list-item">
+                    Item 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    &nbsp;
+        <span class="f-combobutton f-combobutton-focus f-combobutton-CTA"  aria-expanded="true" aria-haspopup="true" tabindex="1"   aria-popupposition="above">
+         <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+        </span>
+
+    <div class="f-popup  f-popup-above" role="menu" aria-labelledby="combobutton" style="top:-104px; left: 102px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item">
+                    Item 1
+                </li>
+                <li class="f-list-item">
+                    Item 2
+                </li>
+                <li class="f-list-item">
+                    Item 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    &nbsp;
+        <span class="f-combobutton f-combobutton-focus f-combobutton-primary"  aria-expanded="true" aria-haspopup="true" tabindex="1"   aria-popupposition="above">
+         <span class="f-combobutton-text">Text</span><span class="f-combobutton-arrow"></span>
+        </span>
+
+    <div class="f-popup  f-popup-above" role="menu" aria-labelledby="combobutton" style="top:-104px; left: 204px;">
+        <div class="f-list">
+            <ul class="f-list-wrap">
+                <li class="f-list-item" aria-disabled="true">
+                    Item 1
+                </li>
+                <li class="f-list-item">
+                    Item 2
+                </li>
+                <li class="f-list-item">
+                    Item 3
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<script type="text/javascript">
+    setTimeout(prettyCode,500)
+</script>
+</body>
+</html>

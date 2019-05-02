@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tab-dom</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+	<script type="text/javascript" src="../../3rdparty/jquery1.7.1.js"></script>
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+
+</head>
+<body>
+<div class="f-tab" data-fruit-type="fruit.ui.Tab" data-fruit-name="tab1" data-fruit-options='{"defaultActive":0}'>
+	<ul class="f-tab-wrap" data-fruit-name="tabHeads">
+		<li class="f-tab-item f-tab-item-selected" data-fruit-type="fruit.ui.TabHead"><a data-fruit-name="tabTitle">Tab-1</a></li>
+		<li class="f-tab-item" data-fruit-type="fruit.ui.TabHead"><a data-fruit-name="tabTitle">Tab-2</a></li>
+	</ul>
+    <div class="f-tab-content" data-fruit-name="tabPanels">
+    	<div class="f-tab-content-body" data-fruit-type="fruit.ui.TabPanel">This is tab-1</div>
+    	<div class="hidden" data-fruit-type="fruit.ui.TabPanel">This is tab-2</div>
+    </div>    
+</div>
+
+</body>
+</html>

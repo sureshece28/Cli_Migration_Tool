@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+    <link rel="stylesheet" type="text/css" href="../../3rdparty/prettify.css">
+    <link rel="stylesheet" type="text/css" href="../../css/futurama.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="../../3rdparty/jquery1.7.1.js"></script>
+
+    <script type="text/javascript" src="../../3rdparty/beautify.js"></script>
+    <script type="text/javascript" src="../../3rdparty/beautify-html.js"></script>
+    <script type="text/javascript" src="../../3rdparty/prettify.js"></script>
+    <script type="text/javascript" src="../../js/fruit.js"></script>
+    <script type="text/javascript" src="js/commonConfig.js"></script>
+    <script type="text/javascript" src="js/componentModel.js"></script>
+    <script type="text/javascript" src="js/Iframe.js"></script>
+    <script type="text/javascript" src="js/Demo.OptionsPanel.js"></script>
+    <script type="text/javascript" src="js/Demo.OptionViewModel.js"></script>
+    <script type="text/javascript" src="js/Demo.Preview.js"></script>
+    <script type="text/javascript" src="js/Demo.API.js"></script>
+    <script type="text/javascript" src="js/Demo.Event.js"></script>
+    <script type="text/javascript" src="js/Demo.Code.js"></script>
+    <script type="text/javascript" src="js/Demo.Component.js"></script>
+
+</head>
+<div class="f-header">
+
+</div>
+<div class="f-container">
+    <div class="f-row">
+        <div class="f-col3">
+            <div class="f-list" id="side-nav">
+
+
+            </div>
+
+        </div>
+        <div class="f-col9" id="content">
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var componentModel = {
+        'button':{
+            type:'button',
+            data:ButtonModel,
+            name:'Button'
+        },
+        'checkbox':{
+            type:'checkbox',
+            data:CheckBoxModel,
+            name:'CheckBox'
+        },
+        'combobox':{
+            type:'combobox',
+            data:ComboBoxModel,
+            name:'ComboBox'
+        },
+        'combobutton':{
+            type:'combobutton',
+            data:ComboButtonModel,
+            name:'ComboButton'
+        },
+        'dialog':{
+            type:'dialog',
+            data:DialogModel,
+            name:'Dialog'
+        },
+        'dropdownbutton':{
+            type:'dropdownbutton',
+            data:DropdownButtonModel,
+            name:'DropdownButton'
+        },
+        'numberspinner':{
+            type:'numberspinner',
+            data:NumberSpinnerModel,
+            name:'NumberSpinner'
+        },
+        'radio':{
+            type:'radio',
+            data:RadioGroupModel,
+            name:'Radio'
+        },
+        'textbox':{
+            type:'textbox',
+            data:TextBoxModel,
+            name:'Textbox'
+        },
+        'accordion':{
+            type:'accordion',
+            data:AccordionModel,
+            name:'Accordion'
+        },
+        'calendar':{
+            type:'calendar',
+            data:CalendarModel,
+            name:'Calendar'
+        },
+        'loading':{
+            type:'loading',
+            data:LoadingModel,
+            name:'Loading'
+        },
+        'tab':{
+            type:'tab',
+            data:TabModel,
+            name:'Tab'
+        },
+        'tree':{
+            type:'tree',
+            data:TreeModel,
+            name:'Tree'
+        }
+    }
+
+
+    url = window.location.href;
+    if (url.indexOf("?") != -1) {
+        currentComponent = url.substr(url.indexOf("?") + 1);
+    } else {
+        currentComponent = "button";
+    }
+
+    //l(currentComponent)
+    var currentComponentModel = componentModel[currentComponent].data;
+    //console.log(fruit.util.format.capitalize(currentComponent))
+    // var currentComponentModel = model[fruit.util.format.capitalize(currentComponent)+"Model"];
+
+
+    fruit.ready(function () {
+
+        var demoComponent = new Demo.ComponentView();
+
+
+//        fruit.Application.load(demoComponent, document.getElementById('content'));
+        currentComponentModel.configs = currentComponentModel.configs.concat(commonConfig.configs);
+//        for (var i = 0; i < currentComponentModel.configs.length; i++) {
+//            var type = currentComponentModel.configs[i].type;
+//            switch (type) {
+//                case "Enum":
+//                    currentComponentModel.configs[i].type = 'Demo.SelectOptions';
+//                    currentComponentModel.configs[i].currentValue = currentComponentModel.configs[i].value[0];
+//                    break;
+//                case "Boolean":
+//                    currentComponentModel.configs[i].type = 'Demo.CheckBoxOptions';
+//                    currentComponentModel.configs[i].currentValue = currentComponentModel.configs[i].value[0];
+//                    break;
+//                default :
+//                    currentComponentModel.configs[i].type = 'Demo.TextOptions';
+//                    break;
+//
+//            }
+//        }
+
+        var optionsModel = new fruit.ui.data.ViewModelCollection(currentComponentModel.configs, 'Demo.OptionViewModel');
+
+        demoComponent.setModel(currentComponentModel);
+        demoComponent.setOption('optionsModel', optionsModel);
+        demoComponent.renderTo('content');
+
+        fruit.Application.trigger('updateComponent');
+    })
+
+    var treeModel = [];
+    for (var i in componentModel) {
+        treeModel.push({
+            title:componentModel[i].name,
+            value:componentModel[i].type
+        })
+    }
+    var tree = new fruit.ui.Tree();
+    tree.on('itemClick', function (inSender, args) {
+        url = window.location.href;
+        value = args.value;
+        console.log(value);
+        window.location = url.substr(0, url.indexOf("?")) + '?' + value;
+
+    })
+    tree.setModel(treeModel);
+    tree.renderTo("side-nav");
+
+
+</script>
+</html>
